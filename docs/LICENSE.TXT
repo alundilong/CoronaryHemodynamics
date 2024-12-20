@@ -1,0 +1,85 @@
+=========================================
+LICENSE INFORMATION FOR blueCFD-Core 2017
+=========================================
+
+The following points are described in this document:
+1 - DISCLAIMER
+2 - LICENSE
+3 - STATEMENT OF SERVICE
+4 - ADDITIONAL INSTALLATION NOTES
+  4.1 - ADMINISTRATIVE INSTALATION NOTES
+
+NOTE: please use the "word wrap" functionality of your text editor to view this file.
+
+
+-----------------------------------------
+1 - DISCLAIMER
+-----------------------------------------
+
+Trademarks:
+- OPENFOAM and OpenCFD are registered trade marks of OpenCFD Limited (ESI Group) <http://www.openfoam.com>.
+- ParaView is a registered trademark of Kitware <http://www.kitware.com>.
+- Linux is a registered trademark of Linus Torvalds.
+- Windows XP, Vista, 7, 8 and 10 operating systems are registered trademarks of Microsoft.
+- other software applications included may have their own trademarks, but those references weren't found at the time of the creation of this document.
+
+Furthermore:
+ * FSD blueCAPE <http://blueCAPE.com.pt> is responsible for the development and maintenance of the blueCFD®-Core project: http://bluecfd.github.io/Core/
+ * blueCFD® is a registered trade mark of FSD blueCAPE Lda: http://bluecfd.com/trademark
+ * This offering is not approved or endorsed by [OpenCFD Limited (ESI Group)](http://openfoam.com), the producer of the OpenFOAM software via www.openfoam.com and owner of the OPENFOAM® and OpenCFD® trade marks.
+ * FSD blueCAPE Lda is a contributor to the [OpenFOAM Foundation](http://openfoam.org), but the majority of the specific modifications needed in the source code for running OpenFOAM natively on Windows, will not be accepted in the official releases of OpenFOAM by the OpenFOAM Foundation, mostly due to the maintenance overhead associated to supporting closed-source operating systems.
+
+Currently, not all applications available in blueCFD-Core have been fully tested. It is still a work in progress, but please refer to chapter 3 of this document, where you can find what are you entitled to.
+
+
+-----------------------------------------
+2 - LICENSE
+-----------------------------------------
+
+This package is provided under the GNU General Public License (GPL version 3 or above), as are most of the software applications included in this package. This includes the NO WARRANTY point indicated in the GPL. Please read the COPYING.TXT file for more information on the GPL or check online the same license: https://www.gnu.org/licenses/gpl.html
+
+OpenFOAM is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version. See the file COPYING in the directories OpenFOAM-*, for a description of the GNU General Public License terms under which you can copy the files. 
+
+ParaView License is available at <http://www.paraview.org/paraview-license/> and link is also provided with the installation of blueCFD-Core.
+
+Notepad2 uses a BSD license.
+
+Gnuplot uses its own license, which allows distribution of unmodified builds: <http://gnuplot.cvs.sourceforge.net/gnuplot/gnuplot/Copyright>
+
+MS-MPI 7.1 and 8.1 uses a permissive distribution license, as long as Copyright statements are upheld.
+
+After installation, shortcuts to these licenses are available through the shortcut menu 'Licenses', either accessible directly on the Start Menu group or at the Extended Start Menu folder.
+
+
+-----------------------------------------
+3 - STATEMENT OF SERVICE
+-----------------------------------------
+
+blueCFD®-Core is an open source project provided by FSD blueCAPE Lda.
+
+This project provides source code and high quality builds of OpenFOAM® technology and related open source projects, as unofficial ports for up-to-date 64 bit Windows, 7 through to 10. Additional tweaks, executables and scripts are also provided, in order to maintain usability when working within Microsoft Windows Operating Systems.
+
+The source code for the patched versions are tracked in the blueCFD project at Github: http://bluecfd.github.io/Core/
+
+This project is in continuous development, so keep track of how it is evolving at the following locations:
+ * Project News: http://bluecfd.github.io/Core/News
+ * FSD blueCAPE's Twitter: https://twitter.com/bluecapept
+
+There are two direct levels of support currently available:
+
+ * The issue tracker <https://github.com/blueCFD/Core/issues> should be used for problems directly associated to the ports of OpenFOAM technology and related open source projects, specifically those provided in the repositories in the blueCFD project at Github <http://github.com/blueCFD>.
+
+ * For dedicated support and development contracts related to blueCFD-Core, please contact us at FSD blueCAPE: http://bluecfd.com/contact
+
+
+-----------------------------------------
+4 - ADDITIONAL INSTALLATION NOTES
+-----------------------------------------
+
+ * It's advisable that blueCFD-Core package should be installed in a permissive folder, e.g "C:\blueCFD-Core", but this is not obligatory.
+
+ * If permissions are not enough for installation, the installer provides the option to enforce the correct folder access permissions.
+
+ * If the installation folder is meant to be kept as read-only, blueCFD-Core will create working folders in the current user's own disk-space (for example, at 'C:\Users').
+
+ * If you are uncertain how to proceed with the installation, please visit the blueCFD-Core User Guides webpage: http://bluecfd.github.io/Core/UserGuide/

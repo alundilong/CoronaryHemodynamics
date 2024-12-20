@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="file-filters" xml:lang="cs">
+<info>
+  <title type="sort">2</title>
+  <link type="guide" xref="index#folder-mode"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+</info>
+<title>Odfiltrování souborů</title>
+
+<p>Když porovnáváte složky, můžete chtít, aby se ignorovaly některé soubory. Například si můžete přát vidět jen soubory, které se v obou složkách navzájem liší a ignorovat soubory, které se shodují nebo se vyskytují jen v jedné ze složek. Případně můžete chtít ignorovat všechny soubory ve složce <file>.git</file> nebo ignorovat všechny obrázky.</p>
+
+<p><app>Meld</app> má několik různých způsobů, jak řídit, které soubory a které druhy rozdílů se zobrazí. Můžete filtrovat na základě <link xref="#file-state-filter">rozdílů mezi soubory napříč složkami</link> nebo na základě <link xref="#file-name-filter">názvů souborů a složek</link>. Můžete také aplikaci <app>Meld</app> říci, aby brala názvy souborů <link xref="#file-case-filter">bez ohledu na velikost písmen</link>. A k tomu všemu můžete použít <link xref="text-filters">textové filtry</link> ke změně toho, co porovnání souborů i složek uvidí.</p>
+
+<note style="important">
+  <p>Některé <link xref="text-filters">textové filtry</link>, které máte nadefinované, <em>se použijí automaticky</em> při porovnávání složek. Soubory, které se shodují po té, co se použily všechny textové filtry, se neoznačí jako lišící se, ale vypíší se kurzívou.</p>
+</note>
+
+
+
+<section id="file-state-filter">
+<title>Filtrování rozdílů v souborech</title>
+
+<p>V porovnání složek obsahuje každý řádek jeden soubor nebo složku, které se nachází aspoň ve jedné z porovnávaných složek. Každý z řádků je označen jako <em>změněné</em> nebo <em>nové</em> nebo <em>stejné</em>.</p>
+<terms>
+  <item>
+    <title>Změněné</title>
+    <p>Soubor existuje ve více složkách, ale jednotlivé verze jsou rozdílné</p>
+  </item>
+  <item>
+    <title>Nové</title>
+    <p>Soubor existuje v jedné složce, ale v ostatních ne</p>
+  </item>
+  <item>
+    <title>Stejné</title>
+    <p>Soubor existuje ve všech složkách a ve všech je stejný</p>
+  </item>
+</terms>
+<p>Pomocí tlačítek <gui style="button">Stejné</gui>, <gui style="button">Nové</gui> a <gui style="button">Změněné</gui> na nástrojové liště můžete změnit, které typy rozdílů uvidíte v aktuálním porovnání. Případně můžete použít nabídku <guiseq><gui style="menu">Zobrazit</gui><gui style="menuitem">Stav souboru</gui></guiseq>.</p>
+
+<note style="tip">
+  <p>V současné době je možné na základě stavu filtrovat jen soubory. Nelze tímto způsobem filtrovat složky. Například nemůžete aplikaci <app>Meld</app> říci, aby ignorovala všechny složky, které obsahují jen nové soubory. Složka obsahující jen „nové“ soubory by se měla jevit jako prázdá, ale stále bude v seznamu zastoupena.</p>
+</note>
+
+</section>
+
+
+
+<section id="file-name-filter">
+<title>Filtrování názvů souborů</title>
+
+<p><app>Meld</app> nabízí užitečnou sadu filtrů názvů souborů, díky kterým se ignorují nezajímavé soubory a složky, jako jsou běžné záložní soubory a složky s metadaty systémů správy verzí. Všechny tyto filtry lze jednotlivě zapínat a vypínat přes tlačítko <gui style="button">Filtry</gui> na nástrojové liště nebo přes nabídku <guiseq><gui style="menu">Zobrazit</gui><gui style="menuitem">Filtry souborů</gui></guiseq>.</p>
+
+<p>Filtry můžete přidávat, odebírat a měnit v části <gui style="tab">Filtry souborů</gui> v dialogovém okně <gui>Předvolby</gui>. Filtry souborů určují vzory názvů souborů, na které <em>nebude</em> brán ohled při porovnávání složek. Žádný ze souborů, který vyhovuje aktivnímu filtru, nebude zobrazen ve stromu porovnání. Filtry souborů kontrolují názvy souborů i složek. V případě, že filtru vyhovuje složka, bude ignorována včetně celého svého obsahu.</p>
+
+<p>Filtry souborů používají při srovnávání vzory shellu. Například vzoru <code>*.jpg</code> odpovídají všechny názvy souborů končící na <code>.jpg</code>. Následující tabulka uvádí všechny znaky vzorů shellu, kterým <app>Meld</app> rozumí.</p>
+
+<table frame="top bottom">
+  <title>Vzory shellu</title>
+
+  <thead>
+    <tr>
+      <td><p>divoký znak</p></td><td><p>odpovídá</p></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><p><code>*</code></p></td>
+      <td><p>cokoliv (tj. žádný, jeden nebo více znaků)</p></td>
+    </tr>
+    <tr>
+      <td><p><code>?</code></p></td>
+      <td><p>právě jeden znak</p></td>
+    </tr>
+    <tr>
+      <td><p><code>[abc]</code></p></td>
+      <td><p>jeden libovolný znak z uvedených</p></td>
+    </tr>
+    <tr>
+      <td><p><code>[!abc]</code></p></td>
+      <td><p>libovolný znak <em>vyjma</em> těch uvedených</p></td>
+    </tr>
+    <tr>
+      <td><p><code>{kočka,pes}</code></p></td>
+      <td><p>buď „kočka“ nebo „pes“</p></td>
+    </tr>
+  </tbody>
+</table>
+
+<note style="tip">
+  <p>Změnou údaje <gui>Aktivní</gui> v dialgovém okně <gui>Předvolby</gui> nastavíte, jestli má být filtr <em>ve výchozím</em> stavu aktivní.</p>
+
+  <p>Aktivací filtru pomocí nabídky nebo nástrojové lišty se filtr zapne nebo vypne <em>jen pro právě aktuální porovnávání</em>.</p>
+</note>
+
+</section>
+
+
+
+<section id="file-case-filter">
+<title>Názvy souborů bez rozlišení velikosti písmen</title>
+
+<p>Soubory jsou porovnávány napříč složkami na základě jejich názvů. Jako výchozí chování je rozlišovat velikost písmen, takže soubory jako <file>README</file>, <file>readme</file> a <file>ReadMe</file> budou zobrazeny jako odlišné.</p>
+
+<p>Při porovnávání složek na některých souborových systémech (např. HFS+ nebo FAT) si můžete přát, aby se na velikost písmen nebral ohled. Toho můžete docílit přes nabídku <guiseq><gui style="menu">Zobrazit</gui><gui style="menuitem">Ignorovat velikost písmen v názvu souboru</gui></guiseq>.</p>
+</section>
+
+
+
+</page>

@@ -1,0 +1,15 @@
+%FILES%
+mingw64/
+mingw64/bin/
+mingw64/bin/libvorbisidec-1.dll
+mingw64/include/
+mingw64/include/tremor/
+mingw64/include/tremor/config_types.h
+mingw64/include/tremor/ivorbiscodec.h
+mingw64/include/tremor/ivorbisfile.h
+mingw64/lib/
+mingw64/lib/libvorbisidec.a
+mingw64/lib/libvorbisidec.dll.a
+mingw64/lib/pkgconfig/
+mingw64/lib/pkgconfig/vorbisidec.pc
+

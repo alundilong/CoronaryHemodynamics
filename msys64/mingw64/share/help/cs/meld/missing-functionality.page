@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="missing-functionality" xml:lang="cs">
+<info>
+  <title type="sort">1</title>
+  <link type="guide" xref="index#advanced"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+</info>
+<title>Věci, které <app>Meld</app> nedělá</title>
+
+<p>Strávili jste hodinu a půl prozkoumáváním aplikace ve snaze najít, jak se udělá jedna konkrétní věc, protože jste si byli <em>jistí</em>, že to musí nějak jít?</p>
+
+<p>Tato část uvádí několik běžných věcí, které <app>Meld</app> <em>nedělá</em>, ať už záměrně nebo proto, že na ně ještě nebyl čas.</p>
+
+<section id="missing-change-fixed-alignment">
+<title>Zarovnávání změn přidáním řádků</title>
+<p>Když <app>Meld</app> zobrazuje rozdíly mezi soubory, zobrazuje oba soubory stejným způsobem jako běžný textový editor. <em>Nevkládá</em> žádné dodatečné řádky, aby levá a pravá strana se změnami měly stejnou velikost. Není k dispozici ani žádná volba, která by to dělala.</p>
+</section>
+
+
+</page>

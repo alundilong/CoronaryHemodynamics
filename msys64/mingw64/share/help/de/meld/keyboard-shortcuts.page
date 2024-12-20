@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="keyboard-shortcuts" xml:lang="de">
+<info>
+  <title type="sort">2</title>
+  <link type="guide" xref="index#advanced"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2009, 2016</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Benjamin Steinwender</mal:name>
+      <mal:email>b@stbe.at</mal:email>
+      <mal:years>2014-2015</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Christian Kirbach</mal:name>
+      <mal:email>christian.kirbach@gmail.com</mal:email>
+      <mal:years>2014, 2016</mal:years>
+    </mal:credit>
+  </info>
+<title>Tastenkürzel</title>
+
+<table frame="top bottom">
+  <title>Tastenkürzel zum Arbeiten mit Dateien und Vergleichen</title>
+
+  <thead>
+    <tr>
+      <td><p>Tastenkürzel</p></td><td><p>Beschreibung</p></td>
+    </tr>
+  </thead>
+
+  <!-- File shortcuts -->
+  <tbody>
+    <tr>
+      <td><p><keyseq><key>Strg</key><key>N</key></keyseq></p></td>
+      <td><p>Einen neuen Vergleich durchführen.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Strg</key><key>S</key></keyseq></p></td>
+      <td><p>Das aktuelle Dokument auf einem Datenträger speichern.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Strg</key><key>Umschalt</key><key>S</key></keyseq></p></td>
+      <td><p>Das aktuelle Dokument unter einem anderen Dateinamen speichern.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Strg</key><key>W</key></keyseq></p></td>
+      <td><p>Den aktuellen Vergleich schließen.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Strg</key><key>Q</key></keyseq></p></td>
+      <td><p><app>Meld</app> beenden.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+<table frame="top bottom">
+  <title>Tastenkürzel zum Bearbeiten von Dokumenten</title>
+
+  <thead>
+    <tr>
+      <td><p>Tastenkürzel</p></td><td><p>Beschreibung</p></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><p><keyseq><key>Strg</key><key>Z</key></keyseq></p></td>
+      <td><p>Die letzte Aktion rückgängig machen.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Strg</key><key>Umschalt</key><key>Z</key></keyseq></p></td>
+      <td><p>Die zuletzt rückgängig gemachte Aktion wiederholen.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Strg</key><key>X</key></keyseq></p></td>
+      <td><p>Den markierten Text oder den markierten Bereich ausschneiden und in die Zwischenablage verschieben.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Strg</key><key>C</key></keyseq></p></td>
+      <td><p>Den markierten Text oder den markierten Bereich in die Zwischenablage kopieren.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Strg</key><key>V</key></keyseq></p></td>
+      <td><p>Den Inhalt der Zwischenablage einfügen.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Strg</key><key>F</key></keyseq></p></td>
+      <td><p>Eine Zeichenkette suchen.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Strg</key><key>G</key></keyseq></p></td>
+      <td><p>Das nächste Vorkommen der Zeichenkette suchen.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Alt</key><key>↓</key></keyseq></p></td>
+      <td><p>Zum nächsten Unterschied springen. (Auch <keyseq><key>Strg</key><key>D</key></keyseq>)</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Alt</key><key>↑</key></keyseq></p></td>
+      <td><p>Zum vorherigen Unterschied springen. (Auch <keyseq><key>Strg</key><key>E</key></keyseq>)</p></td>
+    </tr>
+  </tbody>
+</table>
+
+<table frame="top bottom">
+  <title>Shortcuts for folder comparison</title>
+
+  <thead>
+    <tr>
+      <td><p>Tastenkürzel</p></td><td><p>Beschreibung</p></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><p><keyseq><key>+</key></keyseq></p></td>
+      <td><p>Expand the current folder.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>-</key></keyseq></p></td>
+      <td><p>Collapse the current folder.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table frame="top bottom">
+  <title>Tastenkürzel für Anzeigeoptionen</title>
+
+  <thead>
+    <tr>
+      <td><p>Tastenkürzel</p></td><td><p>Beschreibung</p></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><p><keyseq><key>Esc</key></keyseq></p></td>
+      <td><p>Den aktuellen Vergleich stoppen.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Strg</key><key>R</key></keyseq></p></td>
+      <td><p>Den aktuellen Vergleich aktualisieren.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table frame="top bottom">
+  <title>Tastenkürzel für Hilfe</title>
+
+  <thead>
+    <tr>
+      <td><p>Tastenkürzel</p></td><td><p>Beschreibung</p></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><p><keyseq><key>F1</key></keyseq></p></td>
+      <td><p>Das Benutzerhandbuch von <app>Meld</app> öffnen.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+</page>

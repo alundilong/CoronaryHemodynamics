@@ -1,0 +1,9 @@
+%FILES%
+mingw64/
+mingw64/include/
+mingw64/include/pygobject-3.0/
+mingw64/include/pygobject-3.0/pygobject.h
+mingw64/lib/
+mingw64/lib/pkgconfig/
+mingw64/lib/pkgconfig/pygobject-3.0.pc
+

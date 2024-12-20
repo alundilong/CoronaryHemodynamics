@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="folder-mode" xml:lang="cs">
+<info>
+  <title type="sort">1</title>
+  <link type="guide" xref="index#folder-mode"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+</info>
+
+<title>Začínáme s porovnáváním složek</title>
+
+<p><app>Meld</app> umožňuje porovnávat dvě nebo tři složky vedle sebe. Nové porovnávání složek začnete přes položku nabídky <guiseq><gui style="menu">Soubor</gui><gui style="menuitem">Nový…</gui></guiseq> a kliknutím na kartu <gui style="tab">Porovnávání složek</gui>.</p>
+
+<p>Vybrané složky budou zobrazeny jako stromové struktury vedle sebe a rozdíly mezi soubory v každé složce budou zvýrazněny. Soubory v každé ze složek můžete kopírovat a mazat, případně si u textových souborů zobrazit rozdíly podrobně.</p>
+
+
+
+<section id="folder-mode-overview">
+<title>Zobrazení porovnání složek</title>
+
+<p>Hlavními částmi v porovnání složek jsou stromy zobrazující porovnávané složky. V těchto porovnáních se můžete snadno <link xref="#folder-navigation">pohybovat</link>, abyste našli změny, které vás zajímají. Když vyberete soubor nebo složku, na stavové liště ve spodní části okna se zobrazí podrobné informace. Zmáčknutím klávesy <key>Enter</key> na vybraném souboru nebo dvojitým kliknutím na libovolném souboru se otevře <link xref="file-mode">porovnávání souboru</link> vedle sebe v nové kartě, ale rozumné použití to má jen pro textové soubory.</p>
+
+<p>Po levé i pravé straně okna se nachází lišty, které vám zobrazují jednoduchý barevný přehled výsledků porovnávání. Každý soubor nebo složka v porovnání odpovídají malému úseku lišty, přitom ale <app>Meld</app> nezobrazuje <em>stejné</em> soubory, takže jsou lépe vidět opravdu podstatné rozdíly. Na lištu můžete kdekoliv kliknout a dostat se tak přímo na místo v porovnání.</p>
+</section>
+
+
+
+<section id="folder-navigation">
+<title>Pohyb v porovnávání složek</title>
+
+<p>Mezi změněnými soubory (to jsou všechny soubory/složky, které <em>nejsou</em> označené jako shodné) se můžete pohybovat pomocí položek nabídky <guiseq><gui style="menu">Změny</gui><gui style="menuitem">Předchozí změna</gui></guiseq> a <guiseq><gui style="menu">Změny</gui><gui style="menuitem">Následující změna</gui></guiseq> nebo použít příslušné tlačítko na nástrojové liště.</p>
+<p>Pomocí kláves <key>←</key> a <key>→</key> můžete přecházet mezi složkami, které porovnáváte. To se hodí, abyste mohli vybírat jednotlivé soubory ke zkopírování nebo ke smazání.</p>
+</section>
+
+
+
+<section id="folder-mode-states">
+<title>Stavy při porovnávání složek</title>
+
+<p>Každý soubor či složka ve stromu má svůj vlastní <em>stav</em>, který vám říká, jak se liší od svého protějšku. Možné stavy jsou:</p>
+
+
+<table frame="top bottom">
+  <title>Stavy při porovnávání složek</title>
+
+  <thead>
+    <tr>
+      <td><p>stav</p></td>
+      <td><p>vzhled</p></td>
+      <td><p>význam</p></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><p>Stejné</p></td>
+      <td>
+        <p>normální písmo</p>
+      </td>
+      <td>
+        <p>Soubor/složka je stejná ve všech porovnávaných složkách.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Stejné díky filtru</p></td>
+      <td>
+        <p>kurzíva</p>
+      </td>
+      <td>
+        <p>Tyto soubory se napříč složkami liší, ale díky použití <link xref="text-filters">textového filtru</link> se tyto soubory jeví jako stejné.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Změněné</p></td>
+      <td>
+        <p>modré a tučné</p>
+      </td>
+      <td>
+        <p>Tyto soubory se liší mezi složkami, které jsou porovnávány.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Nové</p></td>
+      <td>
+        <p>zelené a tučné</p>
+      </td>
+      <td>
+        <p>Tento soubor/složka existuje v této složce, ale ne v ostatních.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Schází</p></td>
+      <td>
+        <p>zašedlý středem přeškrtnutý text</p>
+      </td>
+      <td>
+        <p>Tento soubor/složka neexistuje v této složce, ale v některé z ostatních ano.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Chyba</p></td>
+      <td>
+        <p>světle červený tučný text na žlutém pozadí</p>
+      </td>
+      <td>
+        <p>Při porovnávání tohoto souboru nastala chyba. Nejčastější příčinou chyb jsou oprávnění k souboru (tj. aplikaci <app>Meld</app> nebylo dovoleno soubor otevřít) a chyby v kódování názvu souboru.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Můžete odfiltrovat soubory na základě jejich stavu, například aby se zobrazovaly jen soubory, které byly <em>změněné</em>. Více si o tom můžete přečíst v kapitole <link xref="file-filters#file-state-filter"/>.</p>
+
+<p>Navíc mají nejnověji změněné soubory/složky připojen symbol v podobě hvězdičky.</p>
+</section>
+
+</page>

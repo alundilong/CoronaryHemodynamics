@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" id="index" xml:lang="de">
+	<info>
+      <revision docversion="1.6" status="draft"/>
+      <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+      <credit type="author copyright">
+        <name>Kai Willadsen</name>
+        <email>kai.willadsen@gmail.com</email>
+        <years>2012</years>
+      </credit>
+	
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2009, 2016</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Benjamin Steinwender</mal:name>
+      <mal:email>b@stbe.at</mal:email>
+      <mal:years>2014-2015</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Christian Kirbach</mal:name>
+      <mal:email>christian.kirbach@gmail.com</mal:email>
+      <mal:years>2014, 2016</mal:years>
+    </mal:credit>
+  </info>
+
+	<title>Handbuch zu Meld</title>
+
+	<section id="introduction" style="2column">
+	    <title>Einführung</title>
+	</section>
+
+	<section id="file-mode" style="2column">
+		<title>Dateien vergleichen</title>
+	</section>
+
+	<section id="folder-mode" style="2column">
+		<title>Ordner vergleichen</title>
+	</section>
+
+	<section id="vc-mode" style="2column">
+		<title>Meld für Versionskontrolle verwenden</title>
+	</section>
+
+	<section id="advanced" style="2column">
+		<title>Fortgeschrittene Verwendung</title>
+	</section>
+</page>

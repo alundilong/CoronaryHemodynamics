@@ -1,0 +1,330 @@
+<?xml version="1.0"?>
+<!-- This file was automatically generated from C sources - DO NOT EDIT!
+To affect the contents of this file, edit the original C definitions,
+and/or use gtk-doc annotations.  -->
+<repository version="1.2"
+            xmlns="http://www.gtk.org/introspection/core/1.0"
+            xmlns:c="http://www.gtk.org/introspection/c/1.0"
+            xmlns:glib="http://www.gtk.org/introspection/glib/1.0">
+  <include name="Gdk" version="3.0"/>
+  <include name="GdkPixbuf" version="2.0"/>
+  <include name="Gio" version="2.0"/>
+  <include name="Pango" version="1.0"/>
+  <c:include name="gdk/gdkwin32.h"/>
+  <namespace name="GdkWin32"
+             version="3.0"
+             shared-library="libgdk-3-0.dll"
+             c:identifier-prefixes="Gdk"
+             c:symbol-prefixes="gdk">
+    <class name="Win32Cursor"
+           c:symbol-prefix="win32_cursor"
+           c:type="GdkWin32Cursor"
+           parent="Gdk.Cursor"
+           glib:type-name="GdkWin32Cursor"
+           glib:get-type="gdk_win32_cursor_get_type"
+           glib:type-struct="Win32CursorClass">
+    </class>
+    <record name="Win32CursorClass"
+            c:type="GdkWin32CursorClass"
+            disguised="1"
+            glib:is-gtype-struct-for="Win32Cursor">
+    </record>
+    <class name="Win32Display"
+           c:symbol-prefix="win32_display"
+           c:type="GdkWin32Display"
+           parent="Gdk.Display"
+           glib:type-name="GdkWin32Display"
+           glib:get-type="gdk_win32_display_get_type"
+           glib:type-struct="Win32DisplayClass">
+      <method name="set_cursor_theme"
+              c:identifier="gdk_win32_display_set_cursor_theme"
+              version="3.18">
+        <doc xml:space="preserve">Sets the cursor theme from which the images for cursor
+should be taken.
+
+If the windowing system supports it, existing cursors created
+with gdk_cursor_new(), gdk_cursor_new_for_display() and
+gdk_cursor_new_from_name() are updated to reflect the theme
+change. Custom cursors constructed with
+gdk_cursor_new_from_pixbuf() will have to be handled
+by the application (GTK+ applications can learn about
+cursor theme changes by listening for change notification
+for the corresponding #GtkSetting).</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="display" transfer-ownership="none">
+            <doc xml:space="preserve">a #GdkDisplay</doc>
+            <type name="Win32Display" c:type="GdkDisplay*"/>
+          </instance-parameter>
+          <parameter name="name"
+                     transfer-ownership="none"
+                     nullable="1"
+                     allow-none="1">
+            <doc xml:space="preserve">the name of the cursor theme to use, or %NULL to unset
+        a previously set value</doc>
+            <type name="utf8" c:type="const gchar*"/>
+          </parameter>
+          <parameter name="size" transfer-ownership="none">
+            <doc xml:space="preserve">the cursor size to use, or 0 to keep the previous size</doc>
+            <type name="gint" c:type="gint"/>
+          </parameter>
+        </parameters>
+      </method>
+    </class>
+    <record name="Win32DisplayClass"
+            c:type="GdkWin32DisplayClass"
+            disguised="1"
+            glib:is-gtype-struct-for="Win32Display">
+    </record>
+    <class name="Win32DisplayManager"
+           c:symbol-prefix="win32_display_manager"
+           c:type="GdkWin32DisplayManager"
+           parent="Gdk.DisplayManager"
+           glib:type-name="GdkWin32DisplayManager"
+           glib:get-type="gdk_win32_display_manager_get_type"
+           glib:type-struct="Win32DisplayManagerClass">
+    </class>
+    <record name="Win32DisplayManagerClass"
+            c:type="GdkWin32DisplayManagerClass"
+            disguised="1"
+            glib:is-gtype-struct-for="Win32DisplayManager">
+    </record>
+    <class name="Win32DragContext"
+           c:symbol-prefix="win32_drag_context"
+           c:type="GdkWin32DragContext"
+           parent="Gdk.DragContext"
+           glib:type-name="GdkWin32DragContext"
+           glib:get-type="gdk_win32_drag_context_get_type"
+           glib:type-struct="Win32DragContextClass">
+    </class>
+    <record name="Win32DragContextClass"
+            c:type="GdkWin32DragContextClass"
+            disguised="1"
+            glib:is-gtype-struct-for="Win32DragContext">
+    </record>
+    <class name="Win32Keymap"
+           c:symbol-prefix="win32_keymap"
+           c:type="GdkWin32Keymap"
+           parent="Gdk.Keymap"
+           glib:type-name="GdkWin32Keymap"
+           glib:get-type="gdk_win32_keymap_get_type"
+           glib:type-struct="Win32KeymapClass">
+      <method name="check_compose"
+              c:identifier="gdk_win32_keymap_check_compose">
+        <return-value transfer-ownership="none">
+          <type name="Win32KeymapMatch" c:type="GdkWin32KeymapMatch"/>
+        </return-value>
+        <parameters>
+          <instance-parameter name="keymap" transfer-ownership="none">
+            <type name="Win32Keymap" c:type="GdkWin32Keymap*"/>
+          </instance-parameter>
+          <parameter name="compose_buffer" transfer-ownership="none">
+            <type name="guint16" c:type="guint16*"/>
+          </parameter>
+          <parameter name="compose_buffer_len" transfer-ownership="none">
+            <type name="gsize" c:type="gsize"/>
+          </parameter>
+          <parameter name="output" transfer-ownership="none">
+            <type name="guint16" c:type="guint16*"/>
+          </parameter>
+          <parameter name="output_len" transfer-ownership="none">
+            <type name="gsize" c:type="gsize*"/>
+          </parameter>
+        </parameters>
+      </method>
+    </class>
+    <record name="Win32KeymapClass"
+            c:type="GdkWin32KeymapClass"
+            disguised="1"
+            glib:is-gtype-struct-for="Win32Keymap">
+    </record>
+    <enumeration name="Win32KeymapMatch" c:type="GdkWin32KeymapMatch">
+      <doc xml:space="preserve">An enumeration describing the result of a deadkey combination matching.</doc>
+      <member name="none" value="0" c:identifier="GDK_WIN32_KEYMAP_MATCH_NONE">
+        <doc xml:space="preserve">no matches found. Output is not valid.</doc>
+      </member>
+      <member name="incomplete"
+              value="1"
+              c:identifier="GDK_WIN32_KEYMAP_MATCH_INCOMPLETE">
+        <doc xml:space="preserve">the sequence matches so far, but is incomplete. Output is not valid.</doc>
+      </member>
+      <member name="partial"
+              value="2"
+              c:identifier="GDK_WIN32_KEYMAP_MATCH_PARTIAL">
+        <doc xml:space="preserve">the sequence matches up to the last key,
+    which does not match. Output is valid.</doc>
+      </member>
+      <member name="exact"
+              value="3"
+              c:identifier="GDK_WIN32_KEYMAP_MATCH_EXACT">
+        <doc xml:space="preserve">the sequence matches exactly. Output is valid.</doc>
+      </member>
+    </enumeration>
+    <class name="Win32Screen"
+           c:symbol-prefix="win32_screen"
+           c:type="GdkWin32Screen"
+           parent="Gdk.Screen"
+           glib:type-name="GdkWin32Screen"
+           glib:get-type="gdk_win32_screen_get_type"
+           glib:type-struct="Win32ScreenClass">
+    </class>
+    <record name="Win32ScreenClass"
+            c:type="GdkWin32ScreenClass"
+            disguised="1"
+            glib:is-gtype-struct-for="Win32Screen">
+    </record>
+    <class name="Win32Window"
+           c:symbol-prefix="win32_window"
+           c:type="GdkWin32Window"
+           parent="Gdk.Window"
+           glib:type-name="GdkWin32Window"
+           glib:get-type="gdk_win32_window_get_type"
+           glib:type-struct="Win32WindowClass">
+      <constructor name="foreign_new_for_display"
+                   c:identifier="gdk_win32_window_foreign_new_for_display"
+                   introspectable="0">
+        <return-value transfer-ownership="full">
+          <type name="Gdk.Window" c:type="GdkWindow*"/>
+        </return-value>
+        <parameters>
+          <parameter name="display" transfer-ownership="none">
+            <type name="Gdk.Display" c:type="GdkDisplay*"/>
+          </parameter>
+          <parameter name="anid" transfer-ownership="none">
+            <type c:type="HWND"/>
+          </parameter>
+        </parameters>
+      </constructor>
+      <function name="get_handle"
+                c:identifier="gdk_win32_window_get_handle"
+                introspectable="0">
+        <return-value>
+          <type c:type="HGDIOBJ"/>
+        </return-value>
+        <parameters>
+          <parameter name="window" transfer-ownership="none">
+            <type name="Gdk.Window" c:type="GdkWindow*"/>
+          </parameter>
+        </parameters>
+      </function>
+      <function name="get_impl_hwnd"
+                c:identifier="gdk_win32_window_get_impl_hwnd"
+                introspectable="0">
+        <return-value>
+          <type c:type="HWND"/>
+        </return-value>
+        <parameters>
+          <parameter name="window" transfer-ownership="none">
+            <type name="Gdk.Window" c:type="GdkWindow*"/>
+          </parameter>
+        </parameters>
+      </function>
+      <function name="is_win32" c:identifier="gdk_win32_window_is_win32">
+        <return-value transfer-ownership="none">
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <parameter name="window" transfer-ownership="none">
+            <type name="Gdk.Window" c:type="GdkWindow*"/>
+          </parameter>
+        </parameters>
+      </function>
+      <function name="lookup_for_display"
+                c:identifier="gdk_win32_window_lookup_for_display"
+                introspectable="0">
+        <return-value>
+          <type name="Gdk.Window" c:type="GdkWindow*"/>
+        </return-value>
+        <parameters>
+          <parameter name="display" transfer-ownership="none">
+            <type name="Gdk.Display" c:type="GdkDisplay*"/>
+          </parameter>
+          <parameter name="anid" transfer-ownership="none">
+            <type c:type="HWND"/>
+          </parameter>
+        </parameters>
+      </function>
+    </class>
+    <record name="Win32WindowClass"
+            c:type="GdkWin32WindowClass"
+            disguised="1"
+            glib:is-gtype-struct-for="Win32Window">
+    </record>
+    <function name="win32_handle_table_lookup"
+              c:identifier="gdk_win32_handle_table_lookup"
+              introspectable="0">
+      <return-value transfer-ownership="none" nullable="1">
+        <type name="gpointer" c:type="gpointer"/>
+      </return-value>
+      <parameters>
+        <parameter name="handle" transfer-ownership="none">
+          <type c:type="HWND"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="win32_icon_to_pixbuf_libgtk_only"
+              c:identifier="gdk_win32_icon_to_pixbuf_libgtk_only"
+              introspectable="0">
+      <return-value>
+        <type name="GdkPixbuf.Pixbuf" c:type="GdkPixbuf*"/>
+      </return-value>
+      <parameters>
+        <parameter name="hicon" transfer-ownership="none">
+          <type c:type="HICON"/>
+        </parameter>
+        <parameter name="x_hot" transfer-ownership="none">
+          <type name="gdouble" c:type="gdouble*"/>
+        </parameter>
+        <parameter name="y_hot" transfer-ownership="none">
+          <type name="gdouble" c:type="gdouble*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="win32_pixbuf_to_hicon_libgtk_only"
+              c:identifier="gdk_win32_pixbuf_to_hicon_libgtk_only"
+              introspectable="0">
+      <return-value>
+        <type c:type="HICON"/>
+      </return-value>
+      <parameters>
+        <parameter name="pixbuf" transfer-ownership="none">
+          <type name="GdkPixbuf.Pixbuf" c:type="GdkPixbuf*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="win32_selection_add_targets"
+              c:identifier="gdk_win32_selection_add_targets">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="owner" transfer-ownership="none">
+          <type name="Gdk.Window" c:type="GdkWindow*"/>
+        </parameter>
+        <parameter name="selection" transfer-ownership="none">
+          <type name="Gdk.Atom" c:type="GdkAtom"/>
+        </parameter>
+        <parameter name="n_targets" transfer-ownership="none">
+          <type name="gint" c:type="gint"/>
+        </parameter>
+        <parameter name="targets" transfer-ownership="none">
+          <type name="Gdk.Atom" c:type="GdkAtom*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="win32_set_modal_dialog_libgtk_only"
+              c:identifier="gdk_win32_set_modal_dialog_libgtk_only"
+              introspectable="0">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <type c:type="HWND"/>
+        </parameter>
+      </parameters>
+    </function>
+  </namespace>
+</repository>

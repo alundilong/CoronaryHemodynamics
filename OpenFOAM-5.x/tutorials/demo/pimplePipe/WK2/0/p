@@ -1,0 +1,59 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  5                                     |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      p;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    walls
+    {
+        type            zeroGradient;
+    }
+    inlet
+    {
+        type            zeroGradient;
+    }
+    outlet
+    {
+        type            bloodFlowOutletPressure;
+        value           uniform 0;
+        modelName       WindKessel;
+        cycle           off;
+        WindKesselCoeffs
+        {
+            elements        twoElements;
+            twoElementsCoeffs
+            {
+                flowRateModel   realTimeFlowRate;
+                realTimeFlowRateCoeffs
+                {
+                    scaling         constant 1;
+                }
+                Rd              10.0;
+                C               0.01;
+                nSteps          1000;
+                solver          RKF45;
+            }
+        }
+        refValue        uniform 0;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+    }
+}
+
+// ************************************************************************* //

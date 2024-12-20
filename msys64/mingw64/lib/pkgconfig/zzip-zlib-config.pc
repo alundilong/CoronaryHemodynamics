@@ -1,0 +1,8 @@
+zlib_libs=-L/mingw64/lib -lz
+zlib_cflags=-I/mingw64/include
+ 
+Name: zzip-zlib-config
+Version: 
+Description: ZLib Config (for ZZipLib)
+Libs: ${zlib_libs}
+Cflags: ${zlib_cflags}

@@ -1,0 +1,12 @@
+prefix=/mingw64
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+
+Name: libxslt
+Version: 1.1.32
+Description: XSLT library version 2.
+Requires: libxml-2.0
+Libs: -L${libdir} -lxslt -L/mingw64/lib -lxml2 -L/mingw64/lib -lz -L/mingw64/lib -llzma -liconv -lws2_32  
+Cflags: -I${includedir}

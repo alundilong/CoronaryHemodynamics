@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="flattened-view" xml:lang="es">
+<info>
+  <title type="sort">2</title>
+  <link type="guide" xref="index#vc-mode"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Mustieles</mal:name>
+      <mal:email>daniel.mustieles@gmail.com</mal:email>
+      <mal:years>2014 - 2015</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Facundo Darío Illanes</mal:name>
+      <mal:email>fdillanes@gmail.com</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  </info>
+<title>Vista aplanada</title>
+
+<p>Cuando esté viendo carpetas grandes, puede estar interesado en solo unos pocos archivos entre los miles que estén en la carpeta. Por esta razón, <app>Meld</app> incluye la <em>vista aplanada</em> de una carpeta; solo se muestran los archivos que no se hayan filtrado (por ejemplo, mediante <link xref="vc-mode#vc-state-filtering"/>), y la jerarquía de la carpeta se elimina, con las direcciones de los archivos mostrados en la columna <em>Ubicación</em>.</p>
+
+<p>Se puede activar o desactivar esta vista aplanada seleccionando el menú <guiseq><gui style="menu">Vista</gui><gui style="menuitem">Aplanar</gui></guiseq>, o pulsando en el botón <gui style="button">Aplanar</gui> en la barra de herramientas.</p>
+</page>

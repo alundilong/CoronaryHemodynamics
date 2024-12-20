@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="resolving-conflicts" xml:lang="cs">
+<info>
+  <title type="sort">2</title>
+  <link type="guide" xref="index#vc-mode"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+</info>
+<title>Řešení konfliktů při slučování</title>
+
+<p>Jednou z nejlepších věcí na aplikaci <app>Meld</app> je řešení konfliktů, které vznikají při slučování rozdílných větví.</p>
+
+<p>
+For example, when using <app>Git</app>, <cmd>git mergetool</cmd> will start
+a 'merge helper'; <app>Meld</app> is one such helper. If you want to make
+<app>git mergetool</app> use <app>Meld</app> by default, you can add
+</p>
+<code>
+[merge]
+    tool = meld
+</code>
+<p>do souboru <file>.git/gitconfig</file>. Podrobnější informace viz příručka ke <app>git mergetool</app>.</p>
+
+</page>

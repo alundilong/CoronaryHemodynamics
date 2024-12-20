@@ -1,0 +1,11 @@
+prefix=/mingw64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/
+
+Name: gd
+Description: GD graphics library
+Version: 2.2
+Cflags: -I${includedir}
+Libs.private: -L/mingw64/lib  -lz -lpng -lfreetype -lfontconfig -liconv -ljpeg /mingw64/lib/libimagequant.a -lXpm -ltiff -lwebp
+Libs: -L${libdir} -lgd

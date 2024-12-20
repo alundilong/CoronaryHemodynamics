@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="vc-supported" xml:lang="es">
+<info>
+  <title type="sort">3</title>
+  <link type="guide" xref="index#vc-mode"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Mustieles</mal:name>
+      <mal:email>daniel.mustieles@gmail.com</mal:email>
+      <mal:years>2014 - 2015</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Facundo Darío Illanes</mal:name>
+      <mal:email>fdillanes@gmail.com</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  </info>
+<title>Sistemas de control de versiones controlados</title>
+
+<p><app>Meld</app> soporta un amplio rango de sistemas de control de versiones:</p>
+
+<list>
+  <item><p>Bazaar</p></item>
+  <item><p>Darcs</p></item>
+  <item><p>Git</p></item>
+  <item><p>Mercurial</p></item>
+  <item><p>SVN</p></item>
+</list>
+
+<p>Algunos sistemas de control de versiones menos comunes o configuraciones inusuales pueden no estar probadas apropiadamente; por favor informe de los errores de soporte de cualquier control de versiones en <link href="https://bugzilla.gnome.org/">GNOME bugzilla</link>.</p>
+
+</page>

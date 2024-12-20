@@ -1,0 +1,84 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  5                                     |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      casePreparerDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// * * * * * * * * * * * * * * * * Mesh * * * * * * * * * * * * * * * * * * * //
+
+debug       off;
+
+mesh
+{
+    unify   off; 					    // the following stls are already in good shapes
+
+    surfaceFeatureExtract off;
+    refinementRegionMethod ((0.5e-3 4)(2.0e-3 3));
+    capBoxRefinement on;
+
+    //- cfMeshMode
+    cfMeshMode on;
+    #include "MeshingInfo";
+    combinedSurfaceFileName "surface.stl";
+
+    jointBoxRefinement yes;
+    glueBoxRefinement no;
+
+    stlQuality
+    {
+        minLength 1e-10; 
+        minQuality 1e-15;
+    }
+
+    boundaryFiles               
+    (
+        #include "GeometryFiles"
+    );
+
+    scalingFactor                 1e-3;
+    backgroundBox
+    {
+        dx          4.0e-3;
+        dy          4.0e-3;
+        dz          4.0e-3;
+        expandRatio 0.1;
+    }
+}
+
+// * * * * * * * * * * * * * * * * Fields * * * * * * * * * * * * * * * * * * * //
+fields
+{
+
+    transient                   off;
+
+    autoMode                    on;
+
+    #include "PatientInfo"
+    
+    inflowProfile
+    {
+         outOfBounds     repeat;
+         file            "constant/scaled_pulse_flow.flow";
+    }
+    
+    coronaryLeftCapantanceTotal 3.6e-09;
+    coronaryRightCapantanceTotal 2.5e-09;
+    CaCcorRatio 0.11;
+    RaRcorRatio 0.32;
+    RamicroRcorRatio 0.52;
+
+    windKesselAortaC 1e-09;
+
+}
+

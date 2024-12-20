@@ -1,0 +1,142 @@
+solid Visualization Toolkit generated SLA File
+ facet normal 0.797235 0.114519 -0.592707
+  outer loop
+   vertex 58.8631 35.2282 1910.49
+   vertex 58.8355 35.2474 1910.46
+   vertex 58.8731 35.2423 1910.5
+  endloop
+ endfacet
+ facet normal 0.797017 0.119369 -0.592043
+  outer loop
+   vertex 58.8731 35.2423 1910.5
+   vertex 58.8355 35.2474 1910.46
+   vertex 58.8832 35.2736 1910.52
+  endloop
+ endfacet
+ facet normal 0.797021 0.118478 -0.592217
+  outer loop
+   vertex 58.6538 36.1297 1910.39
+   vertex 58.7538 36.1386 1910.52
+   vertex 58.6258 36.0668 1910.34
+  endloop
+ endfacet
+ facet normal 0.797824 0.118187 -0.591193
+  outer loop
+   vertex 58.9724 35.8883 1910.77
+   vertex 58.9857 35.7963 1910.77
+   vertex 58.9298 35.9687 1910.73
+  endloop
+ endfacet
+ facet normal 0.797457 0.117939 -0.591738
+  outer loop
+   vertex 58.9298 35.9687 1910.73
+   vertex 58.9857 35.7963 1910.77
+   vertex 58.8071 36.1069 1910.59
+  endloop
+ endfacet
+ facet normal 0.797215 0.117571 -0.592136
+  outer loop
+   vertex 58.9857 35.7963 1910.77
+   vertex 59.0137 35.5659 1910.76
+   vertex 58.8071 36.1069 1910.59
+  endloop
+ endfacet
+ facet normal 0.797262 0.117591 -0.592069
+  outer loop
+   vertex 58.5185 35.5292 1910.08
+   vertex 58.4734 35.7053 1910.06
+   vertex 58.5692 35.4499 1910.14
+  endloop
+ endfacet
+ facet normal 0.796685 0.118476 -0.592668
+  outer loop
+   vertex 58.5023 35.8934 1910.14
+   vertex 58.5623 35.9874 1910.23
+   vertex 58.4699 35.7461 1910.06
+  endloop
+ endfacet
+ facet normal 0.797418 0.117958 -0.591786
+  outer loop
+   vertex 58.8355 35.2474 1910.46
+   vertex 58.6707 35.3128 1910.25
+   vertex 58.8832 35.2736 1910.52
+  endloop
+ endfacet
+ facet normal 0.797434 0.117382 -0.591879
+  outer loop
+   vertex 58.8832 35.2736 1910.52
+   vertex 58.6707 35.3128 1910.25
+   vertex 59.0038 35.4824 1910.73
+  endloop
+ endfacet
+ facet normal 0.797247 0.118073 -0.591993
+  outer loop
+   vertex 59.0038 35.4824 1910.73
+   vertex 58.6707 35.3128 1910.25
+   vertex 59.0137 35.5659 1910.76
+  endloop
+ endfacet
+ facet normal 0.797373 0.117707 -0.591896
+  outer loop
+   vertex 59.0137 35.5659 1910.76
+   vertex 58.6707 35.3128 1910.25
+   vertex 58.8071 36.1069 1910.59
+  endloop
+ endfacet
+ facet normal 0.797223 0.117558 -0.592127
+  outer loop
+   vertex 58.5692 35.4499 1910.14
+   vertex 58.4734 35.7053 1910.06
+   vertex 58.636 35.3588 1910.21
+  endloop
+ endfacet
+ facet normal 0.797418 0.117097 -0.591957
+  outer loop
+   vertex 58.7538 36.1386 1910.52
+   vertex 58.7815 36.1284 1910.56
+   vertex 58.6258 36.0668 1910.34
+  endloop
+ endfacet
+ facet normal 0.797574 0.116423 -0.59188
+  outer loop
+   vertex 58.7815 36.1284 1910.56
+   vertex 58.8071 36.1069 1910.59
+   vertex 58.6258 36.0668 1910.34
+  endloop
+ endfacet
+ facet normal 0.797349 0.117723 -0.591925
+  outer loop
+   vertex 58.8071 36.1069 1910.59
+   vertex 58.6707 35.3128 1910.25
+   vertex 58.6258 36.0668 1910.34
+  endloop
+ endfacet
+ facet normal 0.797401 0.117718 -0.591857
+  outer loop
+   vertex 58.6258 36.0668 1910.34
+   vertex 58.6707 35.3128 1910.25
+   vertex 58.5623 35.9874 1910.23
+  endloop
+ endfacet
+ facet normal 0.797339 0.117707 -0.591942
+  outer loop
+   vertex 58.5623 35.9874 1910.23
+   vertex 58.6707 35.3128 1910.25
+   vertex 58.4699 35.7461 1910.06
+  endloop
+ endfacet
+ facet normal 0.797203 0.117535 -0.592159
+  outer loop
+   vertex 58.4734 35.7053 1910.06
+   vertex 58.4699 35.7461 1910.06
+   vertex 58.636 35.3588 1910.21
+  endloop
+ endfacet
+ facet normal 0.79705 0.11738 -0.592396
+  outer loop
+   vertex 58.6707 35.3128 1910.25
+   vertex 58.636 35.3588 1910.21
+   vertex 58.4699 35.7461 1910.06
+  endloop
+ endfacet
+endsolid

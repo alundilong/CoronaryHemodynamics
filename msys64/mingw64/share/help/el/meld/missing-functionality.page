@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="missing-functionality" xml:lang="el">
+<info>
+  <title type="sort">1</title>
+  <link type="guide" xref="index#advanced"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Δημήτρης Σπίγγος</mal:name>
+      <mal:email>dmtrs32@gmail.com</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  </info>
+<title>Πράγματα που δεν κάνει το <app>Meld</app></title>
+
+<p>Έχετε ποτέ ξοδέψει μισή ώρα ψάχνοντας μια εφαρμογή προσπαθώντας να βρείτε πώς να κάνετε κάτι, θεωρώντας ότι <em>σίγουρα</em> πρέπει να υπάρχει μια επιλογή για αυτό;</p>
+
+<p>Αυτή η ενότητα εμφανίζει λίγα από τα συνηθισμένα πράγματα που το <app>Meld</app> <em>δεν</em> κάνει, είτε ως μια σκόπιμη επιλογή, ή επειδή απλά δεν είχαμε τον χρόνο.</p>
+
+<section id="missing-change-fixed-alignment">
+<title>Στοίχιση αλλαγών προσθέτοντας γραμμές</title>
+<p>Όταν το <app>Meld</app> εμφανίζει διαφορές μεταξύ αρχείων, εμφανίζει και τα δύο αρχεία όπως θα εμφανιζόντουσαν σε έναν κανονικό επεξεργαστή κειμένου. <em>Δεν</em> εισάγει πρόσθετες γραμμές έτσι ώστε στα αριστερά και στα δεξιά μιας συγκεκριμένης αλλαγής να έχει το ίδιο μέγεθος. Δεν υπάρχει καμιά επιλογή για να το κάνετε αυτό.</p>
+</section>
+
+
+</page>

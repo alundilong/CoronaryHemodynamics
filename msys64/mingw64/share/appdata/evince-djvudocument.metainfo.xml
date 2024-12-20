@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="addon">
+  <id>evince-djvudocument</id>
+  <extends>evince.desktop</extends>
+  <name>DjVu Documents</name>
+  <name xml:lang="af">DjVu-dokumente</name>
+  <name xml:lang="an">Documento DjVu</name>
+  <name xml:lang="ar">مستندات DjVu</name>
+  <name xml:lang="as">DjVu দস্তাবেজসমূহ</name>
+  <name xml:lang="ast">Documentos DjVu</name>
+  <name xml:lang="be">DjVu-дакументы</name>
+  <name xml:lang="bg">Документи DjVu</name>
+  <name xml:lang="bn">Djvu নথি</name>
+  <name xml:lang="bn_IN">DjVu ডকুমেন্ট</name>
+  <name xml:lang="bs">DjVu dokumenti</name>
+  <name xml:lang="ca">Documents DjVu</name>
+  <name xml:lang="ca@valencia">Documents DjVu</name>
+  <name xml:lang="cs">Dokumenty DjVu</name>
+  <name xml:lang="da">DjVu-dokumenter</name>
+  <name xml:lang="de">DjVu-Dokumente</name>
+  <name xml:lang="el">Έγγραφα DjVu</name>
+  <name xml:lang="en@shaw">DjVu 𐑛𐑪𐑒𐑿𐑥𐑩𐑯𐑑𐑕</name>
+  <name xml:lang="en_CA">DjVu Documents</name>
+  <name xml:lang="en_GB">DjVu Documents</name>
+  <name xml:lang="eo">DjVu-dokumentoj</name>
+  <name xml:lang="es">Documentos DjVu</name>
+  <name xml:lang="et">DjVu-dokumendid</name>
+  <name xml:lang="eu">DjVu dokumentuak</name>
+  <name xml:lang="fa">سندهای DjVu</name>
+  <name xml:lang="fi">DjVu-asiakirjat</name>
+  <name xml:lang="fr">Documents DjVu</name>
+  <name xml:lang="fur">Documents DjVu</name>
+  <name xml:lang="ga">Cáipéisí DjVu</name>
+  <name xml:lang="gd">Sgrìobhainnean DjVu</name>
+  <name xml:lang="gl">Documentos DjVu</name>
+  <name xml:lang="gu">DjVu દસ્તાવેજો</name>
+  <name xml:lang="he">מסמכי DjVu</name>
+  <name xml:lang="hi">DjVu दस्तावेज़</name>
+  <name xml:lang="hr">DjVu dokumenti</name>
+  <name xml:lang="hu">DjVu-dokumentumok</name>
+  <name xml:lang="id">Dokumen DjVu</name>
+  <name xml:lang="is">DjVu skjöl</name>
+  <name xml:lang="it">Documenti DjVu</name>
+  <name xml:lang="ja">Djvu ドキュメント</name>
+  <name xml:lang="kk">DjVu құжаттары</name>
+  <name xml:lang="km">ឯកសារ DjVu</name>
+  <name xml:lang="kn">Djvu ದಸ್ತಾವೇಜುಗಳು</name>
+  <name xml:lang="ko">DjVu 문서</name>
+  <name xml:lang="ku">Belgeyên DjVu</name>
+  <name xml:lang="lt">DjVu dokumentai</name>
+  <name xml:lang="lv">DjVu dokumenti</name>
+  <name xml:lang="mk">DjVu документи</name>
+  <name xml:lang="ml">Djvu രേഖകള്‍</name>
+  <name xml:lang="mn">DjVu баримт бичиг</name>
+  <name xml:lang="mr">DjVu दस्तऐवज</name>
+  <name xml:lang="ms">Dokument-dokumen DjVu</name>
+  <name xml:lang="my">DjVu ဖိုင်များ</name>
+  <name xml:lang="nb">DjVu-dokumenter</name>
+  <name xml:lang="ne">DjVuकागजात</name>
+  <name xml:lang="nl">DjVu-documenten</name>
+  <name xml:lang="nn">DjVu-dokument</name>
+  <name xml:lang="oc">Documents DjVu</name>
+  <name xml:lang="or">DjVu ଦଲିଲଗୁଡ଼ିକ</name>
+  <name xml:lang="pa">DjVu ਦਸਤਾਵੇਜ਼</name>
+  <name xml:lang="pl">Dokumenty DjVu</name>
+  <name xml:lang="pt">Documentos DjVu</name>
+  <name xml:lang="pt_BR">Documentos DjVu</name>
+  <name xml:lang="ro">Documente DjVu</name>
+  <name xml:lang="ru">Документы формата DjVu</name>
+  <name xml:lang="sk">Dokumenty typu DjVu</name>
+  <name xml:lang="sl">Djvu dokumenti</name>
+  <name xml:lang="sr">ДјВу документи</name>
+  <name xml:lang="sr@latin">DjVu dokumenti</name>
+  <name xml:lang="sv">DjVu-dokument</name>
+  <name xml:lang="ta">Djvu ஆவணங்கள்</name>
+  <name xml:lang="te">Djvu పత్రములు</name>
+  <name xml:lang="tg">Ҳуҷҷатҳои DjVu</name>
+  <name xml:lang="th">เอกสาร DjVu</name>
+  <name xml:lang="tr">DjVu Belgeleri</name>
+  <name xml:lang="ug">DjVu پۈتۈكى</name>
+  <name xml:lang="uk">Документи DjVu</name>
+  <name xml:lang="vi">Tài liệu dạng DjVu</name>
+  <name xml:lang="zh_CN">DjVu 文档</name>
+  <name xml:lang="zh_HK">DjVu 文件</name>
+  <name xml:lang="zh_TW">DjVu 文件</name>
+  <name xml:lang="zu">Amadokhumende we-DjVu</name>
+  <summary>Adds support for reading DjVu documents</summary>
+  <summary xml:lang="an">Anyade capacidat ta leyer documentos DjVu</summary>
+  <summary xml:lang="ar">يضيف دعم قراءة مستندات DjVu</summary>
+  <summary xml:lang="as">DjVu দস্তাবেজসমূহ পঢ়াৰ সমৰ্থন যোগ কৰিছে</summary>
+  <summary xml:lang="be">Дадае падтрымку прагляду DjVu дакументаў</summary>
+  <summary xml:lang="bg">Добавя поддръжка за четене на документи DjVu</summary>
+  <summary xml:lang="bn_IN">DjVu নথিপত্র পড়ার জন্য সহায়তা যোগ করে</summary>
+  <summary xml:lang="bs">Dodaje podršku za čitanje DjVu dokumenata</summary>
+  <summary xml:lang="ca">Permet la lectura de documents DjVu</summary>
+  <summary xml:lang="ca@valencia">Permet la lectura de documents DjVu</summary>
+  <summary xml:lang="cs">Přidává podporu pro čtení dokumentů DjVu</summary>
+  <summary xml:lang="da">Tilføjer understøttelse af DjVu-dokumenter</summary>
+  <summary xml:lang="de">Fügt Unterstützung für das Lesen von DjVu-Dokumenten hinzu</summary>
+  <summary xml:lang="el">Προσθέτει υποστήριξη για την ανάγνωση εγγράφων DjVu</summary>
+  <summary xml:lang="en_GB">Adds support for reading DjVu documents</summary>
+  <summary xml:lang="eo">Aldonas subtenon por legi DjVu-dokumentojn</summary>
+  <summary xml:lang="es">Añade soporte para leer documentos DjVu</summary>
+  <summary xml:lang="eu">DjVu dokumentuak irakurtzeko euskarria gehitzen du</summary>
+  <summary xml:lang="fa">پشتیبانی از خواندن سندهای DjVu را اضافه می‌کند</summary>
+  <summary xml:lang="fi">Lisää tuen DjVu-asiakirjojen lukemiselle</summary>
+  <summary xml:lang="fr">Ajoute la prise en charge de la lecture des documents Djvu</summary>
+  <summary xml:lang="fur">Al zonte il supuart par lei i documents DjVu</summary>
+  <summary xml:lang="gd">Cuiridh seo taic gus sgrìobhainnean DjVu a leughadh ris</summary>
+  <summary xml:lang="gl">Engade compatibilidade para ler documentos DjVu</summary>
+  <summary xml:lang="gu">DjVu દસ્તાવેજોને વાંચવા માટે આધારને ઉમેરે છે</summary>
+  <summary xml:lang="he">הוספת תמיכה לקריאת מסמכי DjVu</summary>
+  <summary xml:lang="hi">DjVu दस्तावेज़ पढ़ने के लिए समर्थन देता है</summary>
+  <summary xml:lang="hr">Dodaje podršku za čitanje DjVu dokumenata</summary>
+  <summary xml:lang="hu">Támogatást nyújt DjVu dokumentumok olvasásához</summary>
+  <summary xml:lang="id">Menambahkan dukungan untuk membaca dokumen DjVu</summary>
+  <summary xml:lang="is">Bætir við stuðningi til lestrar á DjVu skjölum</summary>
+  <summary xml:lang="it">Aggiunge il supporto per la lettura dei documenti DjVu</summary>
+  <summary xml:lang="ja">DjVu ドキュメントの読み込みサポートを追加する</summary>
+  <summary xml:lang="kk">DjVu құжаттарын оқу мүмкіндігін қосады</summary>
+  <summary xml:lang="kn">DjVu ದಸ್ತಾವೇಜುಗಳನ್ನು ಓದಲು ಬೆಂಬಲವನ್ನು ಸೇರಿಸುತ್ತದೆ</summary>
+  <summary xml:lang="ko">DjVu 문서를 읽는 기능을 추가합니다</summary>
+  <summary xml:lang="lt">Prideda DjVu dokumentų palaikymą</summary>
+  <summary xml:lang="lv">Pievieno atbalstu DjVu dokumentu lasīšanai</summary>
+  <summary xml:lang="mr">DjVu दस्तऐवज वाचण्याकरिता समर्थन समाविष्ट करते</summary>
+  <summary xml:lang="nb">Legger til støtte for å lese DjVu-dokumenter</summary>
+  <summary xml:lang="ne">DjVu कागजात पढ्न समर्थन थप्नुहोस्</summary>
+  <summary xml:lang="nl">Voegt ondersteuning toe voor het lezen van DjVu-documenten</summary>
+  <summary xml:lang="oc">Apond la presa en carga de la lectura dels documents Djvu</summary>
+  <summary xml:lang="pa">DjVu ਦਸਤਾਵੇਜ਼ ਪੜ੍ਹਨ ਲਈ ਸਹਾਇਤਾ ਜੋੜਦੀ ਹੈ</summary>
+  <summary xml:lang="pl">Dodaje obsługę dokumentów w formacie DjVu</summary>
+  <summary xml:lang="pt">Adiciona suporte para ler documentos DjVu</summary>
+  <summary xml:lang="pt_BR">Adiciona suporte para leitura de documentos DjVu</summary>
+  <summary xml:lang="ro">Adaugă suport pentru citirea documenteleor DjVu</summary>
+  <summary xml:lang="ru">Добавляет поддержку для чтения документов в формате DjVu</summary>
+  <summary xml:lang="sk">Pridá podporu na čítanie dokumentov typu DjVu</summary>
+  <summary xml:lang="sl">Doda podporo za branje datotek DjVu</summary>
+  <summary xml:lang="sr">Додајте подршку за читање ДјВу докумената</summary>
+  <summary xml:lang="sr@latin">Dodajte podršku za čitanje DjVu dokumenata</summary>
+  <summary xml:lang="sv">Lägger till stöd för att läsa DjVu-dokument</summary>
+  <summary xml:lang="ta">DjVu ஆவணங்களைப் படிப்பதற்கான ஆதரவைச் சேர்க்கிறது</summary>
+  <summary xml:lang="te">DjVu పత్రములు చదువుటకు తోడ్పాటు జతచేయును</summary>
+  <summary xml:lang="tg">Барои хониши ҳуҷҷатҳои DjVu дастгириро илова мекунад</summary>
+  <summary xml:lang="th">เพิ่มการรองรับการอ่านเอกสาร DjVu</summary>
+  <summary xml:lang="tr">DjVu belgelerini görüntüleme desteği ekler</summary>
+  <summary xml:lang="uk">Додає підтримування читання документів DjVu</summary>
+  <summary xml:lang="vi">Thêm hỗ trợ đọc các tài liệu DjVu</summary>
+  <summary xml:lang="zh_CN">增加支持阅读 DjVu 文档的功能</summary>
+  <summary xml:lang="zh_HK">加入讀取 DjVu 文件的支援</summary>
+  <summary xml:lang="zh_TW">加入讀取 DjVu 文件的支援</summary>
+  <mimetypes>
+    <mimetype>image/vnd.djvu+multipage</mimetype>
+    <mimetype>application/x-ext-djv</mimetype>
+    <mimetype>application/x-ext-djvu</mimetype>
+  </mimetypes>
+  <kudos>
+    <kudo>ModernToolkit</kudo>
+  </kudos>
+  <url type="homepage">https://wiki.gnome.org/Apps/Evince/SupportedDocumentFormats</url>
+  <metadata_license>GPL-2.0+</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <updatecontact>carlosgc@gnome.org</updatecontact>
+</component>

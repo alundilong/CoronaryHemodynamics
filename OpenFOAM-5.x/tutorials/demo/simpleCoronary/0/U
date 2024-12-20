@@ -1,0 +1,137 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  5.x                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+/*   Windows 32 and 64 bit porting by blueCAPE: http://www.bluecape.com.pt   *\
+|  Based on Windows porting (2.0.x v4) by Symscape: http://www.symscape.com   |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    location    "0";
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [ 0 1 -1 0 0 0 0 ];
+
+internalField   uniform ( 0 0 0 );
+
+boundaryField
+{
+    Wall_Aorta
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    Cap_LAD_D1
+    {
+        type            inletOutlet;
+        value           uniform ( 0 0 0 );
+        inletValue      uniform ( 0 0 0 );
+    }
+    Cap_LAD_D2
+    {
+        type            inletOutlet;
+        value           uniform ( 0 0 0 );
+        inletValue      uniform ( 0 0 0 );
+    }
+    Cap_LAD_D3
+    {
+        type            inletOutlet;
+        value           uniform ( 0 0 0 );
+        inletValue      uniform ( 0 0 0 );
+    }
+    Cap_LAD_D4
+    {
+        type            inletOutlet;
+        value           uniform ( 0 0 0 );
+        inletValue      uniform ( 0 0 0 );
+    }
+    Cap_LAD_LAD
+    {
+        type            inletOutlet;
+        value           uniform ( 0 0 0 );
+        inletValue      uniform ( 0 0 0 );
+    }
+    Cap_LAD_RI
+    {
+        type            inletOutlet;
+        value           uniform ( 0 0 0 );
+        inletValue      uniform ( 0 0 0 );
+    }
+    Cap_LAD_S1
+    {
+        type            inletOutlet;
+        value           uniform ( 0 0 0 );
+        inletValue      uniform ( 0 0 0 );
+    }
+    Cap_LCX_LCx
+    {
+        type            inletOutlet;
+        value           uniform ( 0 0 0 );
+        inletValue      uniform ( 0 0 0 );
+    }
+    Cap_RCA_R_PDA
+    {
+        type            inletOutlet;
+        value           uniform ( 0 0 0 );
+        inletValue      uniform ( 0 0 0 );
+    }
+    Cap_RCA_R_PDA2
+    {
+        type            inletOutlet;
+        value           uniform ( 0 0 0 );
+        inletValue      uniform ( 0 0 0 );
+    }
+    Cap_RCA_R_PLB
+    {
+        type            inletOutlet;
+        value           uniform ( 0 0 0 );
+        inletValue      uniform ( 0 0 0 );
+    }
+    Cap_RCA_R_PLB2
+    {
+        type            inletOutlet;
+        value           uniform ( 0 0 0 );
+        inletValue      uniform ( 0 0 0 );
+    }
+    Cap_RCA_R_PLB3
+    {
+        type            inletOutlet;
+        value           uniform ( 0 0 0 );
+        inletValue      uniform ( 0 0 0 );
+    }
+    Cap_RCA_RA1
+    {
+        type            inletOutlet;
+        value           uniform ( 0 0 0 );
+        inletValue      uniform ( 0 0 0 );
+    }
+    Cap_Aorta_Inlet
+    {
+        type            cardiovascularFlowRateInletVelocity;
+        value           uniform ( 0 0 0 );
+        flowRateModel   rawDataConstantFlowRate;
+        rawDataConstantFlowRateCoeffs
+        {
+            outOfBounds     repeat;
+            file            "constant/scaled_pulse_flow.flow";
+            scaling         constant 0.400448;
+        }
+    }
+    Cap_Aorta_Outlet
+    {
+        type            inletOutlet;
+        value           uniform ( 0 0 0 );
+        inletValue      uniform ( 0 0 0 );
+    }
+}
+
+
+// ************************************************************************* //

@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>libcerf - Complex error, Faddeeva, Dawson, and Voigt functions</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body>
+
+
+
+
+
+<link rel="stylesheet" href="podstyle.css" type="text/css" />
+
+<h1 id="NAME">NAME</h1>
+
+<p>cerfcx, erfcx - underflow-compensated complementary error function</p>
+
+<h1 id="SYNOPSIS">SYNOPSIS</h1>
+
+<p><b>#include &lt;cerf.h</b>&gt;</p>
+
+<p><b>double _Complex cerfcx ( double _Complex z );</b></p>
+
+<p><b>double erfcx ( double x );</b></p>
+
+<h1 id="DESCRIPTION">DESCRIPTION</h1>
+
+<p>The function <b>cerfcx</b> is an underflow-compensated variant of the complex error function: erfcx(z) = exp(z^2) erfc(z).</p>
+
+<p>The function <b>erfcx</b> takes a real argument and returns a real result.</p>
+
+<h1 id="REFERENCES">REFERENCES</h1>
+
+<p>The implementation of <b>cerfcx</b> is a thin wrapper around Faddeeva&#39;s function <b>w_of_z</b>.</p>
+
+<p>The implementation of <b>ercx</b> is self-contained, and improves upon the SLATEC DERFC function (or an erfcx function derived therefrom) or Cody&#39;s CALERF function (from netlib.org/specfun), while retaining near machine precision in accuracy.</p>
+
+<h1 id="SEE-ALSO">SEE ALSO</h1>
+
+<p>Related complex error functions in liberfc: <b>w_of_z</b>(3), <b>dawson</b>(3), <b>voigt</b>(3), <b>cerf</b>(3), <b>erfi</b>(3).</p>
+
+<p>The real error function comes with recent versions of glibc, as requested by the C99 standard: <b>erf</b>(3)</p>
+
+<p>Homepage: http://apps.jcns.fz-juelich.de/libcerf</p>
+
+<h1 id="AUTHORS">AUTHORS</h1>
+
+<p>Steven G. Johnson, http://math.mit.edu/~stevenj, Massachusetts Institute of Technology, researched the numerics, and implemented the Faddeeva function.</p>
+
+<p>Joachim Wuttke &lt;j.wuttke@fz-juelich.de&gt;, Forschungszentrum Juelich, reorganized the code into a library, and wrote this man page.</p>
+
+<p>Please report bugs to the authors.</p>
+
+<h1 id="COPYING">COPYING</h1>
+
+<p>Copyright (c) 2012 Massachusetts Institute of Technology</p>
+
+<p>Copyright (c) 2013 Forschungszentrum Juelich GmbH</p>
+
+<p>Software: MIT License.</p>
+
+<p>This documentation: Creative Commons Attribution Share Alike.</p>
+
+
+</body>
+
+</html>
+
+

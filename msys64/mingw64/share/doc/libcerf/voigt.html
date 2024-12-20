@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>libcerf - Complex error, Faddeeva, Dawson, and Voigt functions</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body>
+
+
+
+
+
+<link rel="stylesheet" href="podstyle.css" type="text/css" />
+
+<h1 id="NAME">NAME</h1>
+
+<p>voigt - Voigt&#39;s function, convolution of Gaussian and Lorentzian</p>
+
+<h1 id="SYNOPSIS">SYNOPSIS</h1>
+
+<p><b>#include &lt;cerf.h</b>&gt;</p>
+
+<p><b>double voigt ( double x, double sigma, double gamma );</b></p>
+
+<h1 id="DESCRIPTION">DESCRIPTION</h1>
+
+<p>The function <b>voigt</b> returns Voigt&#39;s convolution</p>
+
+<pre><code>  voigt(x,sigma,gamma) = integral G(t,sigma) L(x-t,gamma) dt</code></pre>
+
+<p>of a Gaussian</p>
+
+<pre><code>  G(x,sigma) = 1/sqrt(2*pi)/|sigma| * exp(-x^2/2/sigma^2)</code></pre>
+
+<p>and a Lorentzian</p>
+
+<pre><code>  L(x,gamma) = |gamma| / pi / ( x^2 + gamma^2 ),</code></pre>
+
+<p>with the integral extending from -infinity to +infinity.</p>
+
+<p>If sigma=0, L(x,gamma) is returned. Conversely, if gamma=0, G(x,sigma) is returned.</p>
+
+<p>If sigma=gamma=0, the return value is Inf for x=0, and 0 for all other x. It is advisable to test input arguments to exclude this irregular case.</p>
+
+<h1 id="REFERENCES">REFERENCES</h1>
+
+<p>Formula (7.4.13) in Abramowitz &amp; Stegun (1964) relates Voigt&#39;s convolution integral to Faddeeva&#39;s function <b>w_of_z</b>, upon which this implementation is based:</p>
+
+<pre><code>   voigt(x,sigma,gamma) = Re[w(z)] / sqrt(2*pi) / |sigma|</code></pre>
+
+<p>with</p>
+
+<pre><code>   z = (x+i*|gamma|) / sqrt(2) / |sigma|.</code></pre>
+
+<h1 id="SEE-ALSO">SEE ALSO</h1>
+
+<p>Related complex error functions: <b>w_of_z(3)</b>, <b>dawson(3)</b>, <b>cerf(3)</b>, <b>erfcx(3)</b>, <b>erfi(3)</b>.</p>
+
+<p>Homepage: http://apps.jcns.fz-juelich.de/libcerf</p>
+
+<h1 id="AUTHORS">AUTHORS</h1>
+
+<p>Joachim Wuttke &lt;j.wuttke@fz-juelich.de&gt;, Forschungszentrum Juelich, based on the w_of_z implementation by Steven G. Johnson, http://math.mit.edu/~stevenj, Massachusetts Institute of Technology.</p>
+
+<p>Please report bugs to the authors.</p>
+
+<h1 id="COPYING">COPYING</h1>
+
+<p>Copyright (c) 2013 Forschungszentrum Juelich GmbH</p>
+
+<p>Software: MIT License.</p>
+
+<p>This documentation: Creative Commons Attribution Share Alike.</p>
+
+
+</body>
+
+</html>
+
+

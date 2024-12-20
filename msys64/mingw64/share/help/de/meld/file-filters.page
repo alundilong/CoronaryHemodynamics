@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="file-filters" xml:lang="de">
+<info>
+  <title type="sort">2</title>
+  <link type="guide" xref="index#folder-mode"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2009, 2016</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Benjamin Steinwender</mal:name>
+      <mal:email>b@stbe.at</mal:email>
+      <mal:years>2014-2015</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Christian Kirbach</mal:name>
+      <mal:email>christian.kirbach@gmail.com</mal:email>
+      <mal:years>2014, 2016</mal:years>
+    </mal:credit>
+  </info>
+<title>Dateien filtern</title>
+
+<p>Wenn Sie Ordner vergleichen, möchten Sie eventuell einige Dateien ignorieren. Zum Beispiel möchten Sie nur Dateien sehen, die in beiden Ordnern unterschiedlich sind und jede Dateien ignorieren, die gleich sind oder sich nur in einem Ordner befinden. Alternativ können Sie alle Dateien in Ihrem <file>.git</file>-Ordner ignorieren oder alle Bilder.</p>
+
+<p><app>Meld</app> besitzt verschiedene Einstellungsmöglichkeiten, um festzulegen, welche Dateien und Unterschiede angezeigt werden sollen. Sie können Filter basierend auf <link xref="#file-state-filter">Unterschiede einer Datei in verschiedenen Ordnern</link> oder <link xref="#file-name-filter">Datei- und Ordnernamen</link> anwenden. Sie können <app>Meld</app> auch anweisen, bei Dateinamen die <link xref="#file-case-filter">Groß-/Kleinschreibung zu ignorieren</link>. Außerdem können Sie <link xref="text-filters">Text-Filter</link> verwenden, um festzulegen welche Ordner und Dateien der Vergleich sieht.</p>
+
+<note style="important">
+  <p>Alle definierten <link xref="text-filters">Textfilter</link> werden beim Ordnervergleich <em>automatisch angewendet</em>. Dateien, die nach der Anwendung aller Textfilter noch immer identisch sind, werden nicht hervorgehoben, sondern in Kursivschrift angezeigt.</p>
+</note>
+
+
+
+<section id="file-state-filter">
+<title>Filtern von Dateiunterschieden</title>
+
+<p>Im Ordnervergleich enthält jede Zeile eine einzelne Datei oder einen einzelnen Ordner, die oder der in mindestens einem der zu vergleichenden Ordner enthalten ist. Jede dieser Zeilen wird entweder als <em>Geändert</em>, <em>Neu</em> oder <em>Identisch</em> klassifiziert:</p>
+<terms>
+  <item>
+    <title>Geändert</title>
+    <p>Die Datei existiert in mehreren Ordnern, aber die Dateien sind unterschiedlich</p>
+  </item>
+  <item>
+    <title>Neu</title>
+    <p>Die Datei existiert in einem Ordnern, jedoch nicht in den anderen</p>
+  </item>
+  <item>
+    <title>Identisch</title>
+    <p>Die Datei existiert in allen Ordnern und ist überall identisch</p>
+  </item>
+</terms>
+<p>Mit den Werkzeugleistenknöpfen <gui style="button">Identisch</gui>, <gui style="button">Neu</gui> und <gui style="button">Geändert</gui> oder über das Menü <guiseq><gui style="menu">Ansicht</gui><gui style="menuitem">Dateistatus</gui></guiseq> können Sie ändern, welche Arten von Unterschieden im aktuellen Vergleich angezeigt werden sollen.</p>
+
+<note style="tip">
+  <p>Derzeit können Sie nur Dateien anhand des Status filtern, für Ordner ist das nicht möglich. Beispielsweise können Sie <app>Meld</app> nicht anweisen, alle Ordner zu ignorieren, die nur neue Dateien enthalten. Ein Ordner, der nur »neue« Dateien enthält, würde als leerer Ordner angezeigt, ist aber noch vorhanden.</p>
+</note>
+
+</section>
+
+
+
+<section id="file-name-filter">
+<title>Filterung nach Dateinamen</title>
+
+<p><app>Meld</app> bietet eine Reihe von nützlichen Filtern für Dateinamen, mit denen Sie uninteressante Dateien und Ordner ausblenden können, zum Beispiel Sicherungsdateien und die Metadaten-Ordner in Versionskontrollsystemen. Jeder Dateinamen-Filter kann über den <gui style="button">Filter</gui>-Knopf in der Werkzeugleiste oder im Menü <guiseq><gui style="menu">Ansicht</gui><gui style="menuitem">Dateifilter</gui></guiseq> separat aktiviert oder deaktiviert werden.</p>
+
+<p>Im Abschnitt <gui style="tab">Dateifilter</gui> des Dialogs <gui>Einstellungen</gui> können Sie Filter für Dateinamen hinzufügen, entfernen oder ändern. Dateinamensfilter geben Muster für Dateinamen vor, nach denen bei einem Ordnervergleich <em>nicht</em> gesucht werden soll. Jede Datei, auf die ein aktiver Filter passt, wird im Baumvergleich nicht angezeigt. Dateinamensfilter werden sowohl auf Dateien als auch auf Ordner angewendet. Wenn ein Ordner auf einen Filter passt, wird er und sein Inhalt ignoriert.</p>
+
+<p>Dateinamen werden anhand von Shell-Platzhaltern gefiltert. Beispielsweise berücksichtigt <code>*.jpg</code> alle Dateinamen mit der Endung <code>.jpg</code>. In der folgenden Tabelle sind alle Platzhalterzeichen aufgelistet, die <app>Meld</app> erkennt.</p>
+
+<table frame="top bottom">
+  <title>Shell-Platzhalter</title>
+
+  <thead>
+    <tr>
+      <td><p>Platzhalter</p></td><td><p>Entspricht</p></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><p><code>*</code></p></td>
+      <td><p>alles (z.B. kein oder mehr Zeichen)</p></td>
+    </tr>
+    <tr>
+      <td><p><code>?</code></p></td>
+      <td><p>genau ein Zeichen</p></td>
+    </tr>
+    <tr>
+      <td><p><code>[abc]</code></p></td>
+      <td><p>ein beliebiges der aufgelisteten Zeichen</p></td>
+    </tr>
+    <tr>
+      <td><p><code>[!abc]</code></p></td>
+      <td><p>ein beliebiges, jedoch <em>keines</em> der aufgelisteten, Zeichen</p></td>
+    </tr>
+    <tr>
+      <td><p><code>{Katze,Hund}</code></p></td>
+      <td><p>entweder »Katze« oder »Hund«</p></td>
+    </tr>
+  </tbody>
+</table>
+
+<note style="tip">
+  <p>Wenn Sie für einen Filter die Einstellung <gui>Aktiv</gui> im Dialog <gui>Einstellungen</gui> ändern, dann wird dieser <em>standardmäßig</em> aktiviert.</p>
+
+  <p>Die Aktivierung eines Filters über das Menü oder die Werkzeugleiste schaltet den Filter <em>nur für diesen Vergleich</em> ein oder aus.</p>
+</note>
+
+</section>
+
+
+
+<section id="file-case-filter">
+<title>Dateinamen mit beliebiger Groß-/Kleinschreibung</title>
+
+<p>Bei Ordnervergleichen werden Dateien anhand deren Namen verglichen. Dabei wird in der Voreinstellung Groß- oder Kleinschreibung beachtet. Das bedeutet, dass <file>README</file>, <file>readme</file> und <file>ReadMe</file> als unterschiedliche Dateien angesehen werden.</p>
+
+<p>Bei Ordnervergleichen auf bestimmten Dateisystemen (zum Beispiel HFS+ oder FAT) kann es sinnvoll sein, wenn <app>Meld</app> bei Dateinamen die Groß- oder Kleinschreibung nicht beachtet. Wählen Sie hierzu <guiseq><gui style="menu">Ansicht</gui><gui style="menuitem">Groß-/Kleinschreibung in Dateinamen ignorieren</gui></guiseq>.</p>
+</section>
+
+
+
+</page>

@@ -1,0 +1,15 @@
+prefix=/mingw64
+bindir=${prefix}/bin
+mandir=${prefix}/
+docdir=${prefix}/
+libdir=${prefix}/lib
+includedir=${prefix}/include/openjpeg-2.3
+
+Name: openjpwl
+Description: JPEG2000 Wireless library (Part 11)
+URL: http://www.openjpeg.org/
+Version: 2.3.0
+Requires: libopenjp2
+Libs: -L${libdir} -lopenjpwl
+Libs.private: -lm
+Cflags: -I${includedir}

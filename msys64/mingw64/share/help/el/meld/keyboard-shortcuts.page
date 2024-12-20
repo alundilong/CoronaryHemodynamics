@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="keyboard-shortcuts" xml:lang="el">
+<info>
+  <title type="sort">2</title>
+  <link type="guide" xref="index#advanced"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Δημήτρης Σπίγγος</mal:name>
+      <mal:email>dmtrs32@gmail.com</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  </info>
+<title>Συντομεύσεις πληκτρολογίου</title>
+
+<table frame="top bottom">
+  <title>Συντομεύσεις για εργασία με αρχεία και συγκρίσεις</title>
+
+  <thead>
+    <tr>
+      <td><p>Συντόμευση</p></td><td><p>Περιγραφή</p></td>
+    </tr>
+  </thead>
+
+  <!-- File shortcuts -->
+  <tbody>
+    <tr>
+      <td><p><keyseq><key>Ctrl</key><key>N</key></keyseq></p></td>
+      <td><p>Έναρξη μιας νέας σύγκρισης.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Ctrl</key><key>S</key></keyseq></p></td>
+      <td><p>Αποθήκευση του τρέχοντος εγγράφου στον δίσκο.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Ctrl</key><key>Shift</key><key>S</key></keyseq></p></td>
+      <td><p>Αποθήκευση του τρέχοντος εγγράφου με νέο όνομα αρχείου.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Ctrl</key><key>W</key></keyseq></p></td>
+      <td><p>Κλείσιμο της τρέχουσας σύγκρισης.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Ctrl</key><key>Q</key></keyseq></p></td>
+      <td><p>Έξοδος από το <app>Meld</app>.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+<table frame="top bottom">
+  <title>Συντομεύσεις για επεξεργασία εγγράφων</title>
+
+  <thead>
+    <tr>
+      <td><p>Συντόμευση</p></td><td><p>Περιγραφή</p></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><p><keyseq><key>Ctrl</key><key>Z</key></keyseq></p></td>
+      <td><p>Αναίρεση της τελευταίας ενέργειας.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Ctrl</key><key>Shift</key><key>Z</key></keyseq></p></td>
+      <td><p>Ακύρωση της τελευταίας αναίρεσης.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Ctrl</key><key>X</key></keyseq></p></td>
+      <td><p>Αποκοπή του επιλεγμένου κειμένου ή περιοχής και τοποθέτηση του στο πρόχειρο.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Ctrl</key><key>C</key></keyseq></p></td>
+      <td><p>Αντιγραφή του επιλεγμένου κειμένου ή περιοχής στο πρόχειρο.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Ctrl</key><key>V</key></keyseq></p></td>
+      <td><p>Επικόλληση των περιεχομένων του προχείρου.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Ctrl</key><key>F</key></keyseq></p></td>
+      <td><p>Εύρεση συμβολοσειράς.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Ctrl</key><key>G</key></keyseq></p></td>
+      <td><p>Εύρεση του επόμενου στιγμιότυπου της συμβολοσειράς.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Alt</key><key>Down</key></keyseq></p></td>
+      <td><p>Μετάβαση στην επόμενη διαφορά. (Επίσης <keyseq><key>Ctrl</key><key>D</key></keyseq>)</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Alt</key><key>Up</key></keyseq></p></td>
+      <td><p>Μετάβαση στην προηγούμενη διαφορά. (Επίσης <keyseq><key>Ctrl</key><key>E</key></keyseq>)</p></td>
+    </tr>
+  </tbody>
+</table>
+
+<table frame="top bottom">
+  <title>Shortcuts for folder comparison</title>
+
+  <thead>
+    <tr>
+      <td><p>Συντόμευση</p></td><td><p>Περιγραφή</p></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><p><keyseq><key>+</key></keyseq></p></td>
+      <td><p>Expand the current folder.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>-</key></keyseq></p></td>
+      <td><p>Collapse the current folder.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table frame="top bottom">
+  <title>Συντομεύσεις για τις ρυθμίσεις προβολής</title>
+
+  <thead>
+    <tr>
+      <td><p>Συντόμευση</p></td><td><p>Περιγραφή</p></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><p><keyseq><key>Escape</key></keyseq></p></td>
+      <td><p>Διακοπή της τρέχουσας σύγκρισης.</p></td>
+    </tr>
+    <tr>
+      <td><p><keyseq><key>Ctrl</key><key>R</key></keyseq></p></td>
+      <td><p>Ανανέωση της τρέχουσας σύγκρισης.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table frame="top bottom">
+  <title>Συντομεύσεις για τη βοήθεια</title>
+
+  <thead>
+    <tr>
+      <td><p>Συντόμευση</p></td><td><p>Περιγραφή</p></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><p><keyseq><key>F1</key></keyseq></p></td>
+      <td><p>Άνοιγμα του εγχειριδίου χρήστη του <app>Meld</app>.</p></td>
+    </tr>
+  </tbody>
+</table>
+
+</page>

@@ -1,0 +1,14 @@
+prefix=X:/msys64/mingw64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 UiTools
+Description: Qt UiTools module
+Version: 5.10.0
+Libs: -L${libdir} -lQt5UiTools 
+Libs.private: -lglu32 -lopengl32 -lgdi32 -luser32 -LC:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib C:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib/libQt5Widgets.dll.a C:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib/libQt5Gui.dll.a C:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib/libQt5Core.dll.a C:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib/libQt5Widgets.dll.a C:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib/libQt5Gui.dll.a C:/repo/mingw-w64-qt5/src/x86_64/qtbase/lib/libQt5Core.dll.a 
+Cflags: -I${includedir}/QtUiTools -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Widgets
+

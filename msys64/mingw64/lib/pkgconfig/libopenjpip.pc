@@ -1,0 +1,15 @@
+prefix=/mingw64
+bindir=${prefix}/bin
+mandir=${prefix}/
+docdir=${prefix}/
+libdir=${prefix}/lib
+includedir=${prefix}/include/openjpeg-2.3
+
+Name: openjpip
+Description: JPEG2000 Interactivity tools, APIs and protocols (Part 9)
+URL: http://www.openjpeg.org/
+Version: 2.3.0
+Requires: libopenjp2
+Libs: -L${libdir} -lopenjpip
+Libs.private: -lm -lcurl -lfcgi -lpthread
+Cflags: -I${includedir}

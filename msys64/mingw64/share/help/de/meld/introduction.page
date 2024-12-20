@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="introduction" xml:lang="de">
+<info>
+  <title type="sort">1</title>
+  <link type="guide" xref="index#introduction"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2009, 2016</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Benjamin Steinwender</mal:name>
+      <mal:email>b@stbe.at</mal:email>
+      <mal:years>2014-2015</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Christian Kirbach</mal:name>
+      <mal:email>christian.kirbach@gmail.com</mal:email>
+      <mal:years>2014, 2016</mal:years>
+    </mal:credit>
+  </info>
+<title>Was is Meld?</title>
+<p><app>Meld</app> ist ein Werkzeug zum Vergleichen von Dateien und Ordnern und zum Auflösen von Unterschieden zwischen solchen. Es ist nützlich zum Betrachten von Änderungen, die von Versionskontrollsystemen erfasst werden.</p>
+
+<p><app>Meld</app> zeigt Unterschiede zwischen zwei oder drei Dateien (oder zwei oder drei Ordnern) an und ermöglicht Ihnen, Inhalte zwischen ihnen zu verschieben oder auch die Dateien manuell zu bearbeiten. Der Schwerpunkt von <app>Meld</app> ist Hilfe für Entwickler beim Vergleichen und Zusammenführen von Quelldateien und eine visuelle Übersicht über die Änderungen in Ihrem bevorzugten Versionskontrollsystem zu erhalten.</p>
+
+</page>

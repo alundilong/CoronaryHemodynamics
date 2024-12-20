@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="vc-mode" xml:lang="es">
+<info>
+  <title type="sort">0</title>
+  <link type="guide" xref="index#vc-mode"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Mustieles</mal:name>
+      <mal:email>daniel.mustieles@gmail.com</mal:email>
+      <mal:years>2014 - 2015</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Facundo Darío Illanes</mal:name>
+      <mal:email>fdillanes@gmail.com</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Ver archivos bajo control de versiones</title>
+
+<p><app>Meld</app> se integra con <link xref="vc-supported">varios sistemas de control de versiones</link> para permitir revisar los cambios locales y ejecutar tareas simples de control de versiones. Puede empezar una nueva comparación de control de versiones eligiendo en el menú <guiseq><gui style="menu">Archivo</gui><gui style="menuitem">Nuevo...</gui></guiseq>, y pulsando en la pestaña <gui style="tab">Control de Versiones</gui>.</p>
+
+
+<section id="vc-mode-overview">
+<title>Comparaciones entre versiones</title>
+
+<p>Las comparaciones en sistemas de control de versiones muestran las diferencias entre los contenidos de su carpeta y la versión del repositorio actual. Cada archivo en su copia local tienen un <link xref="#vc-state">estado</link> que indica en qué difiere de la copia del repositorio.</p>
+
+<p>Si quiere mirar unas diferencias de archivos en particular, puede elegirlo y presionar <key>Intro</key>, o pulsar dos veces en el archivo para empezar una <link xref="file-mode">comparación de archivos</link>. También puede interactuar con su sistema de control de versiones usando el menú <gui style="menu">Cambios</gui>.</p>
+</section>
+
+<section id="vc-state">
+<title>Estados del control de versiones</title>
+
+<p>Cada archivo o carpeta en una comparación de control de versiones tiene un <em>estado</em>, obtenido por el propio sistema de control de versiones. <app>Meld</app> mapea estos diferentes estados en un conjunto estándar de conceptos muy similares. De este modo, <app>Meld</app> puede utilizar nombres ligeramente diferentes para los estados de los que emplea su sistema de control de versiones. Los estados posibles son:</p>
+
+
+<table frame="top bottom">
+  <title>Estados del control de versiones</title>
+
+  <thead>
+    <tr>
+      <td><p>Estado</p></td>
+      <td><p>Apariencia</p></td>
+      <td><p>Significado</p></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><p>El mismo</p></td>
+      <td>
+        <p>Tipografía normal</p>
+      </td>
+      <td>
+        <p>El archivo o carpeta es el mismo que el del repositorio</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Modificado</p></td>
+      <td>
+        <p>Rojo y en negrita</p>
+      </td>
+      <td>
+        <p>El archivo difiere respecto a la versión del repositorio.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Nuevo</p></td>
+      <td>
+        <p>Verde y en negrita</p>
+      </td>
+      <td>
+        <p>El archivo o carpeta es nuevo, y está programado para añadirlo al repositorio.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Eliminado</p></td>
+      <td>
+        <p>Rojo en negrita y con una línea en el medio</p>
+      </td>
+      <td>
+        <p>El archivo o carpeta existe, pero está programado para quitarlo del repositorio.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Conflicto</p></td>
+      <td>
+        <p>Texto en negrita rojo claro</p>
+      </td>
+      <td>
+        <p>Cuando se intenta mezclar con el repositorio, las diferencias entre los archivos locales y los del repositorio podrían no resolverse, y entonces el archivo se encontrará en conflicto con el contenido del repositorio</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Faltante</p></td>
+      <td>
+        <p>Negrita azul con una línea en el medio</p>
+      </td>
+      <td>
+        <p>Este archivo/carpeta debería estar presente, pero no lo está.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Ignorado</p></td>
+      <td>
+        <p>Texto en gris</p>
+      </td>
+      <td>
+        <p>Este archivo/carpeta se ha ignorado deliberadamente (ej. por una entrada en <file>.gitignore</file>) y no está bajo el control de versiones.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Sin control de versiones</p></td>
+      <td>
+        <p>Texto en gris</p>
+      </td>
+      <td>
+        <p>Este archivo no se encuentra en el sistema de control de versiones; solo en la copia local</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Error</p></td>
+      <td>
+        <p>Rojo brillante con un fondo amarillo y negrita</p>
+      </td>
+      <td>
+        <p>El sistema de control de versiones ha reportado un problema con este archivo.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</section>
+
+<section id="vc-state-filtering">
+<title>Filtrar el estado del control de versiones</title>
+
+<p>A menudo, querrá ver solo los archivos que se presentan alguna diferencia; esta es la configuración predeterminada en <app>Meld</app>. Puede cambiar qué estados de archivos se muestran usando el menú <guiseq><gui style="menu">Vista</gui><gui style="menuitem">Estado de la versión</gui></guiseq> o pulsando los botones <gui style="button">Modificado</gui>, <gui style="button">Normal</gui>, <gui style="button">Sin control de versiones</gui> o <gui style="button">Ignorado</gui> en la barra de herramientas.</p>
+</section>
+
+</page>

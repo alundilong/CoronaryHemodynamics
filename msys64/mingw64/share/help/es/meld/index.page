@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" id="index" xml:lang="es">
+	<info>
+      <revision docversion="1.6" status="draft"/>
+      <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+      <credit type="author copyright">
+        <name>Kai Willadsen</name>
+        <email>kai.willadsen@gmail.com</email>
+        <years>2012</years>
+      </credit>
+	
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Mustieles</mal:name>
+      <mal:email>daniel.mustieles@gmail.com</mal:email>
+      <mal:years>2014 - 2015</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Facundo Darío Illanes</mal:name>
+      <mal:email>fdillanes@gmail.com</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  </info>
+
+	<title>Ayuda de Meld</title>
+
+	<section id="introduction" style="2column">
+	    <title>Introducción</title>
+	</section>
+
+	<section id="file-mode" style="2column">
+		<title>Comparar archivos</title>
+	</section>
+
+	<section id="folder-mode" style="2column">
+		<title>Comparar carpetas</title>
+	</section>
+
+	<section id="vc-mode" style="2column">
+		<title>Usar Meld con un sistema de control de versiones</title>
+	</section>
+
+	<section id="advanced" style="2column">
+		<title>Uso avanzado</title>
+	</section>
+</page>

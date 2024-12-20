@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="vc-mode" xml:lang="de">
+<info>
+  <title type="sort">0</title>
+  <link type="guide" xref="index#vc-mode"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2009, 2016</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Benjamin Steinwender</mal:name>
+      <mal:email>b@stbe.at</mal:email>
+      <mal:years>2014-2015</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Christian Kirbach</mal:name>
+      <mal:email>christian.kirbach@gmail.com</mal:email>
+      <mal:years>2014, 2016</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Betrachten von Dateien unter Versionskontrolle</title>
+
+<p><app>Meld</app> arbeitet mit zahlreichen <link xref="vc-supported">Versionskontrollsystemen</link> zusammen. Sie können lokale Änderungen betrachten und einfache Verwaltungsaufgaben ausführen. Einen neuen Versionskontrollvergleich starten Sie über <guiseq><gui style="menu">Datei</gui><gui style="menuitem">Neu …</gui></guiseq> und klicken auf den Reiter <gui style="tab">Versionskontrolle</gui>.</p>
+
+
+<section id="vc-mode-overview">
+<title>Versionskontroll-Vergleiche</title>
+
+<p>Versionskontroll-Vergleiche zeigen die Unterschiede zwischen den Inhalt Ihres Ordners und der aktuellen Version im Softwarebestand (Repository). Jede Datei in Ihrer lokalen Kopie hat einen <link xref="#vc-Status">state</link>, der besagt, wie sie sich von der Version im Softwarebestand unterscheidet.</p>
+
+<p>Wenn Sie die Unterschiede nur für eine bestimmte Datei betrachten wollen, wählen Sie sie aus und drücken Sie die <key>Eingabtaste</key> oder klicken Sie doppelt auf eine Datei, um einen <link xref="file-mode">Dateivergleich</link> zu starten. Über das Menü <gui style="menu">Änderungen</gui> können Sie auch mit Ihrem Versionskontrollsystem interagieren.</p>
+</section>
+
+<section id="vc-state">
+<title>Status in Versionskontrollsystemen</title>
+
+<p>Jede Datei und jeder Ordner in einem Versionskontrollvergleich hat einen <em>Status</em>, der vom Versionskontrollsystem selbst definiert wird. <app>Meld</app> bildet diese verschiedenen Zustände auf einen Standardsatz sehr einfacher Konzepte ab. Als solches kann <app>Meld</app> etwas andere Bezeichnungen für die Zustände verwenden als die eigentliche Versionskontrolle. Mögliche Status sind:</p>
+
+
+<table frame="top bottom">
+  <title>Status in Versionskontrollsystemen</title>
+
+  <thead>
+    <tr>
+      <td><p>Status</p></td>
+      <td><p>Erscheinungsbild</p></td>
+      <td><p>Bedeutung</p></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><p>Identisch</p></td>
+      <td>
+        <p>Normale Schriftart</p>
+      </td>
+      <td>
+        <p>Die Datei/der Ordner ist identisch mit der Version aus dem Softwarebestand.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Geändert</p></td>
+      <td>
+        <p>Rot und fett</p>
+      </td>
+      <td>
+        <p>Die Datei ist unterschiedlich zu der Version im Softwarebestand.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Neu</p></td>
+      <td>
+        <p>Grün und fett</p>
+      </td>
+      <td>
+        <p>Die Datei/der Ordner ist neu und bereits zum Hinzufügen zum Softwarebestand markiert.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Entfernt</p></td>
+      <td>
+        <p>Roter, fetter, durchgestrichener Text</p>
+      </td>
+      <td>
+        <p>Diese Datei/dieser Ordner existiert, ist jedoch zum Entfernen aus dem Softwarebestand markiert.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Konflikt</p></td>
+      <td>
+        <p>Heller, roter, fetter Text</p>
+      </td>
+      <td>
+        <p>Die Unterschiede zwischen der lokalen Datei und dem Softwarebestand konnten beim Zusammenzuführen nicht gelöst werden. Die Datei ist nun im Konflikt mit den Inhalten des Softwarebestandes.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Fehlt</p></td>
+      <td>
+        <p>Blauer, fetter, durchgestrichener Text</p>
+      </td>
+      <td>
+        <p>Diese Datei/dieser Ordner sollte vorhanden sein, ist es jedoch nicht.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Ignoriert</p></td>
+      <td>
+        <p>Ausgegrauter Text</p>
+      </td>
+      <td>
+        <p>Diese Datei/dieser Ordner wurde ausdrücklich ignoriert (z.B. durch einen Eintrag in <file>.gitignore</file>) und wird nicht durch die Versionskontrolle überwacht.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Nicht versioniert</p></td>
+      <td>
+        <p>Ausgegrauter Text</p>
+      </td>
+      <td>
+        <p>Die Datei steht nicht unter Versionskontrolle. Sie ist nur lokal vorhanden.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p>Fehler</p></td>
+      <td>
+        <p>Helles Rot mit einem gelben Hintergrund</p>
+      </td>
+      <td>
+        <p>Das Versionskontrollsystem hat ein Problem zu dieser Datei gemeldet.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</section>
+
+<section id="vc-state-filtering">
+<title>Filterung des Versionskontroll-Status</title>
+
+<p>Meist werden Sie nur die Dateien sehen wollen, die als unterschiedlich erkannt wurden. Dies ist die Voreinstellung in <app>Meld</app>. Sie können ändern, welche Dateistatus Sie sehen wollen. Verwenden Sie hierzu das Menü <guiseq><gui style="menu">Ansicht</gui><gui style="menuitem">Versionsstatus</gui></guiseq> oder klicken Sie doppelt auf einen der Knöpfe <gui style="button">Geändert</gui>, <gui style="button">Normal</gui>, <gui style="button">Nicht versioniert</gui> und <gui style="button">Ignoriert</gui> in der Werkzeugleiste.</p>
+</section>
+
+</page>

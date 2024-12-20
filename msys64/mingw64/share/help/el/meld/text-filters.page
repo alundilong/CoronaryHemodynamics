@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="text-filters" xml:lang="el">
+<info>
+  <title type="sort">2</title>
+  <link type="guide" xref="index#file-mode"/>
+  <link type="seealso" xref="file-filters"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Δημήτρης Σπίγγος</mal:name>
+      <mal:email>dmtrs32@gmail.com</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Φιλτράρισμα κειμένου</title>
+
+<p>Όταν συγκρίνετε πολλά αρχεία, μπορεί να έχετε ενότητες κειμένου όπου οι διαφορές δεν είναι πραγματικά σημαντικές. Για παράδειγμα, ίσως θέλετε να εστιάσετε στις αλλαγμένες ενότητες του κώδικα και να αγνοήσετε κάθε αλλαγή στις γραμμές σχολίων. Με τα φίλτρα κειμένου μπορείτε να πείτε στο <app>Meld</app> να αγνοήσει το κείμενο που ταιριάζει με ένα υπόδειγμα (δηλ., μια κανονική έκφραση), όταν εμφανίζονται διαφορές μεταξύ αρχείων.</p>
+
+<note style="important">
+  <p>Τα φίλτρα κειμένου δεν επηρεάζουν απλά τις συγκρίσεις αρχείων, αλλά επηρεάζουν επίσης τις συγκρίσεις φακέλων. Σημειώστε το <link xref="file-filters">σημειώσεις φιλτραρίσματος αρχείων</link> για περισσότερες λεπτομέρειες.</p>
+</note>
+
+
+<section id="text-filter-creation">
+<title>Προσθήκη και χρήση φίλτρων κειμένου</title>
+
+<p>Μπορείτε να ενεργοποιήσετε και να απενεργοποιήσετε τα φίλτρα κειμένου από την καρτέλα <gui>Φίλτρα κειμένου</gui> στον διάλογο <gui>Προτιμήσεις</gui>. Το <app>Meld</app> έρχεται με λίγα απλά φίλτρα που μπορεί να βρείτε χρήσιμα, αλλά μπορείτε να προσθέσετε επίσης τα δικά σας.</p>
+
+<p>
+In <app>Meld</app>, text filters are regular expressions that are matched
+against the text of files you're comparing. Any text that is matched is ignored
+during the comparison; you'll still see this text in the comparison view, but
+it won't be taken into account when finding differences. Text filters are
+applied in order, so it's possible for the first filter to remove text that now
+makes the second filter match, and so on.
+</p>
+
+<note style="tip">
+  <p>Αν δεν είσαστε εξοικειωμένοι με κανονικές εκφράσεις, μπορεί να θέλετε να κοιτάξετε το Python <link href="http://docs.python.org/howto/regex.html">Κανονική έκφραση HOWTO</link>.</p>
+</note>
+
+</section>
+
+
+
+<section id="text-filter-problems">
+<title>Καταλαβαίνοντας τα φίλτρα κειμένου</title>
+
+<p>Είναι εύκολο να παρανοήσετε το φιλτράρισμα κειμένου και η υποστήριξη του Meld για το φιλτράρισμα δεν είναι πλήρης. Ειδικά, ένα φίλτρο κειμένου δεν μπορεί να αλλάξει τον αριθμό των γραμμών σε ένα αρχείο. Για παράδειγμα, αν έχουμε το ενσωματωμένο φίλτρο <gui>Σχόλιο σεναρίου</gui> ενεργό και συγκρίνουμε τα ακόλουθα αρχεία:</p>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <listing>
+          <title><file>comment1.txt</file></title>
+          <code>
+a
+b#comment
+c
+d</code>
+        </listing>
+      </td>
+      <td>
+        <listing>
+          <title><file>comment2.txt</file></title>
+          <code>
+a
+b
+c
+#comment</code>
+        </listing>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>τότε οι γραμμές που αρχίζουν με <code>b</code> θα εμφανιστούν ως ταυτόσημες (το σχόλιο αφαιρέθηκε) αλλά η γραμμή <code>d</code> θα εμφανιστεί ως διαφορετική στη γραμμή σχολίου στα δεξιά. Αυτό συμβαίνει επειδή το <code>#comment</code> αφαιρείται από τα δεξιά, αλλά η ίδια η γραμμή δεν μπορεί να αφαιρεθεί· το <app>Meld</app> θα εμφανίσει τη γραμμή <code>d</code> ως διαφορετική στο ότι βλέπει μια κενή γραμμή στην άλλη πλευρά.</p>
+
+</section>
+
+
+<section id="text-filter-blank-lines">
+<title>Κενές γραμμές και φίλτρα</title>
+
+<p>Η προτίμηση <gui>Παράβλεψη αλλαγών που εισάγουν ή διαγράφουν κενές γραμμές</gui> στην καρτέλα <gui>Φίλτρα κειμένου</gui> απαιτεί ειδική εξήγηση. Αν αυτό το ειδικό φίλτρο είναι ενεργό, τότε κάθε αλλαγή που αποτελείται μόνο από κενές γραμμές αγνοείται ολότελα. Αυτό μπορεί να συμβεί επειδή υπήρξε μια πραγματική αλλαγή κενού χώρου στο κείμενο, αλλά ενδέχεται επίσης να προκύψει αν τα ενεργά σας φίλτρα κειμένου έχουν αφαιρέσει όλα τα άλλα περιεχόμενα από μια αλλαγή, αφήνοντας μόνο κενές γραμμές.</p>
+
+<p>Μπορείτε να χρησιμοποιήσετε αυτήν την επιλογή για να παρακάμψετε κάποια <link xref="#text-filter-problems">προβλήματα και περιορισμούς</link> που δημιουργούνται από τα φίλτρα επειδή δεν μπορούν να αφαιρέσουν ολόκληρες γραμμές, αλλά μπορεί να είναι επίσης χρήσιμα.</p>
+
+</section>
+
+</page>

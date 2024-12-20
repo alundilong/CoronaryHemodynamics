@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="file-changes" xml:lang="de">
+<info>
+  <title type="sort">2</title>
+  <link type="guide" xref="index#file-mode"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2009, 2016</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Benjamin Steinwender</mal:name>
+      <mal:email>b@stbe.at</mal:email>
+      <mal:years>2014-2015</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Christian Kirbach</mal:name>
+      <mal:email>christian.kirbach@gmail.com</mal:email>
+      <mal:years>2014, 2016</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Umgang mit Änderungen</title>
+
+<p><app>Meld</app> behandelt Dateiunterschiede als Liste von <em>Änderungsblöcken</em> oder einfach <em>Änderungen</em>. Jede dieser Änderungen ist eine Zeilengruppe, die innerhalb der Dateien korrespondiert. Da genau diese Änderungen normalerweise für Sie von Bedeutung sind, stellt Ihnen <app>Meld</app> spezifische Werkzeuge zur Verfügung, um zwischen diesen Änderungen zu navigieren und sie zu bearbeiten. Sie finden diese Werkzeuge im Menü <gui style="menu">Änderungen</gui>.</p>
+
+
+
+<section id="change-navigation">
+<title>Navigieren zwischen Änderungen</title>
+
+<p>
+You can navigate between changes with the
+<guiseq><gui style="menu">Changes</gui><gui style="menuitem">Previous change</gui></guiseq>
+and
+<guiseq><gui style="menu">Changes</gui><gui style="menuitem">Next change</gui></guiseq>
+menu items. You can also use your mouse's scroll wheel to move between changes,
+by scrolling on the central change bar.
+</p>
+
+</section>
+
+
+
+<section id="change-actions">
+<title>Bearbeiten von Änderungen</title>
+
+<p>Neben der direkten Bearbeitung von Textdateien bietet <app>Meld</app> auch Werkzeuge zum Verschieben, Kopieren oder Löschen individueller Unterschiede zwischen Dateien. Die Leiste zwischen zwei Dateien zeigt nicht nur an, welche Teile der beiden Dateien miteinander korrespondieren, sondern ermöglicht auch das selektive Zusammenführen oder Löschen sich unterscheidender Änderungen, indem Sie auf die Pfeil- oder Kreuzsymbole neben dem Beginn jeder Änderung klicken.</p>
+
+<p>Die vorgegebene Aktion ist <em>Ersetzen</em>. Damit wird der Inhalt der korrespondierenden Änderung durch die aktuelle Änderung ersetzt.</p>
+<p>Halten Sie die <key>Umschalttaste</key> gedrückt, wird die Änderung nicht ersetzt, sondern <em>gelöscht</em>.</p>
+<p>Halten Sie die <key>Strg</key>-Taste gedrückt, wird die Änderung nicht ersetzt, sondern <em>eingefügt</em>. Dadurch wird die aktuelle Änderung oberhalb oder unterhalb der korrespondierenden Änderung eingefügt (je nach Auswahl).</p>
+
+</section>
+
+</page>

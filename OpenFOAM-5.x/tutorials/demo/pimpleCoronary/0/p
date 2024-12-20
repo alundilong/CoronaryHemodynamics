@@ -1,0 +1,465 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  5.x                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+/*   Windows 32 and 64 bit porting by blueCAPE: http://www.bluecape.com.pt   *\
+|  Based on Windows porting (2.0.x v4) by Symscape: http://www.symscape.com   |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      p;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [ 1 -1 -2 0 0 0 0 ];
+
+internalField   uniform 8000;
+
+boundaryField
+{
+    Wall_Aorta
+    {
+        type            zeroGradient;
+        value           uniform 8000;
+    }
+    Cap_LAD_D1
+    {
+        type            bloodFlowOutletPressure;
+        value           uniform 8000;
+        duration        1e-030;
+        modelName       WindKessel;
+        cycle           on;
+        period          1;
+        WindKesselCoeffs
+        {
+            elements        twoElements;
+            twoElementsCoeffs
+            {
+                flowRateModel   realTimeFlowRate;
+                realTimeFlowRateCoeffs
+                {
+                    scaling         constant 1;
+                }
+                Rd              1.38216e+011;
+                C               3.79444e-010;
+                nSteps          1000;
+                solver          RKF45;
+            }
+        }
+        refValue        uniform 8000;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+    }
+    Cap_LAD_D2
+    {
+        type            bloodFlowOutletPressure;
+        value           uniform 8000;
+        duration        1e-030;
+        modelName       WindKessel;
+        cycle           on;
+        period          1;
+        WindKesselCoeffs
+        {
+            elements        twoElements;
+            twoElementsCoeffs
+            {
+                flowRateModel   realTimeFlowRate;
+                realTimeFlowRateCoeffs
+                {
+                    scaling         constant 1;
+                }
+                Rd              1.24575e+011;
+                C               4.20992e-010;
+                nSteps          1000;
+                solver          RKF45;
+            }
+        }
+        refValue        uniform 8000;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+    }
+    Cap_LAD_D3
+    {
+        type            bloodFlowOutletPressure;
+        value           uniform 8000;
+        duration        1e-030;
+        modelName       WindKessel;
+        cycle           on;
+        period          1;
+        WindKesselCoeffs
+        {
+            elements        twoElements;
+            twoElementsCoeffs
+            {
+                flowRateModel   realTimeFlowRate;
+                realTimeFlowRateCoeffs
+                {
+                    scaling         constant 1;
+                }
+                Rd              1.69066e+011;
+                C               3.10205e-010;
+                nSteps          1000;
+                solver          RKF45;
+            }
+        }
+        refValue        uniform 8000;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+    }
+    Cap_LAD_D4
+    {
+        type            bloodFlowOutletPressure;
+        value           uniform 8000;
+        duration        1e-030;
+        modelName       WindKessel;
+        cycle           on;
+        period          1;
+        WindKesselCoeffs
+        {
+            elements        twoElements;
+            twoElementsCoeffs
+            {
+                flowRateModel   realTimeFlowRate;
+                realTimeFlowRateCoeffs
+                {
+                    scaling         constant 1;
+                }
+                Rd              1.4541e+011;
+                C               3.60671e-010;
+                nSteps          1000;
+                solver          RKF45;
+            }
+        }
+        refValue        uniform 8000;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+    }
+    Cap_LAD_LAD
+    {
+        type            bloodFlowOutletPressure;
+        value           uniform 8000;
+        duration        1e-030;
+        modelName       WindKessel;
+        cycle           on;
+        period          1;
+        WindKesselCoeffs
+        {
+            elements        twoElements;
+            twoElementsCoeffs
+            {
+                flowRateModel   realTimeFlowRate;
+                realTimeFlowRateCoeffs
+                {
+                    scaling         constant 1;
+                }
+                Rd              9.87229e+010;
+                C               5.31234e-010;
+                nSteps          1000;
+                solver          RKF45;
+            }
+        }
+        refValue        uniform 8000;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+    }
+    Cap_LAD_RI
+    {
+        type            bloodFlowOutletPressure;
+        value           uniform 8000;
+        duration        1e-030;
+        modelName       WindKessel;
+        cycle           on;
+        period          1;
+        WindKesselCoeffs
+        {
+            elements        twoElements;
+            twoElementsCoeffs
+            {
+                flowRateModel   realTimeFlowRate;
+                realTimeFlowRateCoeffs
+                {
+                    scaling         constant 1;
+                }
+                Rd              9.23118e+010;
+                C               5.68129e-010;
+                nSteps          1000;
+                solver          RKF45;
+            }
+        }
+        refValue        uniform 8000;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+    }
+    Cap_LAD_S1
+    {
+        type            bloodFlowOutletPressure;
+        value           uniform 8000;
+        duration        1e-030;
+        modelName       WindKessel;
+        cycle           on;
+        period          1;
+        WindKesselCoeffs
+        {
+            elements        twoElements;
+            twoElementsCoeffs
+            {
+                flowRateModel   realTimeFlowRate;
+                realTimeFlowRateCoeffs
+                {
+                    scaling         constant 1;
+                }
+                Rd              7.9018e+010;
+                C               6.63709e-010;
+                nSteps          1000;
+                solver          RKF45;
+            }
+        }
+        refValue        uniform 8000;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+    }
+    Cap_LCX_LCx
+    {
+        type            bloodFlowOutletPressure;
+        value           uniform 8000;
+        duration        1e-030;
+        modelName       WindKessel;
+        cycle           on;
+        period          1;
+        WindKesselCoeffs
+        {
+            elements        twoElements;
+            twoElementsCoeffs
+            {
+                flowRateModel   realTimeFlowRate;
+                realTimeFlowRateCoeffs
+                {
+                    scaling         constant 1;
+                }
+                Rd              1.43443e+011;
+                C               3.65616e-010;
+                nSteps          1000;
+                solver          RKF45;
+            }
+        }
+        refValue        uniform 8000;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+    }
+    Cap_RCA_R_PDA
+    {
+        type            bloodFlowOutletPressure;
+        value           uniform 8000;
+        duration        1e-030;
+        modelName       WindKessel;
+        cycle           on;
+        period          1;
+        WindKesselCoeffs
+        {
+            elements        twoElements;
+            twoElementsCoeffs
+            {
+                flowRateModel   realTimeFlowRate;
+                realTimeFlowRateCoeffs
+                {
+                    scaling         constant 1;
+                }
+                Rd              1.1781e+011;
+                C               4.75214e-010;
+                nSteps          1000;
+                solver          RKF45;
+            }
+        }
+        refValue        uniform 8000;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+    }
+    Cap_RCA_R_PDA2
+    {
+        type            bloodFlowOutletPressure;
+        value           uniform 8000;
+        duration        1e-030;
+        modelName       WindKessel;
+        cycle           on;
+        period          1;
+        WindKesselCoeffs
+        {
+            elements        twoElements;
+            twoElementsCoeffs
+            {
+                flowRateModel   realTimeFlowRate;
+                realTimeFlowRateCoeffs
+                {
+                    scaling         constant 1;
+                }
+                Rd              1.63492e+011;
+                C               3.42431e-010;
+                nSteps          1000;
+                solver          RKF45;
+            }
+        }
+        refValue        uniform 8000;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+    }
+    Cap_RCA_R_PLB
+    {
+        type            bloodFlowOutletPressure;
+        value           uniform 8000;
+        duration        1e-030;
+        modelName       WindKessel;
+        cycle           on;
+        period          1;
+        WindKesselCoeffs
+        {
+            elements        twoElements;
+            twoElementsCoeffs
+            {
+                flowRateModel   realTimeFlowRate;
+                realTimeFlowRateCoeffs
+                {
+                    scaling         constant 1;
+                }
+                Rd              1.28103e+011;
+                C               4.3703e-010;
+                nSteps          1000;
+                solver          RKF45;
+            }
+        }
+        refValue        uniform 8000;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+    }
+    Cap_RCA_R_PLB2
+    {
+        type            bloodFlowOutletPressure;
+        value           uniform 8000;
+        duration        1e-030;
+        modelName       WindKessel;
+        cycle           on;
+        period          1;
+        WindKesselCoeffs
+        {
+            elements        twoElements;
+            twoElementsCoeffs
+            {
+                flowRateModel   realTimeFlowRate;
+                realTimeFlowRateCoeffs
+                {
+                    scaling         constant 1;
+                }
+                Rd              2.0651e+011;
+                C               2.71099e-010;
+                nSteps          1000;
+                solver          RKF45;
+            }
+        }
+        refValue        uniform 8000;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+    }
+    Cap_RCA_R_PLB3
+    {
+        type            bloodFlowOutletPressure;
+        value           uniform 8000;
+        duration        1e-030;
+        modelName       WindKessel;
+        cycle           on;
+        period          1;
+        WindKesselCoeffs
+        {
+            elements        twoElements;
+            twoElementsCoeffs
+            {
+                flowRateModel   realTimeFlowRate;
+                realTimeFlowRateCoeffs
+                {
+                    scaling         constant 1;
+                }
+                Rd              1.20463e+011;
+                C               4.64748e-010;
+                nSteps          1000;
+                solver          RKF45;
+            }
+        }
+        refValue        uniform 8000;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+    }
+    Cap_RCA_RA1
+    {
+        type            bloodFlowOutletPressure;
+        value           uniform 8000;
+        duration        1e-030;
+        modelName       WindKessel;
+        cycle           on;
+        period          1;
+        WindKesselCoeffs
+        {
+            elements        twoElements;
+            twoElementsCoeffs
+            {
+                flowRateModel   realTimeFlowRate;
+                realTimeFlowRateCoeffs
+                {
+                    scaling         constant 1;
+                }
+                Rd              1.09887e+011;
+                C               5.09477e-010;
+                nSteps          1000;
+                solver          RKF45;
+            }
+        }
+        refValue        uniform 8000;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+    }
+    Cap_Aorta_Inlet
+    {
+        type            zeroGradient;
+        value           uniform 8000;
+    }
+    Cap_Aorta_Outlet
+    {
+        type            bloodFlowOutletPressure;
+        value           uniform 8000;
+        duration        1e-030;
+        modelName       WindKessel;
+        cycle           on;
+        period          1;
+        WindKesselCoeffs
+        {
+            elements        threeElements;
+            threeElementsCoeffs
+            {
+                flowRateModel   realTimeFlowRate;
+                realTimeFlowRateCoeffs
+                {
+                    scaling         constant 1;
+                }
+                Rd              3.3463e+008;
+                Rp              3.30952e+007;
+                C               1e-009;
+                timeLimitC      200;
+                scaleC          100;
+                nSteps          1000;
+                solver          RKF45;
+            }
+        }
+        refValue        uniform 8000;
+        refGradient     uniform 0;
+        valueFraction   uniform 1;
+        Itarget         -9999;
+        skip            1;
+    }
+}
+
+
+// ************************************************************************* //

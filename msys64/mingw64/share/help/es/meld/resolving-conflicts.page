@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="resolving-conflicts" xml:lang="es">
+<info>
+  <title type="sort">2</title>
+  <link type="guide" xref="index#vc-mode"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Mustieles</mal:name>
+      <mal:email>daniel.mustieles@gmail.com</mal:email>
+      <mal:years>2014 - 2015</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Facundo Darío Illanes</mal:name>
+      <mal:email>fdillanes@gmail.com</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  </info>
+<title>Resolver conflictos al combinar</title>
+
+<p>Uno de los mejores usos de <app>Meld</app> es resolver los conflictos que ocurren cuando se mezclan diferentes ramas.</p>
+
+<p>Por ejemplo, cuando al usar <app>Git</app>, <cmd>git mergetool</cmd> arranca un «ayudante de mezcla»; <app>Meld</app> es uno de estos ayudantes. Si quiere hacer que <app>git mergetool</app> use <app>Meld</app> de manera predeterminada, puede agregar</p>
+<code>
+[merge]
+    tool = meld
+</code>
+<p>al archivo <file>.git/gitconfig</file>. Consulte el manual de <app>git mergetool</app> para obtener más detalles.</p>
+
+</page>

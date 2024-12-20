@@ -1,0 +1,14 @@
+prefix=X:/msys64/mingw64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+host_bins=${prefix}/bin
+qt_config=shared debug_and_release release debug build_all c++11 c++14 c++1z concurrent dbus release_tools stl
+
+Name: Qt5 Core
+Description: Qt Core module
+Version: 5.10.0
+Libs: -L${libdir} -lQt5Core 
+Cflags: -I${includedir}/QtCore -I${includedir}
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="introduction" xml:lang="sv">
+<info>
+  <title type="sort">1</title>
+  <link type="guide" xref="index#introduction"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Josef Andersson</mal:name>
+      <mal:email>josef.andersson@fripost.org</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
+  </info>
+<title>Vad är Meld?</title>
+<p><app>Meld</app> är ett verktyg för att jämföra filer och kataloger, och för att lösa skillnader mellan dem. Den är också användbar för att jämföra ändringar registrerade i versionshanteringssystem.</p>
+
+<p><app>Meld</app> visar skillnader mellan två eller tre filer (eller två eller tre kataloger) och låter dig flytta innehåll mellan dem, eller redigera filerna manuellt. <app>Meld</app>s fokus ligger på att hjälpa utvecklare jämföra och sammanfoga källfiler, och att ge en visuell överblick av ändringar i deras favorit-versionshanteringssystem.</p>
+
+</page>

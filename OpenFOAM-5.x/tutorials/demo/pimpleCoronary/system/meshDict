@@ -1,0 +1,366 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  5.x                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+/*   Windows 32 and 64 bit porting by blueCAPE: http://www.bluecape.com.pt   *\
+|  Based on Windows porting (2.0.x v4) by Symscape: http://www.symscape.com   |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      meshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+surfaceFile     "constant/triSurface/surface.fms";
+
+maxCellSize     0.0035;
+
+boundaryCellSize 0.0004375;
+
+keepCellsIntersectingBoundary 1;
+
+checkForGluedMesh 0;
+
+enforceGeometryConstraints 0;
+
+decomposePolyhedraIntoTetsAndPyrs no;
+
+objectRefinements
+{
+    Cap_LAD_D1_Cylinder
+    {
+        cellSize        0.00021875;
+        type            line;
+        p0              ( 0.0686042 0.0103065 1.9195 );
+        p1              ( 0.0685956 0.00953256 1.91909 );
+        refinementThickness 0.000971662;
+    }
+    Cap_LAD_D2_Cylinder
+    {
+        cellSize        0.00021875;
+        type            line;
+        p0              ( 0.071273 -0.0100645 1.91836 );
+        p1              ( 0.0716982 -0.00974821 1.91766 );
+        refinementThickness 0.00102164;
+    }
+    Cap_LAD_D3_Cylinder
+    {
+        cellSize        0.00021875;
+        type            line;
+        p0              ( 0.0775038 -0.0308198 1.90958 );
+        p1              ( 0.0782121 -0.0306693 1.90908 );
+        refinementThickness 0.000974363;
+    }
+    Cap_LAD_D4_Cylinder
+    {
+        cellSize        0.00021875;
+        type            line;
+        p0              ( 0.0695582 -0.0429205 1.90448 );
+        p1              ( 0.0701985 -0.0429929 1.90389 );
+        refinementThickness 0.000963852;
+    }
+    Cap_LAD_LAD_Cylinder
+    {
+        cellSize        0.00021875;
+        type            line;
+        p0              ( 0.0658768 -0.0534018 1.86657 );
+        p1              ( 0.0656869 -0.0534838 1.86571 );
+        refinementThickness 0.00115299;
+    }
+    Cap_LAD_RI_Cylinder
+    {
+        cellSize        0.00021875;
+        type            line;
+        p0              ( 0.043989 0.0210095 1.9249 );
+        p1              ( 0.0448208 0.0209917 1.92463 );
+        refinementThickness 0.00112893;
+    }
+    Cap_LAD_S1_Cylinder
+    {
+        cellSize        0.00021875;
+        type            line;
+        p0              ( 0.0497714 -0.00383959 1.92815 );
+        p1              ( 0.0498026 -0.00470378 1.92829 );
+        refinementThickness 0.00125821;
+    }
+    Cap_LCX_LCx_Cylinder
+    {
+        cellSize        0.00021875;
+        type            line;
+        p0              ( 0.0583923 0.0356283 1.91069 );
+        p1              ( 0.0590819 0.0357227 1.91016 );
+        refinementThickness 0.000995331;
+    }
+    Cap_RCA_R_PDA_Cylinder
+    {
+        cellSize        0.00021875;
+        type            line;
+        p0              ( 0.0522911 -0.0288966 1.85076 );
+        p1              ( 0.0524768 -0.029741 1.85063 );
+        refinementThickness 0.00103273;
+    }
+    Cap_RCA_R_PDA2_Cylinder
+    {
+        cellSize        0.00021875;
+        type            line;
+        p0              ( 0.0259996 0.00703378 1.85439 );
+        p1              ( 0.0268328 0.00682587 1.85422 );
+        refinementThickness 0.000926403;
+    }
+    Cap_RCA_R_PLB_Cylinder
+    {
+        cellSize        0.00021875;
+        type            line;
+        p0              ( 0.048428 0.0261438 1.85521 );
+        p1              ( 0.0490646 0.0255836 1.855 );
+        refinementThickness 0.000957298;
+    }
+    Cap_RCA_R_PLB2_Cylinder
+    {
+        cellSize        0.00021875;
+        type            line;
+        p0              ( 0.0341089 0.0347441 1.86255 );
+        p1              ( 0.0345496 0.0354891 1.86242 );
+        refinementThickness 0.000792308;
+    }
+    Cap_RCA_R_PLB3_Cylinder
+    {
+        cellSize        0.00021875;
+        type            line;
+        p0              ( 0.0801769 0.000421437 1.86112 );
+        p1              ( 0.0808334 -0.000144756 1.86124 );
+        refinementThickness 0.00101175;
+    }
+    Cap_RCA_RA1_Cylinder
+    {
+        cellSize        0.00021875;
+        type            line;
+        p0              ( -0.00191792 -0.0447826 1.87257 );
+        p1              ( -0.00115816 -0.0451923 1.87271 );
+        refinementThickness 0.00107075;
+    }
+    joint_0_Box
+    {
+        cellSize        0.0004375;
+        type            box;
+        centre          ( 0 0 0 );
+        lengthX         0;
+        lengthY         0;
+        lengthZ         0;
+    }
+    joint_1_Box
+    {
+        cellSize        0.0004375;
+        type            box;
+        centre          ( 0 0 0 );
+        lengthX         0;
+        lengthY         0;
+        lengthZ         0;
+    }
+    joint_2_Box
+    {
+        cellSize        0.0004375;
+        type            box;
+        centre          ( 0 0 0 );
+        lengthX         0;
+        lengthY         0;
+        lengthZ         0;
+    }
+}
+
+localRefinement
+{
+    Wall_Aorta
+    {
+        additionalRefinementLevels 2;
+        refinementThickness 0.002;
+    }
+    Cap_LAD_D1
+    {
+        additionalRefinementLevels 2;
+        refinementThickness 0.001;
+    }
+    Cap_LAD_D2
+    {
+        additionalRefinementLevels 2;
+        refinementThickness 0.001;
+    }
+    Cap_LAD_D3
+    {
+        additionalRefinementLevels 2;
+        refinementThickness 0.001;
+    }
+    Cap_LAD_D4
+    {
+        additionalRefinementLevels 2;
+        refinementThickness 0.001;
+    }
+    Cap_LAD_LAD
+    {
+        additionalRefinementLevels 2;
+        refinementThickness 0.001;
+    }
+    Cap_LAD_RI
+    {
+        additionalRefinementLevels 2;
+        refinementThickness 0.001;
+    }
+    Cap_LAD_S1
+    {
+        additionalRefinementLevels 2;
+        refinementThickness 0.001;
+    }
+    Cap_LCX_LCx
+    {
+        additionalRefinementLevels 2;
+        refinementThickness 0.001;
+    }
+    Cap_RCA_R_PDA
+    {
+        additionalRefinementLevels 2;
+        refinementThickness 0.001;
+    }
+    Cap_RCA_R_PDA2
+    {
+        additionalRefinementLevels 2;
+        refinementThickness 0.001;
+    }
+    Cap_RCA_R_PLB
+    {
+        additionalRefinementLevels 2;
+        refinementThickness 0.001;
+    }
+    Cap_RCA_R_PLB2
+    {
+        additionalRefinementLevels 2;
+        refinementThickness 0.001;
+    }
+    Cap_RCA_R_PLB3
+    {
+        additionalRefinementLevels 2;
+        refinementThickness 0.001;
+    }
+    Cap_RCA_RA1
+    {
+        additionalRefinementLevels 2;
+        refinementThickness 0.001;
+    }
+    Cap_Aorta_Inlet
+    {
+        additionalRefinementLevels 1;
+        refinementThickness 0.001;
+    }
+    Cap_Aorta_Outlet
+    {
+        additionalRefinementLevels 1;
+        refinementThickness 0.001;
+    }
+}
+
+renameBoundary
+{
+    newPatchNames
+    {
+        Wall_Aorta
+        {
+            newName         Wall_Aorta;
+            type            wall;
+        }
+        Cap_LAD_D1
+        {
+            newName         Cap_LAD_D1;
+            type            patch;
+        }
+        Cap_LAD_D2
+        {
+            newName         Cap_LAD_D2;
+            type            patch;
+        }
+        Cap_LAD_D3
+        {
+            newName         Cap_LAD_D3;
+            type            patch;
+        }
+        Cap_LAD_D4
+        {
+            newName         Cap_LAD_D4;
+            type            patch;
+        }
+        Cap_LAD_LAD
+        {
+            newName         Cap_LAD_LAD;
+            type            patch;
+        }
+        Cap_LAD_RI
+        {
+            newName         Cap_LAD_RI;
+            type            patch;
+        }
+        Cap_LAD_S1
+        {
+            newName         Cap_LAD_S1;
+            type            patch;
+        }
+        Cap_LCX_LCx
+        {
+            newName         Cap_LCX_LCx;
+            type            patch;
+        }
+        Cap_RCA_R_PDA
+        {
+            newName         Cap_RCA_R_PDA;
+            type            patch;
+        }
+        Cap_RCA_R_PDA2
+        {
+            newName         Cap_RCA_R_PDA2;
+            type            patch;
+        }
+        Cap_RCA_R_PLB
+        {
+            newName         Cap_RCA_R_PLB;
+            type            patch;
+        }
+        Cap_RCA_R_PLB2
+        {
+            newName         Cap_RCA_R_PLB2;
+            type            patch;
+        }
+        Cap_RCA_R_PLB3
+        {
+            newName         Cap_RCA_R_PLB3;
+            type            patch;
+        }
+        Cap_RCA_RA1
+        {
+            newName         Cap_RCA_RA1;
+            type            patch;
+        }
+        Cap_Aorta_Inlet
+        {
+            newName         Cap_Aorta_Inlet;
+            type            patch;
+        }
+        Cap_Aorta_Outlet
+        {
+            newName         Cap_Aorta_Outlet;
+            type            patch;
+        }
+    }
+}
+
+meshQualitySettings
+{
+    maxNonOrthogonality 65;
+    maxSkewness     2;
+}
+
+
+// ************************************************************************* //

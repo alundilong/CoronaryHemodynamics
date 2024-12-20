@@ -1,0 +1,7 @@
+patientInfo {
+    MAP 96.2133; // mmHg
+    HR  60;
+    SBP 120;
+    MyocardialDensity 1.06; // g/mL
+    MyocardialVolume 147.755; // mL
+}

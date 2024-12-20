@@ -1,0 +1,11 @@
+prefix=/mingw64
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: CppUnit
+Description: The C++ Unit Test Library
+Version: 1.13.2
+Libs: -L${libdir} -lcppunit
+Libs.private: 
+Cflags: -I${includedir}

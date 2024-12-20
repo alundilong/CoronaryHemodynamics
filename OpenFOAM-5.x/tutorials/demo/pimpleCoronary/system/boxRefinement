@@ -1,0 +1,1638 @@
+box0 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box1 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box2 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0551028 -0.0110025 1.92602);
+};
+
+box3 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box4 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0471732 0.0109837 1.92697);
+};
+
+box5 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.05387 -0.00216049 1.92602);
+};
+
+box6 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0544748 -0.0364048 1.9129);
+};
+
+box7 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box8 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0381857 0.0205731 1.92853);
+};
+
+box9 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0513329 0.00103922 1.92642);
+};
+
+box10 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box11 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0327909 0.0232956 1.92786);
+};
+
+box12 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box13 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box14 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (-0.0119411 -0.0166161 1.87955);
+};
+
+box15 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box16 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0058026 0.00132553 1.85567);
+};
+
+box17 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box18 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box19 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box20 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0058026 0.00132553 1.85567);
+};
+
+box21 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box22 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box23 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0058026 0.00132553 1.85567);
+};
+
+box24 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box25 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0058026 0.00132553 1.85567);
+};
+
+box26 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box27 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (-0.0121029 -0.0167965 1.87973);
+};
+
+box28 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box29 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (-0.0121029 -0.0167965 1.87973);
+};
+
+box30 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box31 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box32 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box33 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (-0.0121029 -0.0167965 1.87973);
+};
+
+box34 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box35 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box36 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (-0.0121029 -0.0167965 1.87973);
+};
+
+box37 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box38 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (-0.0121029 -0.0167965 1.87973);
+};
+
+box39 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0552924 -0.011143 1.92594);
+};
+
+box40 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box41 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box42 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box43 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0471732 0.0109837 1.92697);
+};
+
+box44 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.05387 -0.00216049 1.92602);
+};
+
+box45 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0552924 -0.011143 1.92594);
+};
+
+box46 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box47 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0381857 0.0205731 1.92853);
+};
+
+box48 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0513329 0.00103922 1.92642);
+};
+
+box49 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box50 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0327909 0.0232956 1.92786);
+};
+
+box51 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box52 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box53 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.00593039 0.00152845 1.8556);
+};
+
+box54 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (-0.0119411 -0.0166161 1.87955);
+};
+
+box55 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box56 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box57 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box58 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box59 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.00955958 0.00619939 1.85456);
+};
+
+box60 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box61 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box62 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0299124 0.0300107 1.86091);
+};
+
+box63 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box64 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0241033 0.023665 1.86274);
+};
+
+box65 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0472397 0.0111972 1.92685);
+};
+
+box66 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box67 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box68 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0472397 0.0111972 1.92685);
+};
+
+box69 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box70 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0472397 0.0111972 1.92685);
+};
+
+box71 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0472397 0.0111972 1.92685);
+};
+
+box72 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box73 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0381857 0.0205731 1.92853);
+};
+
+box74 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0472397 0.0111972 1.92685);
+};
+
+box75 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box76 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0327909 0.0232956 1.92786);
+};
+
+box77 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box78 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0540841 -0.00225478 1.92611);
+};
+
+box79 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box80 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box81 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0540841 -0.00225478 1.92611);
+};
+
+box82 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box83 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0471732 0.0109837 1.92697);
+};
+
+box84 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0540841 -0.00225478 1.92611);
+};
+
+box85 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box86 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0381857 0.0205731 1.92853);
+};
+
+box87 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0513329 0.00103922 1.92642);
+};
+
+box88 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box89 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0327909 0.0232956 1.92786);
+};
+
+box90 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box91 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0547017 -0.0363412 1.91301);
+};
+
+box92 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box93 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box94 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0551028 -0.0110025 1.92602);
+};
+
+box95 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box96 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0471732 0.0109837 1.92697);
+};
+
+box97 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.05387 -0.00216049 1.92602);
+};
+
+box98 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box99 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0381857 0.0205731 1.92853);
+};
+
+box100 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0513329 0.00103922 1.92642);
+};
+
+box101 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box102 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0327909 0.0232956 1.92786);
+};
+
+box103 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box104 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box105 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.00593039 0.00152845 1.8556);
+};
+
+box106 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (-0.0119411 -0.0166161 1.87955);
+};
+
+box107 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box108 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.00941873 0.00599523 1.85459);
+};
+
+box109 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box110 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box111 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box112 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box113 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box114 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.00941873 0.00599523 1.85459);
+};
+
+box115 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box116 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.00941873 0.00599523 1.85459);
+};
+
+box117 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0380912 0.020841 1.92837);
+};
+
+box118 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box119 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box120 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0380912 0.020841 1.92837);
+};
+
+box121 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box122 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0380912 0.020841 1.92837);
+};
+
+box123 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0380912 0.020841 1.92837);
+};
+
+box124 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0380912 0.020841 1.92837);
+};
+
+box125 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box126 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0380912 0.020841 1.92837);
+};
+
+box127 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box128 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0327909 0.0232956 1.92786);
+};
+
+box129 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box130 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.051235 0.00126345 1.92647);
+};
+
+box131 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box132 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box133 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.051235 0.00126345 1.92647);
+};
+
+box134 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box135 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0471732 0.0109837 1.92697);
+};
+
+box136 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.051235 0.00126345 1.92647);
+};
+
+box137 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.051235 0.00126345 1.92647);
+};
+
+box138 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box139 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0381857 0.0205731 1.92853);
+};
+
+box140 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box141 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0327909 0.0232956 1.92786);
+};
+
+box142 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box143 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box144 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.00593039 0.00152845 1.8556);
+};
+
+box145 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (-0.0119411 -0.0166161 1.87955);
+};
+
+box146 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box147 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0299124 0.0300107 1.86091);
+};
+
+box148 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box149 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box150 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box151 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.00955958 0.00619939 1.85456);
+};
+
+box152 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box153 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box154 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box155 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0241033 0.023665 1.86274);
+};
+
+box156 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0327175 0.0234252 1.92761);
+};
+
+box157 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box158 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box159 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0327175 0.0234252 1.92761);
+};
+
+box160 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box161 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0327175 0.0234252 1.92761);
+};
+
+box162 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0327175 0.0234252 1.92761);
+};
+
+box163 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0327175 0.0234252 1.92761);
+};
+
+box164 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box165 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0327175 0.0234252 1.92761);
+};
+
+box166 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0327175 0.0234252 1.92761);
+};
+
+box167 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box168 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0135751 0.011477 1.91627);
+};
+
+box169 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box170 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.00593039 0.00152845 1.8556);
+};
+
+box171 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (-0.0119411 -0.0166161 1.87955);
+};
+
+box172 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box173 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0239841 0.0234469 1.86272);
+};
+
+box174 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box175 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box176 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box177 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.00955958 0.00619939 1.85456);
+};
+
+box178 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box179 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+
+box180 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0239841 0.0234469 1.86272);
+};
+
+box181 {
+type box;
+cellSize 0.0004375;
+lengthX 0.0004375;
+lengthY 0.0004375;
+lengthZ 0.0004375;
+centre (0.0139029 0.0114465 1.91589);
+};
+

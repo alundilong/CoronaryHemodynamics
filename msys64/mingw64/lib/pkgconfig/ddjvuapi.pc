@@ -1,0 +1,13 @@
+prefix=/mingw64
+exec_prefix=/mingw64
+libdir = /mingw64/lib
+includedir = /mingw64/include
+
+Name: ddjvuapi
+Description: DjVu Decoding API
+Version: 3.5.27
+Requires:
+Conflicts:
+Libs: -L/mingw64/lib -ldjvulibre
+Libs.private: -ljpeg  -lm 
+Cflags: -I/mingw64/include  

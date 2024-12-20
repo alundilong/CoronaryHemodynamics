@@ -1,0 +1,170 @@
+solid Visualization Toolkit generated SLA File
+ facet normal 0.751109 -0.646891 0.131782
+  outer loop
+   vertex 80.2134 -0.222947 1860.89
+   vertex 80.3104 -0.135875 1860.76
+   vertex 80.196 -0.223041 1860.99
+  endloop
+ endfacet
+ facet normal 0.751166 -0.646797 0.131924
+  outer loop
+   vertex 80.6011 0.3571 1861.53
+   vertex 80.5205 0.275856 1861.59
+   vertex 80.6541 0.397039 1861.42
+  endloop
+ endfacet
+ facet normal 0.751137 -0.646848 0.131838
+  outer loop
+   vertex 80.7954 0.480598 1861.02
+   vertex 80.7639 0.461458 1861.11
+   vertex 80.7945 0.470052 1860.98
+  endloop
+ endfacet
+ facet normal 0.751047 -0.646957 0.13181
+  outer loop
+   vertex 80.7945 0.470052 1860.98
+   vertex 80.7639 0.461458 1861.11
+   vertex 80.7672 0.416888 1860.87
+  endloop
+ endfacet
+ facet normal 0.751031 -0.64696 0.131887
+  outer loop
+   vertex 80.7307 0.352744 1860.77
+   vertex 80.7672 0.416888 1860.87
+   vertex 80.604 0.183286 1860.66
+  endloop
+ endfacet
+ facet normal 0.751082 -0.646918 0.131803
+  outer loop
+   vertex 80.7672 0.416888 1860.87
+   vertex 80.7639 0.461458 1861.11
+   vertex 80.604 0.183286 1860.66
+  endloop
+ endfacet
+ facet normal 0.751106 -0.646895 0.131781
+  outer loop
+   vertex 80.7639 0.461458 1861.11
+   vertex 80.7045 0.431728 1861.3
+   vertex 80.604 0.183286 1860.66
+  endloop
+ endfacet
+ facet normal 0.751566 -0.646458 0.131304
+  outer loop
+   vertex 80.2294 -0.0966428 1861.42
+   vertex 80.2191 -0.117612 1861.37
+   vertex 80.2511 -0.065477 1861.45
+  endloop
+ endfacet
+ facet normal 0.75119 -0.64678 0.131867
+  outer loop
+   vertex 80.196 -0.223041 1860.99
+   vertex 80.3104 -0.135875 1860.76
+   vertex 80.1707 -0.223149 1861.13
+  endloop
+ endfacet
+ facet normal 0.751084 -0.646868 0.132039
+  outer loop
+   vertex 80.4844 0.236607 1861.6
+   vertex 80.4383 0.181103 1861.59
+   vertex 80.5205 0.275856 1861.59
+  endloop
+ endfacet
+ facet normal 0.751104 -0.646893 0.131803
+  outer loop
+   vertex 80.5205 0.275856 1861.59
+   vertex 80.4383 0.181103 1861.59
+   vertex 80.6541 0.397039 1861.42
+  endloop
+ endfacet
+ facet normal 0.75111 -0.646881 0.131828
+  outer loop
+   vertex 80.4383 0.181103 1861.59
+   vertex 80.3483 0.068242 1861.55
+   vertex 80.6541 0.397039 1861.42
+  endloop
+ endfacet
+ facet normal 0.751103 -0.646904 0.131753
+  outer loop
+   vertex 80.3483 0.068242 1861.55
+   vertex 80.2511 -0.065477 1861.45
+   vertex 80.6541 0.397039 1861.42
+  endloop
+ endfacet
+ facet normal 0.751099 -0.646897 0.131812
+  outer loop
+   vertex 80.6541 0.397039 1861.42
+   vertex 80.2511 -0.065477 1861.45
+   vertex 80.6953 0.425402 1861.32
+  endloop
+ endfacet
+ facet normal 0.751099 -0.646896 0.131818
+  outer loop
+   vertex 80.2511 -0.065477 1861.45
+   vertex 80.2191 -0.117612 1861.37
+   vertex 80.6953 0.425402 1861.32
+  endloop
+ endfacet
+ facet normal 0.751098 -0.646892 0.131844
+  outer loop
+   vertex 80.2191 -0.117612 1861.37
+   vertex 80.1698 -0.208321 1861.21
+   vertex 80.6953 0.425402 1861.32
+  endloop
+ endfacet
+ facet normal 0.751129 -0.646889 0.13168
+  outer loop
+   vertex 80.1698 -0.208321 1861.21
+   vertex 80.1707 -0.223149 1861.13
+   vertex 80.6953 0.425402 1861.32
+  endloop
+ endfacet
+ facet normal 0.751098 -0.6469 0.131803
+  outer loop
+   vertex 80.1707 -0.223149 1861.13
+   vertex 80.3104 -0.135875 1860.76
+   vertex 80.6953 0.425402 1861.32
+  endloop
+ endfacet
+ facet normal 0.751137 -0.646867 0.131744
+  outer loop
+   vertex 80.3104 -0.135875 1860.76
+   vertex 80.3561 -0.0951004 1860.7
+   vertex 80.6953 0.425402 1861.32
+  endloop
+ endfacet
+ facet normal 0.751375 -0.646614 0.131631
+  outer loop
+   vertex 80.604 0.183286 1860.66
+   vertex 80.7045 0.431728 1861.3
+   vertex 80.5776 0.150602 1860.65
+  endloop
+ endfacet
+ facet normal 0.75109 -0.646908 0.131811
+  outer loop
+   vertex 80.5776 0.150602 1860.65
+   vertex 80.7045 0.431728 1861.3
+   vertex 80.3773 -0.0735561 1860.69
+  endloop
+ endfacet
+ facet normal 0.751276 -0.646742 0.131563
+  outer loop
+   vertex 80.6953 0.425402 1861.32
+   vertex 80.3561 -0.0951004 1860.7
+   vertex 80.7045 0.431728 1861.3
+  endloop
+ endfacet
+ facet normal 0.751118 -0.646882 0.131778
+  outer loop
+   vertex 80.3561 -0.0951004 1860.7
+   vertex 80.3697 -0.0812255 1860.69
+   vertex 80.7045 0.431728 1861.3
+  endloop
+ endfacet
+ facet normal 0.751187 -0.64682 0.131688
+  outer loop
+   vertex 80.3773 -0.0735561 1860.69
+   vertex 80.7045 0.431728 1861.3
+   vertex 80.3697 -0.0812255 1860.69
+  endloop
+ endfacet
+endsolid

@@ -1,0 +1,35 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="vc-supported">
+<info>
+  <title type="sort">3</title>
+  <link type="guide" xref="index#vc-mode"/>
+  <revision docversion="1.6" status="draft"/>
+  <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+</info>
+<title>Supported version control systems</title>
+
+<p>
+<app>Meld</app> supports a wide range of version control systems:
+</p>
+
+<list>
+  <item><p>Bazaar</p></item>
+  <item><p>Darcs</p></item>
+  <item><p>Git</p></item>
+  <item><p>Mercurial</p></item>
+  <item><p>SVN</p></item>
+</list>
+
+<p>
+Less common version control systems or unusual configurations may not be
+properly tested; please report any version control support bugs to <link
+href="https://bugzilla.gnome.org/">GNOME bugzilla</link>.
+</p>
+
+</page>

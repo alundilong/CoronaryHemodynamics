@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="command-line" xml:lang="sv">
+<info>
+  <title type="sort">2</title>
+  <link type="guide" xref="index#advanced"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Josef Andersson</mal:name>
+      <mal:email>josef.andersson@fripost.org</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
+  </info>
+<title>Kommandoradsanvändning</title>
+
+<p>Om du startar <app>Meld</app> från kommandoraden kan du berätta hur det ska bete sig vid uppstart.</p>
+<p>För en två- eller trevägs<link xref="file-mode">filjämförelse</link>, starta <app>Meld</app> med <cmd>meld <var>fil1</var> <var>fil2</var></cmd> eller <cmd>meld <var>fil1</var> <var>fil2</var> <var>fil3</var></cmd>.</p>
+
+<p>För en två- eller trevägs <link xref="folder-mode">mappjämförelse</link>, starta <app>Meld</app> med <cmd>meld <var>kat1</var> <var>kat2</var></cmd> eller <cmd>meld <var>kat1</var> <var>kat2</var> <var>kat3</var></cmd>.</p>
+
+<p>Du kan starta en <link xref="vc-mode">versionshantering</link>sjämförelse genom att endast ange ett argument; om filen eller katalogen hanteras av ett <link xref="vc-supported">versionshanteringssystem</link>, kommer det att starta en versionshanteringsjämförelse med det argumentet. Till exempel, <cmd>meld .</cmd> skulle starta en versionskontroll av aktuell katalog.</p>
+
+<note>
+<p>Kör <cmd>meld --help</cmd> för en lista över alla kommandoradsflaggor.</p>
+</note>
+
+</page>

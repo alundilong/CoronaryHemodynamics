@@ -1,0 +1,40 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="missing-functionality">
+<info>
+  <title type="sort">1</title>
+  <link type="guide" xref="index#advanced"/>
+  <revision docversion="1.6" status="draft"/>
+  <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+</info>
+<title>Things that <app>Meld</app> doesn't do</title>
+
+<p>
+Have you ever spent half an hour poking around an application trying to
+find out how to do something, thinking that <em>surely</em> there must be
+an option for this?
+</p>
+
+<p>
+This section lists a few of the common things that <app>Meld</app>
+<em>doesn't</em> do, either as a deliberate choice, or because we just
+haven't had time.
+</p>
+
+<section id="missing-change-fixed-alignment">
+<title>Aligning changes by adding lines</title>
+<p>
+When <app>Meld</app> shows differences between files, it shows both files
+as they would appear in a normal text editor. It does <em>not</em> insert
+additional lines so that the left and right sides of a particular change
+are the same size. There is no option to do this.
+</p>
+</section>
+
+
+</page>

@@ -1,0 +1,46 @@
+%NAME%
+mingw-w64-x86_64-cgal
+
+%VERSION%
+4.11-1
+
+%BASE%
+mingw-w64-cgal
+
+%DESC%
+Computational Geometry Algorithms Library (mingw-w64)
+
+%URL%
+https://www.cgal.org/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1506331273
+
+%INSTALLDATE%
+1506517501
+
+%PACKAGER%
+Alexey Pavlov <alexpux@gmail.com>
+
+%SIZE%
+36307968
+
+%LICENSE%
+LGPL, GPL
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+mingw-w64-x86_64-gcc-libs
+mingw-w64-x86_64-boost
+mingw-w64-x86_64-gmp
+mingw-w64-x86_64-mpfr
+
+%OPTDEPENDS%
+mingw-w64-x86_64-eigen3: for some packages, see the CGAL manual
+mingw-w64-x86_64-qt5: for CGAL_Qt5
+

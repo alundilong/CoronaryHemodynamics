@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GXPSFile: GXPS Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="GXPS Reference Manual">
+<link rel="up" href="ch01.html" title="GXPS">
+<link rel="prev" href="ch01.html" title="GXPS">
+<link rel="next" href="GXPSDocument.html" title="GXPSDocument">
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#GXPSFile.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#GXPSFile.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#GXPSFile.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#GXPSFile.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch01.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="GXPSDocument.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="GXPSFile"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GXPSFile.top_of_page"></a>GXPSFile</span></h2>
+<p>GXPSFile — XPS Files</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="GXPSFile.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="GXPSFile.html" title="GXPSFile"><span class="returnvalue">GXPSFile</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GXPSFile.html#gxps-file-new" title="gxps_file_new ()">gxps_file_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GXPSFile.html#gxps-file-get-n-documents" title="gxps_file_get_n_documents ()">gxps_file_get_n_documents</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GXPSDocument.html" title="GXPSDocument"><span class="returnvalue">GXPSDocument</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GXPSFile.html#gxps-file-get-document" title="gxps_file_get_document ()">gxps_file_get_document</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gint</span>
+</td>
+<td class="function_name">
+<a class="link" href="GXPSFile.html#gxps-file-get-document-for-link-target" title="gxps_file_get_document_for_link_target ()">gxps_file_get_document_for_link_target</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GXPSCoreProperties.html" title="GXPSCoreProperties"><span class="returnvalue">GXPSCoreProperties</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="GXPSFile.html#gxps-file-get-core-properties" title="gxps_file_get_core_properties ()">gxps_file_get_core_properties</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GXPSFile.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody><tr>
+<td class="property_type">
+<span class="type">GFile</span> *</td>
+<td class="property_name"><a class="link" href="GXPSFile.html#GXPSFile--file" title="The “file” property">file</a></td>
+<td class="property_flags">Write / Construct Only</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GXPSFile.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GXPSFile.html#GXPSFile-struct" title="struct GXPSFile">GXPSFile</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GXPSFile.html#GXPS-FILE-ERROR:CAPS" title="GXPS_FILE_ERROR">GXPS_FILE_ERROR</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GXPSFile.html#GXPSFileError" title="enum GXPSFileError">GXPSFileError</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GXPSFile.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> GXPSFile
+</pre>
+</div>
+<div class="refsect1">
+<a name="GXPSFile.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GXPSFile implements
+ GInitable.</p>
+</div>
+<div class="refsect1">
+<a name="GXPSFile.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;libgxps/gxps.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GXPSFile.description"></a><h2>Description</h2>
+<p><a class="link" href="GXPSFile.html" title="GXPSFile"><span class="type">GXPSFile</span></a> represents a XPS file. A <a class="link" href="GXPSFile.html" title="GXPSFile"><span class="type">GXPSFile</span></a> is a set of one or more
+documents, you can get the amount of documents contained in the set
+with <a class="link" href="GXPSFile.html#gxps-file-get-n-documents" title="gxps_file_get_n_documents ()"><code class="function">gxps_file_get_n_documents()</code></a>. Documents can be retrieved by their
+index in the set with <a class="link" href="GXPSFile.html#gxps-file-get-document" title="gxps_file_get_document ()"><code class="function">gxps_file_get_document()</code></a>.</p>
+</div>
+<div class="refsect1">
+<a name="GXPSFile.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="gxps-file-new"></a><h3>gxps_file_new ()</h3>
+<pre class="programlisting"><a class="link" href="GXPSFile.html" title="GXPSFile"><span class="returnvalue">GXPSFile</span></a> *
+gxps_file_new (<em class="parameter"><code><span class="type">GFile</span> *filename</code></em>,
+               <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Creates a new <a class="link" href="GXPSFile.html" title="GXPSFile"><span class="type">GXPSFile</span></a> for the given <span class="type">GFile</span>.</p>
+<div class="refsect3">
+<a name="gxps-file-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>filename</p></td>
+<td class="parameter_description"><p>a <span class="type">GFile</span></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p><span class="type">GError</span> for error reporting, or <code class="literal">NULL</code> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gxps-file-new.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="GXPSFile.html" title="GXPSFile"><span class="type">GXPSFile</span></a> or <code class="literal">NULL</code> on error.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gxps-file-get-n-documents"></a><h3>gxps_file_get_n_documents ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint</span>
+gxps_file_get_n_documents (<em class="parameter"><code><a class="link" href="GXPSFile.html" title="GXPSFile"><span class="type">GXPSFile</span></a> *xps</code></em>);</pre>
+<p>Gets the number of documents in <em class="parameter"><code>xps</code></em>
+.</p>
+<div class="refsect3">
+<a name="gxps-file-get-n-documents.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>xps</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GXPSFile.html" title="GXPSFile"><span class="type">GXPSFile</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gxps-file-get-n-documents.returns"></a><h4>Returns</h4>
+<p> the number of documents.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gxps-file-get-document"></a><h3>gxps_file_get_document ()</h3>
+<pre class="programlisting"><a class="link" href="GXPSDocument.html" title="GXPSDocument"><span class="returnvalue">GXPSDocument</span></a> *
+gxps_file_get_document (<em class="parameter"><code><a class="link" href="GXPSFile.html" title="GXPSFile"><span class="type">GXPSFile</span></a> *xps</code></em>,
+                        <em class="parameter"><code><span class="type">guint</span> n_doc</code></em>,
+                        <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Creates a new <a class="link" href="GXPSDocument.html" title="GXPSDocument"><span class="type">GXPSDocument</span></a> representing the document at
+index <em class="parameter"><code>n_doc</code></em>
+ in <em class="parameter"><code>xps</code></em>
+ file.</p>
+<div class="refsect3">
+<a name="gxps-file-get-document.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>xps</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GXPSFile.html" title="GXPSFile"><span class="type">GXPSFile</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n_doc</p></td>
+<td class="parameter_description"><p>the index of the document to get</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p><span class="type">GError</span> for error reporting, or <code class="literal">NULL</code> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gxps-file-get-document.returns"></a><h4>Returns</h4>
+<p> a new <a class="link" href="GXPSDocument.html" title="GXPSDocument"><span class="type">GXPSDocument</span></a> or <code class="literal">NULL</code> on error.
+Free the returned object with <code class="function">g_object_unref()</code>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gxps-file-get-document-for-link-target"></a><h3>gxps_file_get_document_for_link_target ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+gxps_file_get_document_for_link_target
+                               (<em class="parameter"><code><a class="link" href="GXPSFile.html" title="GXPSFile"><span class="type">GXPSFile</span></a> *xps</code></em>,
+                                <em class="parameter"><code><a class="link" href="libgxps-GXPS-Links.html#GXPSLinkTarget"><span class="type">GXPSLinkTarget</span></a> *target</code></em>);</pre>
+<p>Gets the index of the document in <em class="parameter"><code>xps</code></em>
+ pointed by <em class="parameter"><code>target</code></em>
+.
+If the <a class="link" href="libgxps-GXPS-Links.html#GXPSLinkTarget"><span class="type">GXPSLinkTarget</span></a> does not reference a document, or
+referenced document is not found in <em class="parameter"><code>xps</code></em>
+ file -1 will be
+returned. In this case you can look for the page pointed by
+the link target by calling <a class="link" href="GXPSDocument.html#gxps-document-get-page-for-anchor" title="gxps_document_get_page_for_anchor ()"><code class="function">gxps_document_get_page_for_anchor()</code></a>
+with the anchor of the <a class="link" href="libgxps-GXPS-Links.html#GXPSLinkTarget"><span class="type">GXPSLinkTarget</span></a> for every document in
+<em class="parameter"><code>xps</code></em>
+.</p>
+<div class="refsect3">
+<a name="gxps-file-get-document-for-link-target.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>xps</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GXPSFile.html" title="GXPSFile"><span class="type">GXPSFile</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>target</p></td>
+<td class="parameter_description"><p>a <a class="link" href="libgxps-GXPS-Links.html#GXPSLinkTarget"><span class="type">GXPSLinkTarget</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gxps-file-get-document-for-link-target.returns"></a><h4>Returns</h4>
+<p> the index of the document pointed by the given
+<a class="link" href="libgxps-GXPS-Links.html#GXPSLinkTarget"><span class="type">GXPSLinkTarget</span></a> or -1.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gxps-file-get-core-properties"></a><h3>gxps_file_get_core_properties ()</h3>
+<pre class="programlisting"><a class="link" href="GXPSCoreProperties.html" title="GXPSCoreProperties"><span class="returnvalue">GXPSCoreProperties</span></a> *
+gxps_file_get_core_properties (<em class="parameter"><code><a class="link" href="GXPSFile.html" title="GXPSFile"><span class="type">GXPSFile</span></a> *xps</code></em>,
+                               <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Create a <a class="link" href="GXPSCoreProperties.html" title="GXPSCoreProperties"><span class="type">GXPSCoreProperties</span></a> object containing the metadata
+of <em class="parameter"><code>xpsm</code></em>
+, or <code class="literal">NULL</code> in case of error or if the <a class="link" href="GXPSFile.html" title="GXPSFile"><span class="type">GXPSFile</span></a>
+doesn't contain core properties.</p>
+<div class="refsect3">
+<a name="gxps-file-get-core-properties.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>xps</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GXPSFile.html" title="GXPSFile"><span class="type">GXPSFile</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p><span class="type">GError</span> for error reporting, or <code class="literal">NULL</code> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gxps-file-get-core-properties.returns"></a><h4>Returns</h4>
+<p> a new <a class="link" href="GXPSCoreProperties.html" title="GXPSCoreProperties"><span class="type">GXPSCoreProperties</span></a> or <code class="literal">NULL</code>.
+Free the returned object with <code class="function">g_object_unref()</code>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GXPSFile.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GXPSFile-struct"></a><h3>struct GXPSFile</h3>
+<pre class="programlisting">struct GXPSFile;</pre>
+<p>The <span class="structname">GXPSFile</span> struct contains
+only private fields and should not be directly accessed.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GXPS-FILE-ERROR:CAPS"></a><h3>GXPS_FILE_ERROR</h3>
+<pre class="programlisting">#define GXPS_FILE_ERROR          (gxps_file_error_quark ())
+</pre>
+<p>Error domain for <a class="link" href="GXPSFile.html" title="GXPSFile"><span class="type">GXPSFile</span></a>. Errors in this domain will be from
+the <a class="link" href="GXPSFile.html#GXPSFileError" title="enum GXPSFileError"><span class="type">GXPSFileError</span></a> enumeration.
+See <span class="type">GError</span> for more information on error domains.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GXPSFileError"></a><h3>enum GXPSFileError</h3>
+<p>Error codes returned by <a class="link" href="GXPSFile.html" title="GXPSFile"><span class="type">GXPSFile</span></a> functions.</p>
+<div class="refsect3">
+<a name="GXPSFileError.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="enum_member_name"><p><a name="GXPS-FILE-ERROR-INVALID:CAPS"></a>GXPS_FILE_ERROR_INVALID</p></td>
+<td class="enum_member_description">
+<p>The XPS is invalid.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GXPSFile.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GXPSFile--file"></a><h3>The <code class="literal">“file”</code> property</h3>
+<pre class="programlisting">  “file”                     <span class="type">GFile</span> *</pre>
+<p>The file file.</p>
+<p>Flags: Write / Construct Only</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GXPSFile.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GXPSDocument.html" title="GXPSDocument"><span class="type">GXPSDocument</span></a>, <a class="link" href="libgxps-GXPS-Links.html#GXPSLinkTarget"><span class="type">GXPSLinkTarget</span></a></p>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.25.1</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="text-filters" xml:lang="cs">
+<info>
+  <title type="sort">2</title>
+  <link type="guide" xref="index#file-mode"/>
+  <link type="seealso" xref="file-filters"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+</info>
+
+<title>Odfiltrování textu</title>
+
+<p>Když porovnáváte několik souborů, můžete v nich mít části textu, ve kterých nejsou rozdíly důležité. Například se můžete chtít zaměřit na změny v části s kódem a ignorovat změny v řádcích s komentáři. Díky textovým filtrům stačí aplikaci <app>Meld</app> říci, aby při zobrazování rozdílů mezi soubory ignorovala text, který vyhovuje nějakému vzoru (tj. regulárnímu výrazu).</p>
+
+<note style="important">
+  <p>Textové filtry neovlivňují jen porovnání souborů, ale i porovnání složek. Více podrobností najdete v <link xref="file-filters">poznámkách k filtrování souborů</link>.</p>
+</note>
+
+
+<section id="text-filter-creation">
+<title>Přidávání a používání textových filtrů</title>
+
+<p>Textové filtry můžete zapínat a vypínat na kartě <gui>Filtry textu</gui> v dialogovém okně <gui>Předvolby</gui>. <app>Meld</app> má předdefinováno několik jednoduchých filtrů, které mohou být užitečné, a k tomu si můžete vytvořit své vlastní.</p>
+
+<p>V aplikaci <app>Meld</app> nejsou textové filtry nic jiného, než regulární výrazy spouštěné vůči textu nebo souborům, které porovnáváte. Text, který regulárnímu výrazu vyhovuje, je během porovnávání ignorován. V zobrazení porovnání sice takovýto text stále uvidíte, ale nebude brán v úvahu při hledání rozdílů. Textové filtry se použijí v určeném pořadí, takže je možné, aby první filtr odebral text tak, aby zbytek vyhovoval druhému filtru atd.</p>
+
+<note style="tip">
+  <p>Jestli nejste v regulárních výrazech zběhlí, můžete se podívat na <link href="http://docs.python.org/howto/regex.html">JAK NA regulární výrazy</link> v dokumentaci jazyka Python (odkazovaný text je v angličtině).</p>
+</note>
+
+</section>
+
+
+
+<section id="text-filter-problems">
+<title>Aby textové filtry fungovaly správně</title>
+
+<p>Udělat chybu v definici filtrování textu je lehké a podpora filtrování ze strany aplikace Meld také není úplně dodělaná. Jedním z problémů třeba je, že filtr nedokáže měnit počet řádků v souboru. Kupříkladu mějme zapnutý zabudovaný filtr <gui>Script comment</gui> a porovnejme následující soubory:</p>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <listing>
+          <title><file>poznámky1.txt</file></title>
+          <code>
+a
+b#poznámka
+c
+d</code>
+        </listing>
+      </td>
+      <td>
+        <listing>
+          <title><file>poznámky2.txt</file></title>
+          <code>
+a
+b
+c
+#poznámka</code>
+        </listing>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>potom by řádky začínající <code>b</code> měly být zobrazeny jako shodné (komentář je zahozen), ale řádek <code>d</code> by měl být zobrazen jako lišící se od řádku s komentářem napravo. To je způsobeno tím, že na pravé straně je odstraněno <code>#comment</code>, ale řádek jako takový zůstává. <app>Meld</app> pak zobrazuje, že řádek <code>d</code> se liší od toho, co je na druhé straně zobrazeno, jako prázdný řádek.</p>
+
+</section>
+
+
+<section id="text-filter-blank-lines">
+<title>Prázdné řádky a filtry</title>
+
+<p>Předvolba <gui>Ignorovat změny, které přidávají nebo odstraňují prázdné řádky</gui> na kartě <gui>Filtry textu</gui> si vyžaduje vysvětlení. Když je tento speciální filtr zapnutý, pak jsou změny spočívající jen v prázdných řádcích zcela ignorovány. To může nastat, když byly současné bílé znaky v textu změněny, ale také když váš aktivní textový filtr odstranil ze změny všechen ostatní obsah a ponechal jen prázdné řádky.</p>
+
+<p>Tuto volbu můžete použít k obejití některých <link xref="#text-filter-problems">problémů a omezení</link> vyplývajících z toho, že filtry nejsou schopné odstraňovat celé řádky, ale může být užitečná i sama o sobě.</p>
+
+</section>
+
+</page>

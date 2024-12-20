@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" id="index" xml:lang="el">
+	<info>
+      <revision docversion="1.6" status="draft"/>
+      <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+      <credit type="author copyright">
+        <name>Kai Willadsen</name>
+        <email>kai.willadsen@gmail.com</email>
+        <years>2012</years>
+      </credit>
+	
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Δημήτρης Σπίγγος</mal:name>
+      <mal:email>dmtrs32@gmail.com</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  </info>
+
+	<title>Βοήθεια του Meld</title>
+
+	<section id="introduction" style="2column">
+	    <title>Εισαγωγή</title>
+	</section>
+
+	<section id="file-mode" style="2column">
+		<title>Σύγκριση αρχείων</title>
+	</section>
+
+	<section id="folder-mode" style="2column">
+		<title>Σύγκριση φακέλων</title>
+	</section>
+
+	<section id="vc-mode" style="2column">
+		<title>Χρήση του Meld με έλεγχο εκδόσεων</title>
+	</section>
+
+	<section id="advanced" style="2column">
+		<title>Προχωρημένη χρήση</title>
+	</section>
+</page>

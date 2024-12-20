@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="file-changes" xml:lang="sv">
+<info>
+  <title type="sort">2</title>
+  <link type="guide" xref="index#file-mode"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Josef Andersson</mal:name>
+      <mal:email>josef.andersson@fripost.org</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Hantera ändringar</title>
+
+<p><app>Meld</app> hanterar skillnader mellan filer som en lista av <em>ändringsblock</em> eller enklare, <em>ändringar</em>. Varje ändring är en grupp rader som motsvaras mellan filer. Eftersom dessa ändringar är vad du vanligtvis är intresserad av, ger dig <app>Meld</app> specifika verktyg för att navigera mellan ändringarna och redigera dem. Du kan hitta dessa verktyg i menyn <gui style="menu">Ändringar</gui>.</p>
+
+
+
+<section id="change-navigation">
+<title>Navigera mellan ändringar</title>
+
+<p>Du kan navigera mellan ändringar med menyobjekten <guiseq><gui style="menu">Ändringar</gui><gui style="menuitem">Föregående ändring</gui></guiseq> och <guiseq><gui style="menu">Ändringar</gui><gui style="menuitem">Nästa ändring</gui></guiseq>. Du kan också använda din mus rullhjul för flytta mellan ändringar genom att rulla på ändringsraden i mitten.</p>
+
+</section>
+
+
+
+<section id="change-actions">
+<title>Ändra ändringar</title>
+
+<p>Förutom att direkt redigera textfiler ger dig <app>Meld</app> verktyg för att flytta, kopiera eller ta bort individuella skillnader mellan filer. Raden mellan två filer visar inte bara vilka delar av de två filerna som motsvaras utan låter dig också selektivt välja att sammanfoga eller ta bort olika ändringar genom att klicka på pilen eller kryssikonen intill början på varje ändring.</p>
+
+<p>Standardåtgärden är <em>ersätt</em>. Denna åtgärd ersätter innehållet för motsvarande ändring med den aktuella ändringen.</p>
+<p>Håll ner tangenten <key>Skift</key> för att ändra aktuell åtgärd till <em>ta bort</em>. Denna åtgärd tar bort aktuell ändring.</p>
+<p>Håll ner tangenten <key>Ctrl</key> för att ändra den aktuella åtgärden till <em>infoga</em>. Denna åtgärd infogar den aktuella ändringen ovan eller under (beroende på val) motsvarande ändring.</p>
+
+</section>
+
+</page>

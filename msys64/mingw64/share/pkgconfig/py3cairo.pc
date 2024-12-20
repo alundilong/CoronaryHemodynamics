@@ -1,0 +1,8 @@
+prefix=/mingw64
+
+Name: Pycairo
+Description: Python 3 bindings for cairo
+Version: 1.15.3
+Requires: cairo
+Cflags: -I${prefix}/include/pycairo
+Libs:

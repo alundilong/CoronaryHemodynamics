@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="preferences" xml:lang="de">
+<info>
+  <title type="sort">1</title>
+  <link type="guide" xref="index#advanced"/>
+  <revision docversion="1.7" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2013</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2009, 2016</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Benjamin Steinwender</mal:name>
+      <mal:email>b@stbe.at</mal:email>
+      <mal:years>2014-2015</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Christian Kirbach</mal:name>
+      <mal:email>christian.kirbach@gmail.com</mal:email>
+      <mal:years>2014, 2016</mal:years>
+    </mal:credit>
+  </info>
+<title>Einstellungen von Meld</title>
+
+<terms>
+  <title>Editor-Einstellungen</title>
+  <item>
+    <title>Editor-Befehl</title>
+    <p>Dies ist der Name des Befehls, der zum Öffnen von Textdateien in einem externen Editor verwendet wird. Es kann einfach ein Befehl sein (zum Beispiel <cmd>gedit</cmd>), wobei in diesem Fall die Datei als letztes Argument übergeben wird. Alternativ können Sie zum Befehl <code>{file}</code>- und <code>{line}</code>-Elemente hinzufügen. Dann ersetzt <app>Meld</app> den Dateipfad beziehungsweise die aktuelle Zeilennummer (zum Beispiel <cmd>gedit {file}:{line}</cmd>).</p>
+  </item>
+</terms>
+<terms>
+  <title>Ordnervergleich-Einstellungen</title>
+  <item>
+    <title>Textfilter während eines Ordnervergleichs anwenden</title>
+    <p>Beim Vergleichen von Dateien im Ordnervergleich-Modus können Textfilter und andere Optionen zur Textmanipulation auf die Inhalte von Dateien angewendet werden. Wenn diese Option aktiviert ist, werden alle aktuell aktivierten Textfilter angewendet, die Option zum Entfernen von Leerzeilen bei Bedarf angewendet und alle Unterschiede in Zeilenenden ignoriert.</p>
+    <p>Aktivieren dieser Option bedeutet, dass <app>Meld</app> alle nicht-binären Dateien während des Ordnervergleichs vollständig in den Speicher einlesen muss. Bei großen Textdateien kann dies Geschwindigkeitseinbußen und Speicherprobleme verursachen.</p>
+    <p>Diese Option ist nur wirksam, wenn <gui>Dateien nur anhand Größe und Änderungszeit vergleichen</gui> nicht aktiviert ist.</p>
+  </item>
+</terms>
+
+</page>

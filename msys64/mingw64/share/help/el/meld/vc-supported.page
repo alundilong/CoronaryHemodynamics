@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="vc-supported" xml:lang="el">
+<info>
+  <title type="sort">3</title>
+  <link type="guide" xref="index#vc-mode"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Δημήτρης Σπίγγος</mal:name>
+      <mal:email>dmtrs32@gmail.com</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  </info>
+<title>Υποστηριζόμενα συστήματα ελέγχου εκδόσεων</title>
+
+<p>Το <app>Meld</app> υποστηρίζει μια πλατιά περιοχή συστημάτων ελέγχου εκδόσεων:</p>
+
+<list>
+  <item><p>Bazaar</p></item>
+  <item><p>Darcs</p></item>
+  <item><p>Git</p></item>
+  <item><p>Mercurial</p></item>
+  <item><p>SVN</p></item>
+</list>
+
+<p>Λιγότερο συνηθισμένα συστήματα ελέγχου εκδόσεων ή σπάνιες διαμορφώσεις ενδέχεται να μην μπορούν να ελεγχθούν σωστά· παρακαλούμε αναφέρτε οποιαδήποτε σφάλματα υποστήριξης ελέγχου έκδοσης στο <link href="https://bugzilla.gnome.org/">GNOME bugzilla</link>.</p>
+
+</page>

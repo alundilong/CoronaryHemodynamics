@@ -1,0 +1,36 @@
+%NAME%
+tree
+
+%VERSION%
+1.7.0-1
+
+%DESC%
+A directory listing program displaying a depth indented list of files
+
+%URL%
+http://mama.indstate.edu/users/ice/tree/
+
+%ARCH%
+x86_64
+
+%BUILDDATE%
+1410660373
+
+%INSTALLDATE%
+1505405422
+
+%PACKAGER%
+Alexey Pavlov <alexpux@gmail.com>
+
+%SIZE%
+70656
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+msys2-runtime
+

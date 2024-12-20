@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="preferences" xml:lang="es">
+<info>
+  <title type="sort">1</title>
+  <link type="guide" xref="index#advanced"/>
+  <revision docversion="1.7" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2013</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Mustieles</mal:name>
+      <mal:email>daniel.mustieles@gmail.com</mal:email>
+      <mal:years>2014 - 2015</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Facundo Darío Illanes</mal:name>
+      <mal:email>fdillanes@gmail.com</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  </info>
+<title>Preferencias de Meld</title>
+
+<terms>
+  <title>Preferencias del editor</title>
+  <item>
+    <title>Comando del editor</title>
+    <p>El nombre del comando que ejecutar para abrir archivos de texto en un editor externo. Este puede ser simplemente el comando (por ejemplo: <cmd>gedit</cmd>) en cuyo caso el archivo que abrir se pasará como el último argumento. De otra manera, puede agregar los elementos <code>{archivo}</code> y <code>{línea}</code> al comando, en cuyo caso <app>Meld</app> sustituirá la ruta al archivo y el número de línea respectivamente (por ejemplo: <cmd>gedit {archivo}:{línea}</cmd>).</p>
+  </item>
+</terms>
+<terms>
+  <title>Preferencias de la comparación de carpetas</title>
+  <item>
+    <title>Aplicar filtros de texto en la comparación de carpetas</title>
+    <p>Al comparar archivo en modo de comparación de carpetas, se pueden aplicar filtros de texto y otras opciones de manipulación de texto al contenido de los archivos. Si esta opción está activada, se aplicarán todos los filtros de texto activados, la opción de eliminación de líneas en blanco se aplicará adecuadamente, y las diferencias en los finales de línea de ignorarán.</p>
+    <p>Activar esta opción hará que <app>Meld</app> lea por completo todos los archivos no binarios que estén en memoria durante la comparación de carpetas. Con archivos de texto grandes, esto puede ser lento y provocar problemas de memoria.</p>
+    <p>Esta opción sólo tiene efecto si la opción «Comparar archivos basándose sólo en el tamaño y en la marca de tiempo» no está activada.</p>
+  </item>
+</terms>
+
+</page>

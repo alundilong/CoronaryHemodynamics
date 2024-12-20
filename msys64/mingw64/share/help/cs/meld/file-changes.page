@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="file-changes" xml:lang="cs">
+<info>
+  <title type="sort">2</title>
+  <link type="guide" xref="index#file-mode"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+</info>
+
+<title>Práce se změnami</title>
+
+<p><app>Meld</app> se chová ke změnám mezi soubory jako k seznamu <em>bloků změn</em>, zkráceně jen <em>změn</em>. Každá změna sestává ze skupiny řádků, které si mezi soubory odpovídají. Protože právě tyto změny jsou obvykle to, co vás zajímá, poskytuje <app>Meld</app> nástroje pro přecházení mezi nimi a pro jejich úpravy. Tyto nástroje najdete v nabídce <gui style="menu">Změny</gui>.</p>
+
+
+
+<section id="change-navigation">
+<title>Pohyb mezi změnami</title>
+
+<p>Mezi změnami se můžete pohybovat pomocí položek nabídky <guiseq><gui style="menu">Změny</gui><gui style="menuitem">Předchozí změna</gui></guiseq> a <guiseq><gui style="menu">Změny</gui><gui style="menuitem">Následující změna</gui></guiseq>. Můžete také použít kolečko myši nad středovou lištou se změnami.</p>
+
+</section>
+
+
+
+<section id="change-actions">
+<title>Změna změn</title>
+
+<p>Mimo přímých úprav textu vám <app>Meld</app> poskytuje nástroje pro přesun, kopírování nebo mazání jednotlivých rozdílů mezi soubory. Lišta mezi dvěma soubory nejen zobrazuje, které části těchto souborů si navzájem odpovídají, ale také umožňuje cíleně slučovat nebo mazat rozdílové změny kliknutím na ikonu se šipkou nebo křížkem vedle začátku každé změny.</p>
+
+<p>Výchozí činností je <em>nahrazení</em>. Tím se nahradí obsah odpovídající změny aktuální změnou.</p>
+<p>Přidržením klávesy <key>Shift</key> změníte aktuální činnost na <em>smazat</em>. Touto činností se smažou současné změny.</p>
+<p>Přidržením klávesy <key>Ctrl</key> změníte aktuální činnost na <em>vložit</em>. Touto činností se současné změny vloží nad nebo pod (podle výběru) odpovídající změny.</p>
+
+</section>
+
+</page>

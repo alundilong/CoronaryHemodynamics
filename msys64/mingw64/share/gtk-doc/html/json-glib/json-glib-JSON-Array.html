@@ -1,0 +1,1356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JSON Array: JSON-GLib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="JSON-GLib Reference Manual">
+<link rel="up" href="ch01.html" title="Data Types">
+<link rel="prev" href="json-glib-JSON-Node.html" title="JSON Node">
+<link rel="next" href="json-glib-JSON-Object.html" title="JSON Object">
+<meta name="generator" content="GTK-Doc V1.26 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#json-glib-JSON-Array.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#json-glib-JSON-Array.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="json-glib-JSON-Node.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="json-glib-JSON-Object.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="json-glib-JSON-Array"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="json-glib-JSON-Array.top_of_page"></a>JSON Array</span></h2>
+<p>JSON Array — a JSON array representation</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="json-glib-JSON-Array.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="returnvalue">JsonArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-new" title="json_array_new ()">json_array_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="returnvalue">JsonArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-sized-new" title="json_array_sized_new ()">json_array_sized_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="returnvalue">JsonArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-ref" title="json_array_ref ()">json_array_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-unref" title="json_array_unref ()">json_array_unref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-seal" title="json_array_seal ()">json_array_seal</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-is-immutable" title="json_array_is_immutable ()">json_array_is_immutable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-hash" title="json_array_hash ()">json_array_hash</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-equal" title="json_array_equal ()">json_array_equal</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-add-element" title="json_array_add_element ()">json_array_add_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="returnvalue">JsonNode</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-get-element" title="json_array_get_element ()">json_array_get_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="returnvalue">JsonNode</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-dup-element" title="json_array_dup_element ()">json_array_dup_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-get-elements" title="json_array_get_elements ()">json_array_get_elements</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-get-length" title="json_array_get_length ()">json_array_get_length</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-remove-element" title="json_array_remove_element ()">json_array_remove_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="json-glib-JSON-Array.html#JsonArrayForeach" title="JsonArrayForeach ()">*JsonArrayForeach</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-foreach-element" title="json_array_foreach_element ()">json_array_foreach_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-add-array-element" title="json_array_add_array_element ()">json_array_add_array_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="returnvalue">JsonArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-get-array-element" title="json_array_get_array_element ()">json_array_get_array_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-add-boolean-element" title="json_array_add_boolean_element ()">json_array_add_boolean_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-get-boolean-element" title="json_array_get_boolean_element ()">json_array_get_boolean_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-add-double-element" title="json_array_add_double_element ()">json_array_add_double_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-get-double-element" title="json_array_get_double_element ()">json_array_get_double_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-add-int-element" title="json_array_add_int_element ()">json_array_add_int_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gint64"><span class="returnvalue">gint64</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-get-int-element" title="json_array_get_int_element ()">json_array_get_int_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-add-null-element" title="json_array_add_null_element ()">json_array_add_null_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-get-null-element" title="json_array_get_null_element ()">json_array_get_null_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-add-object-element" title="json_array_add_object_element ()">json_array_add_object_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="json-glib-JSON-Object.html#JsonObject"><span class="returnvalue">JsonObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-get-object-element" title="json_array_get_object_element ()">json_array_get_object_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-add-string-element" title="json_array_add_string_element ()">json_array_add_string_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-JSON-Array.html#json-array-get-string-element" title="json_array_get_string_element ()">json_array_get_string_element</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="JsonArray"></a><div class="refsect1">
+<a name="json-glib-JSON-Array.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="json-glib-JSON-Array.html#JsonArray-struct" title="JsonArray">JsonArray</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="json-glib-JSON-Array.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
+    <span class="lineart">╰──</span> JsonArray
+</pre>
+</div>
+<div class="refsect1">
+<a name="json-glib-JSON-Array.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;json-glib/json-glib.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="json-glib-JSON-Array.description"></a><h2>Description</h2>
+<p><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> is the representation of the array type inside JSON. It contains
+<a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> elements, which may contain fundamental types, other arrays or
+objects.</p>
+<p>Since arrays can be expensive, they are reference counted. You can control
+the lifetime of a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> using <a class="link" href="json-glib-JSON-Array.html#json-array-ref" title="json_array_ref ()"><code class="function">json_array_ref()</code></a> and <a class="link" href="json-glib-JSON-Array.html#json-array-unref" title="json_array_unref ()"><code class="function">json_array_unref()</code></a>.</p>
+<p>To append an element, use <a class="link" href="json-glib-JSON-Array.html#json-array-add-element" title="json_array_add_element ()"><code class="function">json_array_add_element()</code></a>.
+To extract an element at a given index, use <a class="link" href="json-glib-JSON-Array.html#json-array-get-element" title="json_array_get_element ()"><code class="function">json_array_get_element()</code></a>.
+To retrieve the entire array in list form, use <a class="link" href="json-glib-JSON-Array.html#json-array-get-elements" title="json_array_get_elements ()"><code class="function">json_array_get_elements()</code></a>.
+To retrieve the length of the array, use <a class="link" href="json-glib-JSON-Array.html#json-array-get-length" title="json_array_get_length ()"><code class="function">json_array_get_length()</code></a>.</p>
+</div>
+<div class="refsect1">
+<a name="json-glib-JSON-Array.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="json-array-new"></a><h3>json_array_new ()</h3>
+<pre class="programlisting"><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="returnvalue">JsonArray</span></a> *
+json_array_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a>.</p>
+<p><span class="annotation">[<acronym title="This symbol is a constructor, not a static method."><span class="acronym">constructor</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="json-array-new.returns"></a><h4>Returns</h4>
+<p>the newly created <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-sized-new"></a><h3>json_array_sized_new ()</h3>
+<pre class="programlisting"><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="returnvalue">JsonArray</span></a> *
+json_array_sized_new (<em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> n_elements</code></em>);</pre>
+<p>Creates a new <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> with <em class="parameter"><code>n_elements</code></em>
+ slots already allocated.</p>
+<p><span class="annotation">[<acronym title="This symbol is a constructor, not a static method."><span class="acronym">constructor</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="json-array-sized-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>n_elements</p></td>
+<td class="parameter_description"><p>number of slots to pre-allocate</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-array-sized-new.returns"></a><h4>Returns</h4>
+<p>the newly created <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-ref"></a><h3>json_array_ref ()</h3>
+<pre class="programlisting"><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="returnvalue">JsonArray</span></a> *
+json_array_ref (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>);</pre>
+<p>Increase by one the reference count of a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a>.</p>
+<div class="refsect3">
+<a name="json-array-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-array-ref.returns"></a><h4>Returns</h4>
+<p>the passed <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a>, with the reference count
+increased by one. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-unref"></a><h3>json_array_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+json_array_unref (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>);</pre>
+<p>Decreases by one the reference count of a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a>. If the
+reference count reaches zero, the array is destroyed and all
+its allocated resources are freed.</p>
+<div class="refsect3">
+<a name="json-array-unref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-seal"></a><h3>json_array_seal ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+json_array_seal (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>);</pre>
+<p>Seals the <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a>, making it immutable to further changes. This will
+recursively seal all elements in the array too.</p>
+<p>If the <em class="parameter"><code>array</code></em>
+ is already immutable, this is a no-op.</p>
+<div class="refsect3">
+<a name="json-array-seal.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix11.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-is-immutable"></a><h3>json_array_is_immutable ()</h3>
+<pre class="programlisting"><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+json_array_is_immutable (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>);</pre>
+<p>Check whether the given <em class="parameter"><code>array</code></em>
+ has been marked as immutable by calling
+<a class="link" href="json-glib-JSON-Array.html#json-array-seal" title="json_array_seal ()"><code class="function">json_array_seal()</code></a> on it.</p>
+<div class="refsect3">
+<a name="json-array-is-immutable.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-array-is-immutable.returns"></a><h4>Returns</h4>
+<p> <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the <em class="parameter"><code>array</code></em>
+is immutable</p>
+</div>
+<p class="since">Since: <a class="link" href="ix11.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-hash"></a><h3>json_array_hash ()</h3>
+<pre class="programlisting"><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+json_array_hash (<em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> key</code></em>);</pre>
+<p>Calculate a hash value for the given <em class="parameter"><code>key</code></em>
+ (a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a>).</p>
+<p>The hash is calculated over the array and all its elements, recursively. If
+the array is immutable, this is a fast operation; otherwise, it scales
+proportionally with the length of the array.</p>
+<div class="refsect3">
+<a name="json-array-hash.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>key</p></td>
+<td class="parameter_description"><p>a JSON array to hash. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> JsonArray]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-array-hash.returns"></a><h4>Returns</h4>
+<p> hash value for <em class="parameter"><code>key</code></em>
+</p>
+</div>
+<p class="since">Since: <a class="link" href="ix11.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-equal"></a><h3>json_array_equal ()</h3>
+<pre class="programlisting"><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+json_array_equal (<em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> a</code></em>,
+                  <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> b</code></em>);</pre>
+<p>Check whether <em class="parameter"><code>a</code></em>
+ and <em class="parameter"><code>b</code></em>
+ are equal <a href="json-glib-JSON-Array.html#JsonArray-struct"><span class="type">JsonArrays</span></a>, meaning they have the same
+number of elements, and the values of elements in corresponding positions
+are equal.</p>
+<div class="refsect3">
+<a name="json-array-equal.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a</p></td>
+<td class="parameter_description"><p>a JSON array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> JsonArray]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>b</p></td>
+<td class="parameter_description"><p>another JSON array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> JsonArray]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-array-equal.returns"></a><h4>Returns</h4>
+<p> <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>a</code></em>
+and <em class="parameter"><code>b</code></em>
+are equal; <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
+</div>
+<p class="since">Since: <a class="link" href="ix11.html#api-index-1.2">1.2</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-add-element"></a><h3>json_array_add_element ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+json_array_add_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                        <em class="parameter"><code><a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> *node</code></em>);</pre>
+<p>Appends <em class="parameter"><code>node</code></em>
+ inside <em class="parameter"><code>array</code></em>
+. The array will take ownership of the
+<a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a>.</p>
+<div class="refsect3">
+<a name="json-array-add-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>node</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-get-element"></a><h3>json_array_get_element ()</h3>
+<pre class="programlisting"><a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="returnvalue">JsonNode</span></a> *
+json_array_get_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                        <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> index_</code></em>);</pre>
+<p>Retrieves the <a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> containing the value of the element at <em class="parameter"><code>index_</code></em>
+
+inside a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a>.</p>
+<div class="refsect3">
+<a name="json-array-get-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index_</p></td>
+<td class="parameter_description"><p>the index of the element to retrieve</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-array-get-element.returns"></a><h4>Returns</h4>
+<p>a pointer to the <a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> at the requested index. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-dup-element"></a><h3>json_array_dup_element ()</h3>
+<pre class="programlisting"><a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="returnvalue">JsonNode</span></a> *
+json_array_dup_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                        <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> index_</code></em>);</pre>
+<p>Retrieves a copy of the <a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> containing the value of the
+element at <em class="parameter"><code>index_</code></em>
+ inside a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p>
+<div class="refsect3">
+<a name="json-array-dup-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index_</p></td>
+<td class="parameter_description"><p>the index of the element to retrieve</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-array-dup-element.returns"></a><h4>Returns</h4>
+<p>a copy of the <a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> at the requested
+index. Use <a class="link" href="json-glib-JSON-Node.html#json-node-unref" title="json_node_unref ()"><code class="function">json_node_unref()</code></a> when done. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="ix04.html#api-index-0.6">0.6</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-get-elements"></a><h3>json_array_get_elements ()</h3>
+<pre class="programlisting"><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+json_array_get_elements (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>);</pre>
+<p>Gets the elements of a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> as a list of <a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> instances.</p>
+<div class="refsect3">
+<a name="json-array-get-elements.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-array-get-elements.returns"></a><h4>Returns</h4>
+<p>a <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a>
+containing the elements of the array. The contents of the list are
+owned by the array and should never be modified or freed. Use
+<a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#g-list-free"><code class="function">g_list_free()</code></a> on the returned list when done using it. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> JsonNode][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-get-length"></a><h3>json_array_get_length ()</h3>
+<pre class="programlisting"><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+json_array_get_length (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>);</pre>
+<p>Retrieves the length of a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p>
+<div class="refsect3">
+<a name="json-array-get-length.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-array-get-length.returns"></a><h4>Returns</h4>
+<p> the length of the array</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-remove-element"></a><h3>json_array_remove_element ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+json_array_remove_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                           <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> index_</code></em>);</pre>
+<p>Removes the <a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> inside <em class="parameter"><code>array</code></em>
+ at <em class="parameter"><code>index_</code></em>
+ freeing its allocated
+resources.</p>
+<div class="refsect3">
+<a name="json-array-remove-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index_</p></td>
+<td class="parameter_description"><p>the position of the element to be removed</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="JsonArrayForeach"></a><h3>JsonArrayForeach ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*JsonArrayForeach<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                     <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> index_</code></em>,
+                     <em class="parameter"><code><a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> *element_node</code></em>,
+                     <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>The function to be passed to <a class="link" href="json-glib-JSON-Array.html#json-array-foreach-element" title="json_array_foreach_element ()"><code class="function">json_array_foreach_element()</code></a>. You
+should not add or remove elements to and from <em class="parameter"><code>array</code></em>
+ within
+this function. It is safe to change the value of <em class="parameter"><code>element_node</code></em>
+.</p>
+<div class="refsect3">
+<a name="JsonArrayForeach.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>the iterated <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index_</p></td>
+<td class="parameter_description"><p>the index of the element</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>element_node</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> containing the value at <em class="parameter"><code>index_</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>data passed to the function</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8">0.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-foreach-element"></a><h3>json_array_foreach_element ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+json_array_foreach_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                            <em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArrayForeach" title="JsonArrayForeach ()"><span class="type">JsonArrayForeach</span></a> func</code></em>,
+                            <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);</pre>
+<p>Iterates over all elements of <em class="parameter"><code>array</code></em>
+ and calls <em class="parameter"><code>func</code></em>
+ on
+each one of them.</p>
+<p>It is safe to change the value of a <a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> of the <em class="parameter"><code>array</code></em>
+
+from within the iterator <em class="parameter"><code>func</code></em>
+, but it is not safe to add or
+remove elements from the <em class="parameter"><code>array</code></em>
+.</p>
+<div class="refsect3">
+<a name="json-array-foreach-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>func</p></td>
+<td class="parameter_description"><p>the function to be called on each element. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to be passed to the function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8">0.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-add-array-element"></a><h3>json_array_add_array_element ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+json_array_add_array_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                              <em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *value</code></em>);</pre>
+<p>Conveniently adds an array into <em class="parameter"><code>array</code></em>
+. The <em class="parameter"><code>array</code></em>
+ takes ownership
+of the newly added <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p>
+<p>See also: <a class="link" href="json-glib-JSON-Array.html#json-array-add-element" title="json_array_add_element ()"><code class="function">json_array_add_element()</code></a>, <a class="link" href="json-glib-JSON-Node.html#json-node-take-array" title="json_node_take_array ()"><code class="function">json_node_take_array()</code></a></p>
+<div class="refsect3">
+<a name="json-array-add-array-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8">0.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-get-array-element"></a><h3>json_array_get_array_element ()</h3>
+<pre class="programlisting"><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="returnvalue">JsonArray</span></a> *
+json_array_get_array_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                              <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> index_</code></em>);</pre>
+<p>Conveniently retrieves the array from the element at <em class="parameter"><code>index_</code></em>
+
+inside <em class="parameter"><code>array</code></em>
+</p>
+<p>See also: <a class="link" href="json-glib-JSON-Array.html#json-array-get-element" title="json_array_get_element ()"><code class="function">json_array_get_element()</code></a>, <a class="link" href="json-glib-JSON-Node.html#json-node-get-array" title="json_node_get_array ()"><code class="function">json_node_get_array()</code></a></p>
+<div class="refsect3">
+<a name="json-array-get-array-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index_</p></td>
+<td class="parameter_description"><p>the index of the element to retrieve</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-array-get-array-element.returns"></a><h4>Returns</h4>
+<p>the array. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8">0.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-add-boolean-element"></a><h3>json_array_add_boolean_element ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+json_array_add_boolean_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                                <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<p>Conveniently adds a boolean <em class="parameter"><code>value</code></em>
+ into <em class="parameter"><code>array</code></em>
+</p>
+<p>See also: <a class="link" href="json-glib-JSON-Array.html#json-array-add-element" title="json_array_add_element ()"><code class="function">json_array_add_element()</code></a>, <a class="link" href="json-glib-JSON-Node.html#json-node-set-boolean" title="json_node_set_boolean ()"><code class="function">json_node_set_boolean()</code></a></p>
+<div class="refsect3">
+<a name="json-array-add-boolean-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>a boolean value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8">0.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-get-boolean-element"></a><h3>json_array_get_boolean_element ()</h3>
+<pre class="programlisting"><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+json_array_get_boolean_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                                <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> index_</code></em>);</pre>
+<p>Conveniently retrieves the boolean value of the element at <em class="parameter"><code>index_</code></em>
+
+inside <em class="parameter"><code>array</code></em>
+</p>
+<p>See also: <a class="link" href="json-glib-JSON-Array.html#json-array-get-element" title="json_array_get_element ()"><code class="function">json_array_get_element()</code></a>, <a class="link" href="json-glib-JSON-Node.html#json-node-get-boolean" title="json_node_get_boolean ()"><code class="function">json_node_get_boolean()</code></a></p>
+<div class="refsect3">
+<a name="json-array-get-boolean-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index_</p></td>
+<td class="parameter_description"><p>the index of the element to retrieve</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-array-get-boolean-element.returns"></a><h4>Returns</h4>
+<p> the integer value</p>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8">0.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-add-double-element"></a><h3>json_array_add_double_element ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+json_array_add_double_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                               <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>);</pre>
+<p>Conveniently adds a floating point <em class="parameter"><code>value</code></em>
+ into <em class="parameter"><code>array</code></em>
+</p>
+<p>See also: <a class="link" href="json-glib-JSON-Array.html#json-array-add-element" title="json_array_add_element ()"><code class="function">json_array_add_element()</code></a>, <a class="link" href="json-glib-JSON-Node.html#json-node-set-double" title="json_node_set_double ()"><code class="function">json_node_set_double()</code></a></p>
+<div class="refsect3">
+<a name="json-array-add-double-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>a floating point value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8">0.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-get-double-element"></a><h3>json_array_get_double_element ()</h3>
+<pre class="programlisting"><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+json_array_get_double_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                               <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> index_</code></em>);</pre>
+<p>Conveniently retrieves the floating point value of the element at
+<em class="parameter"><code>index_</code></em>
+ inside <em class="parameter"><code>array</code></em>
+</p>
+<p>See also: <a class="link" href="json-glib-JSON-Array.html#json-array-get-element" title="json_array_get_element ()"><code class="function">json_array_get_element()</code></a>, <a class="link" href="json-glib-JSON-Node.html#json-node-get-double" title="json_node_get_double ()"><code class="function">json_node_get_double()</code></a></p>
+<div class="refsect3">
+<a name="json-array-get-double-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index_</p></td>
+<td class="parameter_description"><p>the index of the element to retrieve</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-array-get-double-element.returns"></a><h4>Returns</h4>
+<p> the floating point value</p>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8">0.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-add-int-element"></a><h3>json_array_add_int_element ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+json_array_add_int_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                            <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a> value</code></em>);</pre>
+<p>Conveniently adds an integer <em class="parameter"><code>value</code></em>
+ into <em class="parameter"><code>array</code></em>
+</p>
+<p>See also: <a class="link" href="json-glib-JSON-Array.html#json-array-add-element" title="json_array_add_element ()"><code class="function">json_array_add_element()</code></a>, <a class="link" href="json-glib-JSON-Node.html#json-node-set-int" title="json_node_set_int ()"><code class="function">json_node_set_int()</code></a></p>
+<div class="refsect3">
+<a name="json-array-add-int-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>an integer value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8">0.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-get-int-element"></a><h3>json_array_get_int_element ()</h3>
+<pre class="programlisting"><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gint64"><span class="returnvalue">gint64</span></a>
+json_array_get_int_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                            <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> index_</code></em>);</pre>
+<p>Conveniently retrieves the integer value of the element at <em class="parameter"><code>index_</code></em>
+
+inside <em class="parameter"><code>array</code></em>
+</p>
+<p>See also: <a class="link" href="json-glib-JSON-Array.html#json-array-get-element" title="json_array_get_element ()"><code class="function">json_array_get_element()</code></a>, <a class="link" href="json-glib-JSON-Node.html#json-node-get-int" title="json_node_get_int ()"><code class="function">json_node_get_int()</code></a></p>
+<div class="refsect3">
+<a name="json-array-get-int-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index_</p></td>
+<td class="parameter_description"><p>the index of the element to retrieve</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-array-get-int-element.returns"></a><h4>Returns</h4>
+<p> the integer value</p>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8">0.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-add-null-element"></a><h3>json_array_add_null_element ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+json_array_add_null_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>);</pre>
+<p>Conveniently adds a null element into <em class="parameter"><code>array</code></em>
+</p>
+<p>See also: <a class="link" href="json-glib-JSON-Array.html#json-array-add-element" title="json_array_add_element ()"><code class="function">json_array_add_element()</code></a>, <a class="link" href="json-glib-JSON-Node.html#JSON-NODE-NULL:CAPS"><code class="literal">JSON_NODE_NULL</code></a></p>
+<div class="refsect3">
+<a name="json-array-add-null-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8">0.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-get-null-element"></a><h3>json_array_get_null_element ()</h3>
+<pre class="programlisting"><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+json_array_get_null_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                             <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> index_</code></em>);</pre>
+<p>Conveniently retrieves whether the element at <em class="parameter"><code>index_</code></em>
+ is set to null</p>
+<p>See also: <a class="link" href="json-glib-JSON-Array.html#json-array-get-element" title="json_array_get_element ()"><code class="function">json_array_get_element()</code></a>, <a class="link" href="json-glib-JSON-Node.html#JSON-NODE-TYPE:CAPS" title="JSON_NODE_TYPE()"><code class="function">JSON_NODE_TYPE()</code></a>, <a class="link" href="json-glib-JSON-Node.html#JSON-NODE-NULL:CAPS"><code class="literal">JSON_NODE_NULL</code></a></p>
+<div class="refsect3">
+<a name="json-array-get-null-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index_</p></td>
+<td class="parameter_description"><p>the index of the element to retrieve</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-array-get-null-element.returns"></a><h4>Returns</h4>
+<p> <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the element is null</p>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8">0.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-add-object-element"></a><h3>json_array_add_object_element ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+json_array_add_object_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                               <em class="parameter"><code><a class="link" href="json-glib-JSON-Object.html#JsonObject"><span class="type">JsonObject</span></a> *value</code></em>);</pre>
+<p>Conveniently adds an object into <em class="parameter"><code>array</code></em>
+. The <em class="parameter"><code>array</code></em>
+ takes ownership
+of the newly added <a class="link" href="json-glib-JSON-Object.html#JsonObject"><span class="type">JsonObject</span></a></p>
+<p>See also: <a class="link" href="json-glib-JSON-Array.html#json-array-add-element" title="json_array_add_element ()"><code class="function">json_array_add_element()</code></a>, <a class="link" href="json-glib-JSON-Node.html#json-node-take-object" title="json_node_take_object ()"><code class="function">json_node_take_object()</code></a></p>
+<div class="refsect3">
+<a name="json-array-add-object-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Object.html#JsonObject"><span class="type">JsonObject</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8">0.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-get-object-element"></a><h3>json_array_get_object_element ()</h3>
+<pre class="programlisting"><a class="link" href="json-glib-JSON-Object.html#JsonObject"><span class="returnvalue">JsonObject</span></a> *
+json_array_get_object_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                               <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> index_</code></em>);</pre>
+<p>Conveniently retrieves the object from the element at <em class="parameter"><code>index_</code></em>
+
+inside <em class="parameter"><code>array</code></em>
+</p>
+<p>See also: <a class="link" href="json-glib-JSON-Array.html#json-array-get-element" title="json_array_get_element ()"><code class="function">json_array_get_element()</code></a>, <a class="link" href="json-glib-JSON-Node.html#json-node-get-object" title="json_node_get_object ()"><code class="function">json_node_get_object()</code></a></p>
+<div class="refsect3">
+<a name="json-array-get-object-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index_</p></td>
+<td class="parameter_description"><p>the index of the element to retrieve</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-array-get-object-element.returns"></a><h4>Returns</h4>
+<p>the object. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8">0.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-add-string-element"></a><h3>json_array_add_string_element ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+json_array_add_string_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                               <em class="parameter"><code>const <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<p>Conveniently adds a string <em class="parameter"><code>value</code></em>
+ into <em class="parameter"><code>array</code></em>
+</p>
+<p>See also: <a class="link" href="json-glib-JSON-Array.html#json-array-add-element" title="json_array_add_element ()"><code class="function">json_array_add_element()</code></a>, <a class="link" href="json-glib-JSON-Node.html#json-node-set-string" title="json_node_set_string ()"><code class="function">json_node_set_string()</code></a></p>
+<div class="refsect3">
+<a name="json-array-add-string-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>a string value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8">0.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-array-get-string-element"></a><h3>json_array_get_string_element ()</h3>
+<pre class="programlisting">const <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+json_array_get_string_element (<em class="parameter"><code><a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> *array</code></em>,
+                               <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> index_</code></em>);</pre>
+<p>Conveniently retrieves the string value of the element at <em class="parameter"><code>index_</code></em>
+
+inside <em class="parameter"><code>array</code></em>
+</p>
+<p>See also: <a class="link" href="json-glib-JSON-Array.html#json-array-get-element" title="json_array_get_element ()"><code class="function">json_array_get_element()</code></a>, <a class="link" href="json-glib-JSON-Node.html#json-node-get-string" title="json_node_get_string ()"><code class="function">json_node_get_string()</code></a></p>
+<div class="refsect3">
+<a name="json-array-get-string-element.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>array</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index_</p></td>
+<td class="parameter_description"><p>the index of the element to retrieve</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-array-get-string-element.returns"></a><h4>Returns</h4>
+<p> the string value; the returned string is owned by
+the <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> and should not be modified or freed</p>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8">0.8</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="json-glib-JSON-Array.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="JsonArray-struct"></a><h3>JsonArray</h3>
+<pre class="programlisting">typedef struct _JsonArray JsonArray;</pre>
+<p>A JSON array type. The contents of the <a class="link" href="json-glib-JSON-Array.html#JsonArray"><span class="type">JsonArray</span></a> structure are private
+and should only be accessed by the provided API</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.26</div>
+</body>
+</html>

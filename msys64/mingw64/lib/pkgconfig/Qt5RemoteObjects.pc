@@ -1,0 +1,13 @@
+prefix=X:/msys64/mingw64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 RemoteObjects
+Description: Qt RemoteObjects module
+Version: 5.10.0
+Libs: -L${libdir} -lQt5RemoteObjects 
+Cflags: -I${includedir}/QtRemoteObjects -I${includedir}
+Requires: Qt5Core Qt5Network
+

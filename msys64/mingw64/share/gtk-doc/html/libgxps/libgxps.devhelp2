@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<book xmlns="http://www.devhelp.net/book" title="GXPS Reference Manual" link="index.html" author="" name="libgxps" version="2" language="c">
+  <chapters>
+    <sub name="GXPS" link="ch01.html">
+      <sub name="GXPSFile" link="GXPSFile.html"/>
+      <sub name="GXPSDocument" link="GXPSDocument.html"/>
+      <sub name="GXPSPage" link="GXPSPage.html"/>
+      <sub name="GXPS Links" link="libgxps-GXPS-Links.html"/>
+      <sub name="GXPSDocumentStructure" link="GXPSDocumentStructure.html"/>
+      <sub name="GXPSCoreProperties" link="GXPSCoreProperties.html"/>
+      <sub name="GXPSError" link="libgxps-GXPSError.html"/>
+      <sub name="Version Information" link="libgxps-Version-Information.html"/>
+    </sub>
+    <sub name="Index of all symbols" link="api-index-full.html"/>
+    <sub name="Index of new symbols in 0.2.1" link="api-index-0-2-1.html"/>
+    <sub name="Index of new symbols in 0.2.3" link="api-index-0-2-3.html"/>
+    <sub name="Annotation Glossary" link="annotation-glossary.html"/>
+  </chapters>
+  <functions>
+    <keyword type="function" name="gxps_file_new ()" link="GXPSFile.html#gxps-file-new"/>
+    <keyword type="function" name="gxps_file_get_n_documents ()" link="GXPSFile.html#gxps-file-get-n-documents"/>
+    <keyword type="function" name="gxps_file_get_document ()" link="GXPSFile.html#gxps-file-get-document"/>
+    <keyword type="function" name="gxps_file_get_document_for_link_target ()" link="GXPSFile.html#gxps-file-get-document-for-link-target"/>
+    <keyword type="function" name="gxps_file_get_core_properties ()" link="GXPSFile.html#gxps-file-get-core-properties"/>
+    <keyword type="struct" name="struct GXPSFile" link="GXPSFile.html#GXPSFile-struct"/>
+    <keyword type="macro" name="GXPS_FILE_ERROR" link="GXPSFile.html#GXPS-FILE-ERROR:CAPS"/>
+    <keyword type="enum" name="enum GXPSFileError" link="GXPSFile.html#GXPSFileError"/>
+    <keyword type="property" name="The “file” property" link="GXPSFile.html#GXPSFile--file"/>
+    <keyword type="function" name="gxps_document_get_n_pages ()" link="GXPSDocument.html#gxps-document-get-n-pages"/>
+    <keyword type="function" name="gxps_document_get_page ()" link="GXPSDocument.html#gxps-document-get-page"/>
+    <keyword type="function" name="gxps_document_get_page_size ()" link="GXPSDocument.html#gxps-document-get-page-size"/>
+    <keyword type="function" name="gxps_document_get_page_for_anchor ()" link="GXPSDocument.html#gxps-document-get-page-for-anchor"/>
+    <keyword type="function" name="gxps_document_get_structure ()" link="GXPSDocument.html#gxps-document-get-structure"/>
+    <keyword type="struct" name="struct GXPSDocument" link="GXPSDocument.html#GXPSDocument-struct"/>
+    <keyword type="property" name="The “archive” property" link="GXPSDocument.html#GXPSDocument--archive"/>
+    <keyword type="property" name="The “source” property" link="GXPSDocument.html#GXPSDocument--source"/>
+    <keyword type="function" name="gxps_page_get_size ()" link="GXPSPage.html#gxps-page-get-size"/>
+    <keyword type="function" name="gxps_page_render ()" link="GXPSPage.html#gxps-page-render"/>
+    <keyword type="function" name="gxps_page_get_links ()" link="GXPSPage.html#gxps-page-get-links"/>
+    <keyword type="function" name="gxps_page_get_anchor_destination ()" link="GXPSPage.html#gxps-page-get-anchor-destination"/>
+    <keyword type="struct" name="struct GXPSPage" link="GXPSPage.html#GXPSPage-struct"/>
+    <keyword type="macro" name="GXPS_PAGE_ERROR" link="GXPSPage.html#GXPS-PAGE-ERROR:CAPS"/>
+    <keyword type="enum" name="enum GXPSPageError" link="GXPSPage.html#GXPSPageError"/>
+    <keyword type="property" name="The “archive” property" link="GXPSPage.html#GXPSPage--archive"/>
+    <keyword type="property" name="The “source” property" link="GXPSPage.html#GXPSPage--source"/>
+    <keyword type="function" name="gxps_link_target_copy ()" link="libgxps-GXPS-Links.html#gxps-link-target-copy"/>
+    <keyword type="function" name="gxps_link_target_free ()" link="libgxps-GXPS-Links.html#gxps-link-target-free"/>
+    <keyword type="function" name="gxps_link_target_is_internal ()" link="libgxps-GXPS-Links.html#gxps-link-target-is-internal"/>
+    <keyword type="function" name="gxps_link_target_get_anchor ()" link="libgxps-GXPS-Links.html#gxps-link-target-get-anchor"/>
+    <keyword type="function" name="gxps_link_target_get_uri ()" link="libgxps-GXPS-Links.html#gxps-link-target-get-uri"/>
+    <keyword type="function" name="gxps_link_copy ()" link="libgxps-GXPS-Links.html#gxps-link-copy"/>
+    <keyword type="function" name="gxps_link_free ()" link="libgxps-GXPS-Links.html#gxps-link-free"/>
+    <keyword type="function" name="gxps_link_get_target ()" link="libgxps-GXPS-Links.html#gxps-link-get-target"/>
+    <keyword type="function" name="gxps_link_get_area ()" link="libgxps-GXPS-Links.html#gxps-link-get-area"/>
+    <keyword type="struct" name="GXPSLinkTarget" link="libgxps-GXPS-Links.html#GXPSLinkTarget-struct"/>
+    <keyword type="struct" name="GXPSLink" link="libgxps-GXPS-Links.html#GXPSLink-struct"/>
+    <keyword type="function" name="gxps_document_structure_has_outline ()" link="GXPSDocumentStructure.html#gxps-document-structure-has-outline"/>
+    <keyword type="function" name="gxps_document_structure_outline_iter_init ()" link="GXPSDocumentStructure.html#gxps-document-structure-outline-iter-init"/>
+    <keyword type="function" name="gxps_outline_iter_next ()" link="GXPSDocumentStructure.html#gxps-outline-iter-next"/>
+    <keyword type="function" name="gxps_outline_iter_children ()" link="GXPSDocumentStructure.html#gxps-outline-iter-children"/>
+    <keyword type="function" name="gxps_outline_iter_get_description ()" link="GXPSDocumentStructure.html#gxps-outline-iter-get-description"/>
+    <keyword type="function" name="gxps_outline_iter_get_target ()" link="GXPSDocumentStructure.html#gxps-outline-iter-get-target"/>
+    <keyword type="struct" name="struct GXPSDocumentStructure" link="GXPSDocumentStructure.html#GXPSDocumentStructure-struct"/>
+    <keyword type="struct" name="struct GXPSOutlineIter" link="GXPSDocumentStructure.html#GXPSOutlineIter"/>
+    <keyword type="property" name="The “archive” property" link="GXPSDocumentStructure.html#GXPSDocumentStructure--archive"/>
+    <keyword type="property" name="The “source” property" link="GXPSDocumentStructure.html#GXPSDocumentStructure--source"/>
+    <keyword type="function" name="gxps_core_properties_get_title ()" link="GXPSCoreProperties.html#gxps-core-properties-get-title" since="0.2.3"/>
+    <keyword type="function" name="gxps_core_properties_get_creator ()" link="GXPSCoreProperties.html#gxps-core-properties-get-creator" since="0.2.3"/>
+    <keyword type="function" name="gxps_core_properties_get_description ()" link="GXPSCoreProperties.html#gxps-core-properties-get-description" since="0.2.3"/>
+    <keyword type="function" name="gxps_core_properties_get_subject ()" link="GXPSCoreProperties.html#gxps-core-properties-get-subject" since="0.2.3"/>
+    <keyword type="function" name="gxps_core_properties_get_keywords ()" link="GXPSCoreProperties.html#gxps-core-properties-get-keywords" since="0.2.3"/>
+    <keyword type="function" name="gxps_core_properties_get_version ()" link="GXPSCoreProperties.html#gxps-core-properties-get-version" since="0.2.3"/>
+    <keyword type="function" name="gxps_core_properties_get_revision ()" link="GXPSCoreProperties.html#gxps-core-properties-get-revision" since="0.2.3"/>
+    <keyword type="function" name="gxps_core_properties_get_identifier ()" link="GXPSCoreProperties.html#gxps-core-properties-get-identifier" since="0.2.3"/>
+    <keyword type="function" name="gxps_core_properties_get_language ()" link="GXPSCoreProperties.html#gxps-core-properties-get-language" since="0.2.3"/>
+    <keyword type="function" name="gxps_core_properties_get_category ()" link="GXPSCoreProperties.html#gxps-core-properties-get-category" since="0.2.3"/>
+    <keyword type="function" name="gxps_core_properties_get_content_status ()" link="GXPSCoreProperties.html#gxps-core-properties-get-content-status" since="0.2.3"/>
+    <keyword type="function" name="gxps_core_properties_get_content_type ()" link="GXPSCoreProperties.html#gxps-core-properties-get-content-type" since="0.2.3"/>
+    <keyword type="function" name="gxps_core_properties_get_created ()" link="GXPSCoreProperties.html#gxps-core-properties-get-created" since="0.2.3"/>
+    <keyword type="function" name="gxps_core_properties_get_last_modified_by ()" link="GXPSCoreProperties.html#gxps-core-properties-get-last-modified-by" since="0.2.3"/>
+    <keyword type="function" name="gxps_core_properties_get_modified ()" link="GXPSCoreProperties.html#gxps-core-properties-get-modified" since="0.2.3"/>
+    <keyword type="function" name="gxps_core_properties_get_last_printed ()" link="GXPSCoreProperties.html#gxps-core-properties-get-last-printed" since="0.2.3"/>
+    <keyword type="struct" name="struct GXPSCoreProperties" link="GXPSCoreProperties.html#GXPSCoreProperties-struct"/>
+    <keyword type="property" name="The “archive” property" link="GXPSCoreProperties.html#GXPSCoreProperties--archive"/>
+    <keyword type="property" name="The “source” property" link="GXPSCoreProperties.html#GXPSCoreProperties--source"/>
+    <keyword type="macro" name="GXPS_ERROR" link="libgxps-GXPSError.html#GXPS-ERROR:CAPS"/>
+    <keyword type="enum" name="enum GXPSError" link="libgxps-GXPSError.html#GXPSError"/>
+    <keyword type="macro" name="GXPS_CHECK_VERSION()" link="libgxps-Version-Information.html#GXPS-CHECK-VERSION:CAPS"/>
+    <keyword type="macro" name="GXPS_MAJOR_VERSION" link="libgxps-Version-Information.html#GXPS-MAJOR-VERSION:CAPS"/>
+    <keyword type="macro" name="GXPS_MINOR_VERSION" link="libgxps-Version-Information.html#GXPS-MINOR-VERSION:CAPS"/>
+    <keyword type="macro" name="GXPS_MICRO_VERSION" link="libgxps-Version-Information.html#GXPS-MICRO-VERSION:CAPS"/>
+    <keyword type="macro" name="GXPS_VERSION_STRING" link="libgxps-Version-Information.html#GXPS-VERSION-STRING:CAPS" since="0.2.1"/>
+    <keyword type="constant" name="GXPS_FILE_ERROR_INVALID" link="GXPSFile.html#GXPS-FILE-ERROR-INVALID:CAPS"/>
+    <keyword type="constant" name="GXPS_PAGE_ERROR_INVALID" link="GXPSPage.html#GXPS-PAGE-ERROR-INVALID:CAPS"/>
+    <keyword type="constant" name="GXPS_PAGE_ERROR_RENDER" link="GXPSPage.html#GXPS-PAGE-ERROR-RENDER:CAPS"/>
+    <keyword type="constant" name="GXPS_PAGE_ERROR_INVALID_ANCHOR" link="GXPSPage.html#GXPS-PAGE-ERROR-INVALID-ANCHOR:CAPS"/>
+    <keyword type="constant" name="GXPS_ERROR_SOURCE_NOT_FOUND" link="libgxps-GXPSError.html#GXPS-ERROR-SOURCE-NOT-FOUND:CAPS"/>
+    <keyword type="constant" name="GXPS_ERROR_FONT" link="libgxps-GXPSError.html#GXPS-ERROR-FONT:CAPS"/>
+    <keyword type="constant" name="GXPS_ERROR_IMAGE" link="libgxps-GXPSError.html#GXPS-ERROR-IMAGE:CAPS"/>
+  </functions>
+</book>

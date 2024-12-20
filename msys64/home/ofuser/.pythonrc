@@ -1,0 +1,2 @@
+
+from sys import exit as quit

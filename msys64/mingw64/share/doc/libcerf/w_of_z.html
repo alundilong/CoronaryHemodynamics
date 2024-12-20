@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>libcerf - Complex error, Faddeeva, Dawson, and Voigt functions</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body>
+
+
+
+
+
+<link rel="stylesheet" href="podstyle.css" type="text/css" />
+
+<h1 id="NAME">NAME</h1>
+
+<p>w_of_z, im_w_of_x - Faddeeva&#39;s rescaled complex error function</p>
+
+<h1 id="SYNOPSIS">SYNOPSIS</h1>
+
+<p><b>#include &lt;cerf.h</b>&gt;</p>
+
+<p><b>double _Complex w_of_z ( double _Complex z );</b></p>
+
+<p><b>double im_w_of_x ( double x );</b></p>
+
+<h1 id="DESCRIPTION">DESCRIPTION</h1>
+
+<p>Faddeeva&#39;s rescaled complex error function w(z), also called the plasma dispersion function.</p>
+
+<p><b>w_of_z</b> returns w(z) = exp(-z^2) * erfc(-i*z).</p>
+
+<p><b>im_w_of_x</b> returns Im[w(x)].</p>
+
+<h1 id="REFERENCES">REFERENCES</h1>
+
+<p>To compute w(z), a combination of two algorithms is used:</p>
+
+<p>For sufficiently large |z|, a continued-fraction expansion similar to those described by Gautschi (1970) and Poppe &amp; Wijers (1990).</p>
+
+<p>Otherwise, Algorithm 916 by Zaghloul &amp; Ali (2011), which is generally competitive at small |z|, and more accurate than the Poppe &amp; Wijers expansion in some regions, e.g. in the vicinity of z=1+i.</p>
+
+<p>To compute Im[w(x)], Chebyshev polynomials and continous fractions are used.</p>
+
+<p>Milton Abramowitz and Irene M. Stegun, &quot;Handbook of Mathematical Functions&quot;, National Bureau of Standards (1964): Formula (7.1.3) introduces the nameless function w(z).</p>
+
+<p>Walter Gautschi, &quot;Efficient computation of the complex error function,&quot; SIAM J. Numer. Anal. 7, 187 (1970).</p>
+
+<p>G. P. M. Poppe and C. M. J. Wijers, &quot;More efficient computation of the complex error function,&quot; ACM Trans. Math. Soft. 16, 38 (1990).</p>
+
+<p>Mofreh R. Zaghloul and Ahmed N. Ali, &quot;Algorithm 916: Computing the Faddeyeva and Voigt Functions,&quot; ACM Trans. Math. Soft. 38, 15 (2011).</p>
+
+<p>Steven G. Johnson, http://ab-initio.mit.edu/Faddeeva</p>
+
+<h1 id="SEE-ALSO">SEE ALSO</h1>
+
+<p>This function is used to compute several other complex error functions: <b>dawson(3)</b>, <b>voigt(3)</b>, <b>cerf(3)</b>, <b>erfcx(3)</b>, <b>erfi(3)</b>.</p>
+
+<p>Homepage: http://apps.jcns.fz-juelich.de/libcerf</p>
+
+<h1 id="AUTHORS">AUTHORS</h1>
+
+<p>Steven G. Johnson, http://math.mit.edu/~stevenj, Massachusetts Institute of Technology, researched the numerics, and implemented the Faddeeva function.</p>
+
+<p>Joachim Wuttke &lt;j.wuttke@fz-juelich.de&gt;, Forschungszentrum Juelich, reorganized the code into a library, and wrote this man page.</p>
+
+<p>Please report bugs to the authors.</p>
+
+<h1 id="COPYING">COPYING</h1>
+
+<p>Copyright (c) 2012 Massachusetts Institute of Technology</p>
+
+<p>Copyright (c) 2013 Forschungszentrum Juelich GmbH</p>
+
+<p>Software: MIT License.</p>
+
+<p>This documentation: Creative Commons Attribution Share Alike.</p>
+
+
+</body>
+
+</html>
+
+

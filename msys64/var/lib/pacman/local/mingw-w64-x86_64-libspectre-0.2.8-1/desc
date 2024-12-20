@@ -1,0 +1,43 @@
+%NAME%
+mingw-w64-x86_64-libspectre
+
+%VERSION%
+0.2.8-1
+
+%BASE%
+mingw-w64-libspectre
+
+%DESC%
+libspectre is a small library for rendering PostScript documents. It provides a convenient easy to use API for handling and rendering PostScript documents (mingw-w64)
+
+%URL%
+https://www.freedesktop.org/wiki/Software/libspectre/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1467955084
+
+%INSTALLDATE%
+1512996418
+
+%PACKAGER%
+Alexey Pavlov <alexpux@gmail.com>
+
+%SIZE%
+281600
+
+%REASON%
+1
+
+%LICENSE%
+GPL 2
+
+%VALIDATION%
+pgp
+
+%DEPENDS%
+mingw-w64-x86_64-ghostscript
+mingw-w64-x86_64-cairo
+

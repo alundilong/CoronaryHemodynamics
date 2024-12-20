@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="file-mode" xml:lang="de">
+<info>
+  <title type="sort">1</title>
+  <link type="guide" xref="index#file-mode"/>
+  <link type="seealso" xref="file-changes"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2009, 2016</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Benjamin Steinwender</mal:name>
+      <mal:email>b@stbe.at</mal:email>
+      <mal:years>2014-2015</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Christian Kirbach</mal:name>
+      <mal:email>christian.kirbach@gmail.com</mal:email>
+      <mal:years>2014, 2016</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Erste Schritte beim Vergleichen von Dateien</title>
+
+<p>Mit <app>Meld</app> können Sie zwei oder drei Textdateien nebeneinander vergleichen. Einen neuen Dateivergleich starten Sie im Menü mit <guiseq><gui style="menu">Datei</gui><gui style="menuitem">Neu …</gui></guiseq>.</p>
+
+<p>Nach dem Auswählen der Dateien zeigt <app>Meld</app> diese nebeneinander an. Unterschiede zwischen den Dateien werden hervorgehoben, um einzelne Änderungen besser sichtbar zu machen. Wenn Sie die Dateien bearbeiten, werden diese in der Vergleichsansicht unmittelbar aktualisiert. Details zum Navigieren zwischen den einzelnen Änderungen und zur änderungsbasierten Bearbeitung finden Sie in <link xref="file-changes"/>.</p>
+
+<section id="file-mode-overview">
+<title>Dateivergleiche in <app>Meld</app></title>
+
+<p>Ein Dateivergleich hat mehrere verschiedene Teile. Die wichtigsten Teile sind die Editoren, in denen Ihre Dateien angezeigt werden. Neben diesen Editoren vermitteln Ihnen die Bereiche um die und zwischen den Dateien einen visuellen Überblick und stellen Aktionen bereit, die Ihnen dabei helfen, die Änderungen zwischen den Dateien zu behandeln.</p>
+<p>An der rechten und linken Seite des Fensters finden Sie zwei senkrechte Leisten, die verschiedenfarbige Blöcke anzeigen. Über diese Leisten erhalten Sie einen Überblick über die Unterschiede zwischen den zwei Dateien. Jeder Block bezeichnet anhand seiner Farbe einen Abschnitt, der eingefügt, gelöscht oder geändert wurde oder anderweitig einen Konflikt zwischen den Dateien darstellt.</p>
+<p>Zwischen jedem Dateipaar befindet sich eine Leiste, in der angezeigt wird, wie die geänderten Teile Ihrer Dateien miteinander korrespondieren. Klicken Sie auf die Pfeile in einem Segment, um die Abschnitte einer Datei gegen die der anderen Datei auszutauschen. Sie können Änderungen auch löschen, kopieren oder zusammenführen. Weitere Informationen hierzu finden Sie in <link xref="file-changes#change-actions"/>.</p>
+
+</section>
+
+
+<section id="file-mode-saving">
+<title>Speichern der Änderungen</title>
+
+<p>Wenn Sie mit dem Bearbeiten der Dateien fertig sind, müssen Sie die von Ihnen geänderten Dateien speichern.</p>
+<p>Sie können anhand des Speichern-Symbols neben dem Dateinamen erkennen, ob Ihre Dateien seit der letzten Änderung gespeichert wurden. Die Reiterbeschriftung zeigt außerdem einen Asterisk (<code>*</code>) nach jeder Datei an, die noch nicht gespeichert wurde.</p>
+<p>Die aktuelle Datei speichern Sie im Menü mit <guiseq><gui style="menu">Datei</gui><gui style="menuitem">Speichern</gui></guiseq> oder durch Drücken von <keyseq><key>Strg</key><key>S</key></keyseq>.</p>
+<note>
+  <p>Es wird nur die <em>aktuell fokussierte</em> Datei gespeichert, also die Datei mit der Eingabemarke. Wenn Sie nicht erkennen können, welche Datei fokussiert ist, klicken Sie auf die gewünschte Datei, bevor Sie sie speichern.</p>
+</note>
+
+</section>
+
+</page>

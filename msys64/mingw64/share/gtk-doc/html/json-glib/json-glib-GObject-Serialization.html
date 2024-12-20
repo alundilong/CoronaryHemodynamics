@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GObject Serialization: JSON-GLib Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="JSON-GLib Reference Manual">
+<link rel="up" href="json-advanced.html" title="Part IV. JSON-GLib Advanced API">
+<link rel="prev" href="json-advanced.html" title="Part IV. JSON-GLib Advanced API">
+<link rel="next" href="json-glib-Serializable-Interface.html" title="Serializable Interface">
+<meta name="generator" content="GTK-Doc V1.26 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#json-glib-GObject-Serialization.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="json-advanced.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="json-advanced.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="json-glib-Serializable-Interface.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="json-glib-GObject-Serialization"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="json-glib-GObject-Serialization.top_of_page"></a>GObject Serialization</span></h2>
+<p>GObject Serialization — Serialize and deserialize GObjects</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="json-glib-GObject-Serialization.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="returnvalue">JsonNode</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-GObject-Serialization.html#json-gobject-serialize" title="json_gobject_serialize ()">json_gobject_serialize</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-GObject-Serialization.html#json-gobject-deserialize" title="json_gobject_deserialize ()">json_gobject_deserialize</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-GObject-Serialization.html#json-gobject-to-data" title="json_gobject_to_data ()">json_gobject_to_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-GObject-Serialization.html#json-gobject-from-data" title="json_gobject_from_data ()">json_gobject_from_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-GObject-Serialization.html#json-construct-gobject" title="json_construct_gobject ()">json_construct_gobject</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="json-glib-GObject-Serialization.html#json-serialize-gobject" title="json_serialize_gobject ()">json_serialize_gobject</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="json-glib-GObject-Serialization.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;json-glib/json-glib.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="json-glib-GObject-Serialization.description"></a><h2>Description</h2>
+<p>JSON-GLib provides API for serializing and deserializing <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>
+instances to and from JSON data streams.</p>
+<p>Simple <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> classes can be (de)serialized into JSON objects, if the
+properties have compatible types with the native JSON types (integers,
+booleans, strings, string vectors). If the class to be (de)serialized has
+complex data types for properties (like boxed types or other objects)
+then the class should implement the provided <a class="link" href="json-glib-Serializable-Interface.html#JsonSerializable"><span class="type">JsonSerializable</span></a> interface
+and its virtual functions.</p>
+</div>
+<div class="refsect1">
+<a name="json-glib-GObject-Serialization.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="json-gobject-serialize"></a><h3>json_gobject_serialize ()</h3>
+<pre class="programlisting"><a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="returnvalue">JsonNode</span></a> *
+json_gobject_serialize (<em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *gobject</code></em>);</pre>
+<p>Creates a <a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> representing the passed <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>
+instance. Each member of the returned JSON object will
+map to a property of the <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a></p>
+<div class="refsect3">
+<a name="json-gobject-serialize.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>gobject</p></td>
+<td class="parameter_description"><p>a <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-gobject-serialize.returns"></a><h4>Returns</h4>
+<p>the newly created <a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a>
+of type <a class="link" href="json-glib-JSON-Node.html#JSON-NODE-OBJECT:CAPS"><code class="literal">JSON_NODE_OBJECT</code></a>. Use <a class="link" href="json-glib-JSON-Node.html#json-node-unref" title="json_node_unref ()"><code class="function">json_node_unref()</code></a> to free
+the resources allocated by this function. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="ix06.html#api-index-0.10">0.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-gobject-deserialize"></a><h3>json_gobject_deserialize ()</h3>
+<pre class="programlisting"><a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+json_gobject_deserialize (<em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> gtype</code></em>,
+                          <em class="parameter"><code><a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> *node</code></em>);</pre>
+<p>Creates a new <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> of type <em class="parameter"><code>gtype</code></em>
+, and constructs it
+using the members of the passed <a class="link" href="json-glib-JSON-Object.html#JsonObject"><span class="type">JsonObject</span></a></p>
+<div class="refsect3">
+<a name="json-gobject-deserialize.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>gtype</p></td>
+<td class="parameter_description"><p>the type of the <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> to create</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>node</p></td>
+<td class="parameter_description"><p>a <a class="link" href="json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> of type <a class="link" href="json-glib-JSON-Node.html#JSON-NODE-OBJECT:CAPS"><code class="literal">JSON_NODE_OBJECT</code></a> describing the
+instance of type <em class="parameter"><code>gtype</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-gobject-deserialize.returns"></a><h4>Returns</h4>
+<p>The newly created <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a>
+instance. Use <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a> to free the resources
+allocated by this function. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="ix06.html#api-index-0.10">0.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-gobject-to-data"></a><h3>json_gobject_to_data ()</h3>
+<pre class="programlisting"><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+json_gobject_to_data (<em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *gobject</code></em>,
+                      <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *length</code></em>);</pre>
+<p>Serializes a <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> into a JSON data stream, iterating recursively
+over each property.</p>
+<p>If <em class="parameter"><code>gobject</code></em>
+ implements the <a class="link" href="json-glib-Serializable-Interface.html#JsonSerializableIface" title="struct JsonSerializableIface"><span class="type">JsonSerializableIface</span></a> interface, it will
+be asked to serialize all its properties; otherwise, the default
+implementation will be use to translate the compatible types into
+JSON native types.</p>
+<div class="refsect3">
+<a name="json-gobject-to-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>gobject</p></td>
+<td class="parameter_description"><p>a <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>return value for the length of the buffer, or <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-gobject-to-data.returns"></a><h4>Returns</h4>
+<p> a JSON data stream representing the passed <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a></p>
+</div>
+<p class="since">Since: <a class="link" href="ix06.html#api-index-0.10">0.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-gobject-from-data"></a><h3>json_gobject_from_data ()</h3>
+<pre class="programlisting"><a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+json_gobject_from_data (<em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> gtype</code></em>,
+                        <em class="parameter"><code>const <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *data</code></em>,
+                        <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gssize"><span class="type">gssize</span></a> length</code></em>,
+                        <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Deserializes a JSON data stream and creates the corresponding
+<a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> class. If <em class="parameter"><code>gtype</code></em>
+ implements the <a class="link" href="json-glib-Serializable-Interface.html#JsonSerializableIface" title="struct JsonSerializableIface"><span class="type">JsonSerializableIface</span></a>
+interface, it will be asked to deserialize all the JSON members
+into the respective properties; otherwise, the default implementation
+will be used to translate the compatible JSON native types.</p>
+<p>Note: the JSON data stream must be an object declaration.</p>
+<div class="refsect3">
+<a name="json-gobject-from-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>gtype</p></td>
+<td class="parameter_description"><p>the <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> of object to construct</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a JSON data stream</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>length of the data stream, or -1 if it is NUL-terminated</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for a <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-gobject-from-data.returns"></a><h4>Returns</h4>
+<p>a <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> or <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="ix06.html#api-index-0.10">0.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-construct-gobject"></a><h3>json_construct_gobject ()</h3>
+<pre class="programlisting"><a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="returnvalue">GObject</span></a> *
+json_construct_gobject (<em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> gtype</code></em>,
+                        <em class="parameter"><code>const <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *data</code></em>,
+                        <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> length</code></em>,
+                        <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">json_construct_gobject</code> has been deprecated since version 0.10 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="json-glib-GObject-Serialization.html#json-gobject-from-data" title="json_gobject_from_data ()"><code class="function">json_gobject_from_data()</code></a> instead</p>
+</div>
+<p>Deserializes a JSON data stream and creates the corresponding
+<a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> class. If <em class="parameter"><code>gtype</code></em>
+ implements the <a class="link" href="json-glib-Serializable-Interface.html#JsonSerializableIface" title="struct JsonSerializableIface"><span class="type">JsonSerializableIface</span></a>
+interface, it will be asked to deserialize all the JSON members
+into the respective properties; otherwise, the default implementation
+will be used to translate the compatible JSON native types.</p>
+<p>Note: the JSON data stream must be an object declaration.</p>
+<div class="refsect3">
+<a name="json-construct-gobject.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>gtype</p></td>
+<td class="parameter_description"><p>the <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> of object to construct</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>a JSON data stream</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>length of the data stream</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>return location for a <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-construct-gobject.returns"></a><h4>Returns</h4>
+<p>a <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> or <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="ix03.html#api-index-0.4">0.4</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="json-serialize-gobject"></a><h3>json_serialize_gobject ()</h3>
+<pre class="programlisting"><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+json_serialize_gobject (<em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> *gobject</code></em>,
+                        <em class="parameter"><code><a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *length</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">json_serialize_gobject</code> has been deprecated since version 0.10 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="json-glib-GObject-Serialization.html#json-gobject-to-data" title="json_gobject_to_data ()"><code class="function">json_gobject_to_data()</code></a> instead</p>
+</div>
+<p>Serializes a <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> into a JSON data stream. If <em class="parameter"><code>gobject</code></em>
+ implements
+the <a class="link" href="json-glib-Serializable-Interface.html#JsonSerializableIface" title="struct JsonSerializableIface"><span class="type">JsonSerializableIface</span></a> interface, it will be asked to serizalize all
+its properties; otherwise, the default implementation will be use to
+translate the compatible types into JSON native types.</p>
+<div class="refsect3">
+<a name="json-serialize-gobject.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>gobject</p></td>
+<td class="parameter_description"><p>a <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>return value for the length of the buffer, or <a href="C:/building/msys64/mingw64/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="json-serialize-gobject.returns"></a><h4>Returns</h4>
+<p> a JSON data stream representing the passed <a href="C:/building/msys64/mingw64/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="json-glib-GObject-Serialization.other_details"></a><h2>Types and Values</h2>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.26</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+prefix=X:/msys64/mingw64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Nfc
+Description: Qt Nfc module
+Version: 5.10.0
+Libs: -L${libdir} -lQt5Nfc 
+Cflags: -I${includedir}/QtNfc -I${includedir}
+Requires: Qt5Core
+

@@ -1,0 +1,10 @@
+prefix=/mingw64
+exec_prefix=${prefix}/bin
+libdir=${prefix}/lib
+includedir=${prefix}/include/X11
+
+Name: Xpm
+Description: X Pixmap Library not using X
+Version: 4.2.0
+Cflags: -I${includedir}
+Libs: -L${libdir} -lXpm

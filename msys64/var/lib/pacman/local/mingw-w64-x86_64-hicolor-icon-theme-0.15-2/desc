@@ -1,0 +1,36 @@
+%NAME%
+mingw-w64-x86_64-hicolor-icon-theme
+
+%VERSION%
+0.15-2
+
+%DESC%
+Freedesktop.org Hicolor icon theme (mingw-w64)
+
+%URL%
+http://icon-theme.freedesktop.org/wiki/HicolorTheme
+
+%ARCH%
+any
+
+%BUILDDATE%
+1435735995
+
+%INSTALLDATE%
+1505405333
+
+%PACKAGER%
+Alexey Pavlov <alexpux@gmail.com>
+
+%SIZE%
+46080
+
+%REASON%
+1
+
+%LICENSE%
+GPL2
+
+%VALIDATION%
+pgp
+

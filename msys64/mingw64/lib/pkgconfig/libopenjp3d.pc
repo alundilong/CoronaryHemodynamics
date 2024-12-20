@@ -1,0 +1,14 @@
+prefix=/mingw64
+bindir=${prefix}/bin
+mandir=${prefix}/
+docdir=${prefix}/
+libdir=${prefix}/lib
+includedir=${prefix}/include/openjpeg-2.3
+
+Name: openjp3d
+Description: JPEG2000 Extensions for three-dimensional data (Part 10)
+URL: http://www.openjpeg.org/
+Version: 2.3.0
+Libs: -L${libdir} -lopenjp3d
+Libs.private: -lm
+Cflags: -I${includedir}

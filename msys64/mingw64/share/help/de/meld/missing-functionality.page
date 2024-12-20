@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="missing-functionality" xml:lang="de">
+<info>
+  <title type="sort">1</title>
+  <link type="guide" xref="index#advanced"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2009, 2016</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Benjamin Steinwender</mal:name>
+      <mal:email>b@stbe.at</mal:email>
+      <mal:years>2014-2015</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Christian Kirbach</mal:name>
+      <mal:email>christian.kirbach@gmail.com</mal:email>
+      <mal:years>2014, 2016</mal:years>
+    </mal:credit>
+  </info>
+<title>Dinge, die <app>Meld</app> nicht macht</title>
+
+<p>Haben Sie jemals eine halbe Stunde damit verschwendet, in einer Anwendung herauszufinden, wie etwas funktioniert, wobei Sie <em>sicher</em> waren, dass es eine Option dafür geben <em>muss</em>?</p>
+
+<p>Dieser Abschnitt zählt ein paar der Dinge auf, die <app>Meld</app>, entweder aus handfesten Gründen oder weil wir einfach keine Zeit hatten, <em>nicht macht</em>.</p>
+
+<section id="missing-change-fixed-alignment">
+<title>Änderungen durch Hinzufügen von Zeilen aneinander ausrichten</title>
+<p>Bei der Anzeige von Unterschieden zeigt <app>Meld</app> die Dateien so an, wie sie in einem normalem Textbearbeitungsprogramm erscheinen. <app>Meld</app> fügt <em>keine</em> zusätzlichen Zeilen ein, so dass die linke und die rechte Seite einer bestimmten Änderung die selbe Größe haben. Es gibt dafür keine Einstellungsmöglichkeit.</p>
+</section>
+
+
+</page>

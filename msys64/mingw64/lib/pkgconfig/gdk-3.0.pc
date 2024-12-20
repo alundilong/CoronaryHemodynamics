@@ -1,0 +1,13 @@
+prefix=/mingw64
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+targets=win32 broadway
+
+Name: GDK
+Description: GTK+ Drawing Kit
+Version: 3.22.26
+Requires: pangowin32 pangocairo gdk-pixbuf-2.0 >= 2.30.0 cairo >= 1.14.0 cairo-gobject >= 1.14.0
+Requires.private: gio-2.0 >= 2.49.4     cairo-win32 cairo epoxy >= 1.0 
+Libs: -L${libdir} -lgdk-3  -lgdi32 -limm32 -lshell32 -lole32 -Wl,-luuid -lwinmm -ldwmapi -lsetupapi -lcfgmgr32 -lz
+Cflags: -I${includedir}/gtk-3.0 

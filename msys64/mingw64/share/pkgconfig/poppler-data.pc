@@ -1,0 +1,8 @@
+poppler_datadir=/mingw64/share/poppler
+
+Name: poppler-data
+Description: Encoding files for use with poppler
+Version: 0.4.8
+
+Cflags: -DPOPPLER_DATADIR=/mingw64/share/poppler
+

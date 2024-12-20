@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="flattened-view" xml:lang="de">
+<info>
+  <title type="sort">2</title>
+  <link type="guide" xref="index#vc-mode"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2009, 2016</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Benjamin Steinwender</mal:name>
+      <mal:email>b@stbe.at</mal:email>
+      <mal:years>2014-2015</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Christian Kirbach</mal:name>
+      <mal:email>christian.kirbach@gmail.com</mal:email>
+      <mal:years>2014, 2016</mal:years>
+    </mal:credit>
+  </info>
+<title>Eingeklappte Ansicht</title>
+
+<p>Beim Betrachten großer Ordner kommt es oft vor, dass unter vielleicht Tausenden von Dateien nur wenige für Sie wirklich von Bedeutung sind. Aus diesem Grund ist in <app>Meld</app> eine <em>eingeklappte Ansicht</em> eines Ordners möglich. Es werden dann nur Dateien angezeigt, die nicht gefiltert wurden (zum Beispiel durch <link xref="vc-mode#vc-state-filtering"/>) und die Ordnerhierarchie wird ausgeblendet und die Dateipfade in der Spalte <em>Ort</em> angezeigt.</p>
+
+<p>Über das Menü <guiseq><gui style="menu">Ansicht</gui><gui style="menuitem">Einklappen</gui></guiseq> oder durch Anklicken des entsprechenden <gui style="button">Einklappen</gui>-Knopfs in der Werkzeugleiste kann die eingeklappte Ansicht ein- oder ausgeschaltet werden.</p>
+</page>

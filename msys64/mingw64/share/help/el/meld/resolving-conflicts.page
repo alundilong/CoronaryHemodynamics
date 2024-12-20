@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="resolving-conflicts" xml:lang="el">
+<info>
+  <title type="sort">2</title>
+  <link type="guide" xref="index#vc-mode"/>
+  <revision docversion="1.6" status="draft"/>
+  <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  <credit type="author copyright">
+    <name>Kai Willadsen</name>
+    <email>kai.willadsen@gmail.com</email>
+    <years>2012</years>
+  </credit>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name> Δημήτρης Σπίγγος</mal:name>
+      <mal:email>dmtrs32@gmail.com</mal:email>
+      <mal:years>2014</mal:years>
+    </mal:credit>
+  </info>
+<title>Επίλυση συγκρούσεων συγχώνευσης</title>
+
+<p>Μια από τις καλύτερες χρήσεις του <app>Meld</app> είναι η επίλυση συγκρούσεων που συμβαίνουν κατά τη συγχώνευση διαφορετικών κλάδων.</p>
+
+<p>Για παράδειγμα, όταν χρησιμοποιείτε το <app>git</app>, <cmd>git mergetool</cmd> θα αρχίσει ένας 'βοηθός συγχώνευσης'· το <app>Meld</app> είναι ένας τέτοιος βοηθός. Αν θέλετε να κάνετε <app>git mergetool</app> χρησιμοποιήστε το <app>Meld</app> από προεπιλογή, μπορείτε να προσθέσετε</p>
+<code>
+[merge]
+    tool = meld
+</code>
+<p>στο <file>.git/gitconfig</file>. Δείτε το εγχειρίδιο <app>git mergetool</app> για λεπτομέρειες.</p>
+
+</page>
