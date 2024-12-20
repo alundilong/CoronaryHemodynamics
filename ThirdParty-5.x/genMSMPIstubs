@@ -1,0 +1,474 @@
+#!/bin/bash
+#------------------------------------------------------------------------------
+# License
+#     Copyright (C) 2011-2017 blueCAPE Lda
+#
+#     This file is part of blueCAPE's unofficial mingw patches for OpenFOAM.
+#     For more information about these patches, visit:
+#         http://bluecfd.com/Core
+#
+#     This file is a derivative work of OpenFOAM.
+#
+#     OpenFOAM is free software: you can redistribute it and/or modify it
+#     under the terms of the GNU General Public License as published by
+#     the Free Software Foundation, either version 3 of the License, or
+#     (at your option) any later version.
+#
+#     OpenFOAM is distributed in the hope that it will be useful, but WITHOUT
+#     ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+#     FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+#     for more details.
+#
+#     You should have received a copy of the GNU General Public License
+#     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Script
+#     genMSMPIstubs
+#
+# Description
+#     This script generates the link library and prepares the include
+#   files for MSMPI, based on:
+#
+#      * HPC Pack 2008 R2 SP4 MS-MPI Redistributable Package:
+#        https://www.microsoft.com/download/en/details.aspx?id=14737
+#
+#      * HPC Pack 2012 MS-MPI Redistributable Package:
+#        https://www.microsoft.com/en-us/download/details.aspx?id=36045
+#
+#      * HPC Pack 2012 R2 MS-MPI Redistributable Package:
+#        https://www.microsoft.com/en-us/download/details.aspx?id=41634
+#
+#      * Microsoft MPI 7.1 MS-MPI Redistributable Package:
+#        https://www.microsoft.com/en-us/download/details.aspx?id=52981
+#
+#      * Microsoft MPI 8.1 MS-MPI Redistributable Package:
+#        https://www.microsoft.com/en-us/download/details.aspx?id=55494
+#
+#   This is designed to be installed directly on Windows, so that it's ready
+#   to be used after this script is finished.
+#
+#------------------------------------------------------------------------------
+
+if ! isMinGW; then
+  echo "Error: this script is meant to be used for MinGW compilers only!"
+  exit 1
+fi
+
+#check the MSMPI version
+case $WM_MPLIB in
+  MSMPI2008)
+    #set up variables
+    INSTPACK_URL="https://download.microsoft.com/download/3/8/D/38D18861-67DE-4E66-92C7-6819D8B07210"
+    INSTPACK_X86="mpi_x86.msi"
+    INSTPACK_X86_64="mpi_x64.msi"
+    ;;
+
+  MSMPI2012)
+    #set up variables
+    INSTPACK_URL="https://download.microsoft.com/download/A/1/3/A1397A8C-4751-433C-8330-F738C3BE2187"
+    INSTPACK_X86="mpi_x86.Msi"
+    INSTPACK_X86_64="mpi_x64.Msi"
+    ;;
+
+  MSMPI2012R2)
+    #set up variables
+    INSTPACK_URL="https://download.microsoft.com/download/B/C/8/BC826318-B57E-490D-82C1-06C99F52C608/"
+    INSTPACK_X86="MSMPISetup.exe"
+    INSTPACK_X86_64=$INSTPACK_X86
+    ;;
+
+  MSMPI71)
+    #set up variables
+    INSTPACK_URL="https://download.microsoft.com/download/E/8/A/E8A080AF-040D-43FF-97B4-065D4F220301/"
+    INSTPACK_X86="MSMpiSetup.exe"
+    INSTPACK_X86_64=$INSTPACK_X86
+    
+    ## Also need SDK installer...
+    INSTPACK_SDK_FILE="msmpisdk.msi"
+    ;;
+
+  MSMPI81)
+    #set up variables
+    INSTPACK_URL="https://download.microsoft.com/download/D/B/B/DBB64BA1-7B51-43DB-8BF1-D1FB45EACF7A/"
+    INSTPACK_X86="MSMpiSetup.exe"
+    INSTPACK_X86_64=$INSTPACK_X86
+    
+    ## Also need SDK installer...
+    INSTPACK_SDK_FILE="msmpisdk.msi"
+    ;;
+
+  *)
+    echo "Error: Incompatible MPI toolbox chosen."
+    exit 1
+    ;;
+esac
+
+if [ $WM_ARCH_OPTION -eq 64 ]; then
+  INSTPACK_FILE=$INSTPACK_X86_64
+  DLLVERNUM="64"
+else
+  INSTPACK_FILE=$INSTPACK_X86
+  DLLVERNUM=""
+fi
+
+FINAL_INSTPACK_FILE=${WM_MPLIB}_${INSTPACK_FILE}
+
+if [ -n "$INSTPACK_SDK_FILE" ]
+then
+
+  FINAL_INSTPACK_SDK_FILE=${WM_MPLIB}_${INSTPACK_SDK_FILE}
+
+fi
+
+
+# run from third-party directory only
+cd ${0%/*} || exit 1
+wmakeCheckPwd "$WM_THIRD_PARTY_DIR" || {
+    echo "Error: Current directory is not \$WM_THIRD_PARTY_DIR"
+    echo "    The environment variables are inconsistent with the installation."
+    echo "    Check the OpenFOAM entries in your dot-files and source them."
+    exit 1
+}
+. etc/tools/ThirdPartyFunctions
+. etc/tools/makeExtraThirdPartyFunctions
+
+
+#end of initializations -------------------------------------------
+
+
+download_files()
+{
+  # Make sure wget is installed
+  if test "x$(which wget)" = "x"
+  then
+    echo "You need to install wget."
+    exit 1
+  fi
+
+  downloadFile $FINAL_INSTPACK_FILE $INSTPACK_URL/$INSTPACK_FILE
+  
+  if [ -n "$FINAL_INSTPACK_SDK_FILE" ]
+  then
+    downloadFile $FINAL_INSTPACK_SDK_FILE $INSTPACK_URL/$INSTPACK_SDK_FILE
+  fi
+}
+
+
+unpack_files()
+{
+  echo "Unpacking files..."
+  
+  #Just in case, purge the previous installation
+  cleanup
+
+  createBinIncludeLib $MPI_ARCH_PATH
+
+  #depends on the MPI version
+  case $WM_MPLIB in
+    MSMPI2008)
+
+      relativePath=${MPI_ARCH_PATH#$WM_THIRD_PARTY_DIR/}
+
+      if [ $WM_ARCH_OPTION = 32 ]; then
+
+        cmd /c "$(echo "msiexec /a download\\${WM_MPLIB}_mpi_x86.msi /qb TARGETDIR=\"%CD%\\${relativePath//\//\\}\"")"
+
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft HPC Pack 2008 R2/Bin"/*.* "${MPI_ARCH_PATH}/bin/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft HPC Pack 2008 R2/Inc"/*.* "${MPI_ARCH_PATH}/include/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft HPC Pack 2008 R2/Lib/i386"/*.* "${MPI_ARCH_PATH}/lib/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft HPC Pack 2008 R2/License"/* "${MPI_ARCH_PATH}/"
+        cp "${MPI_ARCH_PATH}/PFiles/System"/*.* "${MPI_ARCH_PATH}/bin/"
+
+        # The 32-bit version library interface is already compatible with GCC+MinGW
+        cp "${MPI_ARCH_PATH}/lib/msmpi.lib" "${MPI_ARCH_PATH}/lib/libmpi.a"
+
+      else
+
+        cmd /c "$(echo "msiexec /a download\\${WM_MPLIB}_mpi_x64.msi /qb TARGETDIR=\"%CD%\\${relativePath//\//\\}\"")"
+        
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft HPC Pack 2008 R2/Bin"/*.* "${MPI_ARCH_PATH}/bin/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft HPC Pack 2008 R2/Inc"/*.* "${MPI_ARCH_PATH}/include/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft HPC Pack 2008 R2/Lib/amd64"/*.* "${MPI_ARCH_PATH}/lib/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft HPC Pack 2008 R2/License"/* "${MPI_ARCH_PATH}/"
+        cp "${MPI_ARCH_PATH}/PFiles/System64"/*.* "${MPI_ARCH_PATH}/bin/"
+
+      fi
+
+      cp "${MPI_ARCH_PATH}/bin/mpiexec.exe" "${MPI_ARCH_PATH}/bin/mpirun.exe"
+    ;;
+
+    MSMPI2012)
+
+      relativePath=${MPI_ARCH_PATH#$WM_THIRD_PARTY_DIR/}
+
+      if [ $WM_ARCH_OPTION = 32 ]; then
+
+        cmd /c "$(echo "msiexec /a download\\${WM_MPLIB}_mpi_x86.msi /qb TARGETDIR=\"%CD%\\${relativePath//\//\\}\"")"
+
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft HPC Pack 2012/Bin"/*.* "${MPI_ARCH_PATH}/bin/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft HPC Pack 2012/Inc"/*.* "${MPI_ARCH_PATH}/include/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft HPC Pack 2012/Lib/i386"/*.* "${MPI_ARCH_PATH}/lib/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft HPC Pack 2012/License"/* "${MPI_ARCH_PATH}/"
+        cp "${MPI_ARCH_PATH}/PFiles/System"/*.* "${MPI_ARCH_PATH}/bin/"
+        
+        # The 32-bit version library interface is already compatible with GCC+MinGW
+        cp "${MPI_ARCH_PATH}/lib/msmpi.lib" "${MPI_ARCH_PATH}/lib/libmpi.a"
+
+      else
+
+        cmd /c "$(echo "msiexec /a download\\${WM_MPLIB}_mpi_x64.msi /qb TARGETDIR=\"%CD%\\${relativePath//\//\\}\"")"
+        
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft HPC Pack 2012/Bin"/*.* "${MPI_ARCH_PATH}/bin/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft HPC Pack 2012/Inc"/*.* "${MPI_ARCH_PATH}/include/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft HPC Pack 2012/Lib/amd64"/*.* "${MPI_ARCH_PATH}/lib/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft HPC Pack 2012/License"/* "${MPI_ARCH_PATH}/"
+        cp "${MPI_ARCH_PATH}/PFiles/System64"/*.* "${MPI_ARCH_PATH}/bin/"
+
+      fi
+      
+      cp "${MPI_ARCH_PATH}/bin/mpiexec.exe" "${MPI_ARCH_PATH}/bin/mpirun.exe"
+    ;;
+
+    MSMPI2012R2)
+
+      relativePath=${MPI_ARCH_PATH#$WM_THIRD_PARTY_DIR/}
+      chmod +x download//${WM_MPLIB}_${INSTPACK_X86}
+      
+      MSI_INSTALLER_NAME=${WM_MPLIB}_${INSTPACK_X86}_${WM_ARCH_OPTION}.msi
+
+      # Override "run as admin" option. Source: http://superuser.com/a/450503
+      export __COMPAT_LAYER=RUNASINVOKER
+
+      cmd /c "$(echo "download\\${WM_MPLIB}_${INSTPACK_X86} -unattend -nodepends -full -installroot \"%CD%\\${relativePath//\//\\}\"")" &
+
+      echo "WHEN THE INSTALLER ASKS YOU FOR ADMIN PERMISSIONS, SAY NO AFTER A FEW SECONDS"
+
+      while true
+      do
+
+          (
+            #ignore errors
+            set +e
+            find /tmp -iname "mpi_*.msi" | xargs -I {} cp {} download/${MSI_INSTALLER_NAME}
+            exit 0
+          )
+
+          if [ -e "download/${MSI_INSTALLER_NAME}" ]
+          then
+              echo "We have got what we wanted. You can NOW DENY the installer's request to install."
+              break
+          fi
+
+      done
+
+      echo "Currently unpacking what we want..."
+      cmd /c "$(echo "msiexec /a download\\${MSI_INSTALLER_NAME} /qb TARGETDIR=\"%CD%\\${relativePath//\//\\}\"")"
+
+      echo "Unpacking complete."
+
+      if [ $WM_ARCH_OPTION = 32 ]; then
+
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft MPI/Bin"/*.* "${MPI_ARCH_PATH}/bin/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft MPI/Inc"/*.* "${MPI_ARCH_PATH}/include/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft MPI/Lib/i386"/*.* "${MPI_ARCH_PATH}/lib/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft MPI/License"/* "${MPI_ARCH_PATH}/"
+        cp "${MPI_ARCH_PATH}/PFiles/System"/*.* "${MPI_ARCH_PATH}/bin/"
+        
+        # The 32-bit version library interface is already compatible with GCC+MinGW
+        cp "${MPI_ARCH_PATH}/lib/msmpi.lib" "${MPI_ARCH_PATH}/lib/libmpi.a"
+
+      else
+
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft MPI/Bin"/*.* "${MPI_ARCH_PATH}/bin/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft MPI/Inc"/*.* "${MPI_ARCH_PATH}/include/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft MPI/Lib/amd64"/*.* "${MPI_ARCH_PATH}/lib/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft MPI/License"/* "${MPI_ARCH_PATH}/"
+        cp "${MPI_ARCH_PATH}/PFiles/System64"/*.* "${MPI_ARCH_PATH}/bin/"
+
+      fi
+
+      cp "${MPI_ARCH_PATH}/bin/mpiexec.exe" "${MPI_ARCH_PATH}/bin/mpirun.exe"
+    ;;
+
+    MSMPI71|MSMPI81)
+
+      relativePath=${MPI_ARCH_PATH#$WM_THIRD_PARTY_DIR/}
+      chmod +x download//${WM_MPLIB}_${INSTPACK_X86}
+      
+      MSI_INSTALLER_NAME=${WM_MPLIB}_${INSTPACK_X86}_${WM_ARCH_OPTION}.msi
+
+      # Override "run as admin" option. Source: http://superuser.com/a/450503
+      export __COMPAT_LAYER=RUNASINVOKER
+
+      cmd /c "$(echo "download\\${WM_MPLIB}_${INSTPACK_X86} -unattend -nodepends -full -installroot \"%CD%\\${relativePath//\//\\}\"")" &
+
+      while true
+      do
+
+          (
+            #ignore errors
+            set +e
+            find /tmp -iname "mpi_*.msi" | xargs -I {} cp {} download/${MSI_INSTALLER_NAME}
+            exit 0
+          )
+
+          if [ -e "download/${MSI_INSTALLER_NAME}" ]
+          then
+              echo "We have got what we wanted. You can NOW DENY the installer's request to install."
+              break
+          fi
+
+      done
+
+      echo "Currently unpacking what we want..."
+      cmd /c "$(echo "msiexec /a download\\${MSI_INSTALLER_NAME} /qb TARGETDIR=\"%CD%\\${relativePath//\//\\}\"")"
+
+      cmd /c "$(echo "msiexec /a download\\${FINAL_INSTPACK_SDK_FILE} /qb TARGETDIR=\"%CD%\\${relativePath//\//\\}\"")"
+
+      echo "Unpacking complete."
+
+      if [ $WM_ARCH_OPTION = 32 ]; then
+
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft MPI/Bin"/*.* "${MPI_ARCH_PATH}/bin/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft MPI/License"/* "${MPI_ARCH_PATH}/"
+        cp "${MPI_ARCH_PATH}/PFiles/System"/*.* "${MPI_ARCH_PATH}/bin/"
+
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft SDKs/MPI/Include"/*.* "${MPI_ARCH_PATH}/include/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft SDKs/MPI/Include/x86"/*.* "${MPI_ARCH_PATH}/include/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft SDKs/MPI/Lib/x86"/*.* "${MPI_ARCH_PATH}/lib/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft SDKs/MPI/License"/* "${MPI_ARCH_PATH}/"
+
+        # The 32-bit version library interface is already compatible with GCC+MinGW
+        cp "${MPI_ARCH_PATH}/lib/msmpi.lib" "${MPI_ARCH_PATH}/lib/libmpi.a"
+
+      else
+
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft MPI/Bin"/*.* "${MPI_ARCH_PATH}/bin/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft MPI/License"/* "${MPI_ARCH_PATH}/"
+        cp "${MPI_ARCH_PATH}/PFiles/System64"/*.* "${MPI_ARCH_PATH}/bin/"
+
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft SDKs/MPI/Include"/*.* "${MPI_ARCH_PATH}/include/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft SDKs/MPI/Include/x64"/*.* "${MPI_ARCH_PATH}/include/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft SDKs/MPI/Lib/x64"/*.* "${MPI_ARCH_PATH}/lib/"
+        cp "${MPI_ARCH_PATH}/PFiles/Microsoft SDKs/MPI/License"/* "${MPI_ARCH_PATH}/"
+
+      fi
+
+      cp "${MPI_ARCH_PATH}/bin/mpiexec.exe" "${MPI_ARCH_PATH}/bin/mpirun.exe"
+    ;;
+
+  esac
+
+}
+
+
+function create_gcccompatible_library
+{
+  echo -e "\033[1m creating libmpi.a \033[0m"
+  if [ -n "${DLLVERNUM}" ]; then
+    cd $BUILDDIR/lib
+    gendef - ../bin/msmpi.dll > libmpi.def
+    dlltool -d libmpi.def -l libmpi.a -D msmpi.dll
+  fi
+}
+
+
+function patch_mpi_includes
+{
+
+  echo -e "\033[1m patching mpi.h \033[0m"
+  cd $BUILDDIR/include
+
+  cat mpi.h | sed -e ':a;N;$!ba;s/\r\n/\n/g' > mpi.h_tmp
+  mv -f mpi.h_tmp mpi.h
+
+  if [ "$WM_ARCH_OPTION" = "64" ]; then
+    patch -p0 --binary < $WM_THIRD_PARTY_DIR/etc/patches/patch_msmpi_mpi_h
+  fi
+
+echo '--- mpi.h_orig  2011-01-18 15:11:38.284485101 +0000
++++ mpi.h 2011-01-18 15:11:43.739068567 +0000
+@@ -16,6 +16,7 @@
+ #define MSMPI_VER 0x100
+ #endif
+ 
++#include <stdint.h>
+ 
+ /*---------------------------------------------------------------------------*/
+ /* SAL ANNOTATIONS                                                           */
+@@ -5319,6 +5319,15 @@
+ /* Chapter 15: Depricated Functions                                          */
+ /*---------------------------------------------------------------------------*/
+ 
++#if defined( __GNUC__ ) && defined( __GNUC_MINOR__ )
++  #if (__GNUC__ == 4) && (__GNUC_MINOR__ == 4)
++    //this will override an issue that is already fixed in gcc 4.5.x and above
++    //namely a problem with "deprecated" not allowing messages in 4.4.x and below.
++    //#define MSMPI_NO_DEPRECATE_20
++    #define deprecated(x) deprecated
++  #endif
++#endif
++
+ #ifdef MSMPI_NO_DEPRECATE_20
+ #define MSMPI_DEPRECATE_20( x )
+ #else
+' | patch -p0
+
+  if [ "$WM_MPLIB" = "MSMPI2012" ]; then
+    patch -p0 --binary < $WM_THIRD_PARTY_DIR/etc/patches/patch_msmpi2012_mpi_h
+  fi
+
+  if [ -n "${DLLVERNUM}" ]; then
+    cat mpi.h | sed -e 's=\#define MPIAPI __stdcall=\#define MPIAPI=' > mpi.h_tmp
+    mv -f mpi.h_tmp mpi.h
+  fi
+}
+
+
+function cleanup
+{
+  if [ -n "$BUILDDIR" -a -e "$BUILDDIR" ]; then
+    rm -rf "$BUILDDIR"
+  fi
+}
+
+#script start ------------------------------------------------------
+
+BUILDDIR="$MPI_ARCH_PATH"
+SRCDIR="$MPI_HOME/source"
+
+if [ $# -eq 1 -a "$1" = "clean" ]; then
+
+  echo -e "\033[1m Cleaning up MSMPI stub... \033[0m"
+  cleanup
+
+else
+
+  if test -z "x$(which msiexec)" ; then
+    echo "The installation application msiexec was not found. Cannot proceed."
+    exit 1
+  elif ! onWin; then
+    echo "This script was designed to be used on Windows (using MSYS/MinGW). Cannot proceed."
+    exit 1
+  fi
+
+  if [ ! -e "$BUILDDIR/lib/libmpi.a" ]; then
+
+    echo -e "\033[1m Downloading necessary MSMPI installation files...\033[0m"
+    download_files
+
+    echo -e "\033[1m Unpacking necessary MSMPI installation files...\033[0m"
+    unpack_files
+
+    echo -e "\033[1m Generating MSMPI stub... \033[0m"
+
+    create_gcccompatible_library
+    patch_mpi_includes
+    echo -e "\033[1m All done. \033[0m"
+  else
+    echo -e "\033[1m MSMPI stub is already built and ready to use. \033[0m"
+  fi
+
+  cd $WM_THIRD_PARTY_DIR
+
+fi

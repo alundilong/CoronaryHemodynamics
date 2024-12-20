@@ -1,0 +1,76 @@
+diff -Nur mingw-libgnurx-2.5.1-orig/regcomp.c mingw-libgnurx-2.5.1/regcomp.c
+--- mingw-libgnurx-2.5.1-orig/regcomp.c 2007-04-27 20:29:49.000000000 +0100
++++ mingw-libgnurx-2.5.1/regcomp.c  2009-10-02 11:07:32.000000000 +0100
+@@ -506,11 +506,12 @@
+    from either regcomp or regexec.   We don't use PREG here.  */
+ 
+ size_t
+-regerror (errcode, preg, errbuf, errbuf_size)
+-    int errcode;
+-    const regex_t *__restrict preg;
+-    char *__restrict errbuf;
+-    size_t errbuf_size;
++regerror (
++    int errcode,
++    const regex_t *__restrict preg,
++    char *__restrict errbuf,
++    size_t errbuf_size
++)
+ {
+   const char *msg;
+   size_t msg_size;
+@@ -2510,7 +2510,11 @@
+     old_tree = NULL;
+ 
+   if (elem->token.type == SUBEXP)
++#ifdef _WIN64
++    postorder (elem, mark_opt_subexp, (void *) (long long) elem->token.opr.idx);
++#else
+     postorder (elem, mark_opt_subexp, (void *) (long) elem->token.opr.idx);
++#endif
+ 
+   tree = create_tree (dfa, elem, NULL, (end == -1 ? OP_DUP_ASTERISK : OP_ALT));
+   if (BE (tree == NULL, 0))
+@@ -3722,7 +3726,11 @@
+ static reg_errcode_t
+ mark_opt_subexp (void *extra, bin_tree_t *node)
+ {
++#ifdef _WIN64
++  int idx = (int) (long long) extra;
++#else
+   int idx = (int) (long) extra;
++#endif
+   if (node->token.type == SUBEXP && node->token.opr.idx == idx)
+     node->token.opt_subexp = 1;
+ 
+diff -Nur mingw-libgnurx-2.5.1-orig/regex.c mingw-libgnurx-2.5.1/regex.c
+--- mingw-libgnurx-2.5.1-orig/regex.c   2007-04-27 20:29:49.000000000 +0100
++++ mingw-libgnurx-2.5.1/regex.c    2009-10-02 11:12:59.000000000 +0100
+@@ -57,7 +57,7 @@
+    #undefs RE_DUP_MAX and sets it to the right value.  */
+ #include <limits.h>
+ 
+-#include <regex.h>
++#include "regex.h"
+ #include "regex_internal.h"
+ 
+ #include "regex_internal.c"
+diff -Nur mingw-libgnurx-2.5.1-orig/regex_internal.h mingw-libgnurx-2.5.1/regex_internal.h
+--- mingw-libgnurx-2.5.1-orig/regex_internal.h  2007-04-27 20:29:51.000000000 +0100
++++ mingw-libgnurx-2.5.1/regex_internal.h   2009-10-02 11:08:54.000000000 +0100
+@@ -420,6 +420,7 @@
+ #define re_string_skip_bytes(pstr,idx) ((pstr)->cur_idx += (idx))
+ #define re_string_set_index(pstr,idx) ((pstr)->cur_idx = (idx))
+ 
++#ifndef alloca
+ #ifdef __GNUC__
+ # define alloca(size)   __builtin_alloca (size)
+ # define HAVE_ALLOCA 1
+@@ -430,6 +431,7 @@
+ #else
+ # error No alloca()
+ #endif
++#endif
+ 
+ #ifndef _LIBC
+ # if HAVE_ALLOCA

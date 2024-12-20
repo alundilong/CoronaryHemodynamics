@@ -1,0 +1,16 @@
+EXPORTS
+    PARMETIS_V3_NODEND @1
+    PARMETIS_V3_PARTGEOMKWAY @2
+    PARMETIS_V3_PARTKWAY @3
+    ParMETIS_V3_NodeND @4
+    ParMETIS_V3_PartGeomKway @5
+    ParMETIS_V3_PartKway @6
+    parmetis_v3_nodend @7
+    parmetis_v3_nodend_ @8
+    parmetis_v3_nodend__ @9
+    parmetis_v3_partgeomkway @10
+    parmetis_v3_partgeomkway_ @11
+    parmetis_v3_partgeomkway__ @12
+    parmetis_v3_partkway @13
+    parmetis_v3_partkway_ @14
+    parmetis_v3_partkway__ @15

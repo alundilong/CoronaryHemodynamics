@@ -1,0 +1,221 @@
+diff --git a/src/Makefile b/src/Makefile
+index 9bcba66..20b78a3 100644
+--- a/src/Makefile
++++ b/src/Makefile
+@@ -55,6 +55,8 @@ Makefile.inc			:
+ 
+ include Makefile.inc
+ 
++CPLIB ?= $(LIB)
++
+ prefix		?= /usr/local
+ bindir		?= $(prefix)/bin
+ includedir	?= $(prefix)/include
+@@ -109,7 +111,7 @@ install				:	required	$(bindir)	$(includedir)	$(libdir)	$(mandir)/man1
+ 					-$(CP) -f ../bin/[agm]*$(EXE) $(bindir)
+ 					-$(CP) -f ../bin/d[agm]*$(EXE) $(bindir)
+ 					-$(CP) -f ../include/*scotch*.h $(includedir)
+-					-$(CP) -f ../lib/*scotch*$(LIB) $(libdir)
++					-$(CP) -f ../lib/*scotch*$(CPLIB) $(libdir)
+ 					-$(CP) -Rf ../man/* $(mandir)
+ 
+ clean				:	required
+diff --git a/src/libscotch/Makefile b/src/libscotch/Makefile
+index d67aeb8..742e741 100644
+--- a/src/libscotch/Makefile
++++ b/src/libscotch/Makefile
+@@ -39,6 +39,8 @@ libdir		= ../../lib
+ 
+ include ../Makefile.inc
+ 
++CPLIB ?= $(LIB)
++
+ %$(OBJ)	:	%.c
+ 				$(CC) $(CFLAGS) $(CLIBFLAGS) -c $(<) -o $(@)
+ 
+@@ -55,17 +57,17 @@ scotch				:
+ 					$(MAKE) CC="$(CCS)" CCD="$(CCS)"	\
+ 					scotch.h				\
+ 					scotchf.h				\
+-					libscotch$(LIB)				\
+ 					libscotcherr$(LIB)			\
+-					libscotcherrexit$(LIB)
++					libscotcherrexit$(LIB)			\
++					libscotch$(LIB)
+ 
+ ptscotch			:	scotch
+ 					$(MAKE) CFLAGS="$(CFLAGS) -DSCOTCH_PTSCOTCH" CC="$(CCP)"	\
+ 					ptscotch.h							\
+ 					ptscotchf.h							\
+-					libptscotch$(LIB)						\
+ 					libptscotcherr$(LIB)						\
+-					libptscotcherrexit$(LIB)
++					libptscotcherrexit$(LIB)					\
++					libptscotch$(LIB)
+ 
+ install				:	$(includedir)/scotch.h			\
+ 					$(includedir)/scotchf.h			\
+@@ -77,7 +79,7 @@ ptinstall			:	install					\
+ 					$(libdir)/libptscotch$(LIB)
+ 
+ clean				:
+-					-$(RM) *~ *$(OBJ) lib*$(LIB) parser_yy.c parser_ly.h parser_ll.c *scotch.h *scotchf.h y.output *dummysizes$(EXE)
++					-$(RM) *~ *$(OBJ) lib*$(LIB) lib*.def lib*.a parser_yy.c parser_ly.h parser_ll.c *scotch.h *scotchf.h y.output *dummysizes$(EXE)
+ 
+ realclean			:	clean
+ 
+@@ -99,10 +101,10 @@ $(includedir)/ptscotchf.h	:	ptscotchf.h
+ 					-$(CP) ptscotchf.h $(includedir)
+ 
+ $(libdir)/libscotch$(LIB)	:	libscotch$(LIB)
+-					-$(CP) libscotch$(LIB) libscotcherr*$(LIB) $(libdir)
++					-$(CP) libscotch$(CPLIB) libscotcherr*$(CPLIB) $(libdir)
+ 
+ $(libdir)/libptscotch$(LIB)	:	libptscotch$(LIB)
+-					-$(CP) libptscotch$(LIB) libptscotcherr*$(LIB) $(libdir)
++					-$(CP) libptscotch$(CPLIB) libptscotcherr*$(CPLIB) $(libdir)
+ 
+ ##
+ ##  Library dependencies.
+@@ -2934,7 +2936,7 @@ ptscotchf.h			:	ptdummysizes$(EXE)			\
+ 					./ptdummysizes$(EXE) library_pt_f.h ptscotchf.h
+ 
+ libscotch$(LIB)			:	$(LIBSCOTCHDEPS)
+-					$(AR) $(ARFLAGS) $(@) $(?)
++					$(AR) $(ARFLAGS) $(@) $(?) $(ARSFLAGS)
+ 					-$(RANLIB) $(@)
+ 
+ libscotcherr$(LIB)		:	library_error$(OBJ)
+@@ -2946,13 +2948,13 @@ libscotcherrexit$(LIB)		:	library_error_exit$(OBJ)
+ 					-$(RANLIB) $(@)
+ 
+ libptscotch$(LIB)		:	$(LIBPTSCOTCHDEPS)
+-					$(AR) $(ARFLAGS) $(@) $(?)
++					$(AR) $(ARFLAGS) $(@) $(?) $(ARPFLAGS)
+ 					-$(RANLIB) $(@)
+ 
+ libptscotcherr$(LIB)		:	library_error_pt$(OBJ)
+-					$(AR) $(ARFLAGS) $(@) $(?)
++					$(AR) $(ARFLAGS) $(@) $(?)  $(LDFLAGS_P1_PT)
+ 					-$(RANLIB) $(@)
+ 
+ libptscotcherrexit$(LIB)	:	library_error_exit_pt$(OBJ)
+-					$(AR) $(ARFLAGS) $(@) $(?)
++					$(AR) $(ARFLAGS) $(@) $(?)  $(LDFLAGS_P1_PT)
+ 					-$(RANLIB) $(@)
+diff --git a/src/libscotch/library_dgraph_stat.c b/src/libscotch/library_dgraph_stat.c
+index 450c33f..996c9b5 100644
+--- a/src/libscotch/library_dgraph_stat.c
++++ b/src/libscotch/library_dgraph_stat.c
+@@ -62,8 +62,14 @@
+ **  The static variables.
+ */
+ 
++#if defined(WIN32) || defined(WIN64)
++#define DEFERRED_ADDRESS(address) 0
++#else
++#define DEFERRED_ADDRESS(address) address
++#endif
++
+ static int                  dgraphstatblentab[2] = { 7, 3 };
+-static MPI_Datatype         dgraphstattypetab[2] = { GNUM_MPI, MPI_DOUBLE };
++static MPI_Datatype         dgraphstattypetab[2] = { DEFERRED_ADDRESS(GNUM_MPI), DEFERRED_ADDRESS(MPI_DOUBLE) };
+ 
+ /************************************/
+ /*                                  */
+@@ -147,6 +153,12 @@ double *                    edlodltptr)
+   double              edlolocdlt;
+   int                 o;
+ 
++#if defined(WIN32) || defined(WIN64)
++  //Had to re-route the initiallization of dgraphstattypetab, for compatibility with MinGW dllimports
++  dgraphstattypetab[0] = GNUM_MPI;
++  dgraphstattypetab[1] = MPI_DOUBLE;
++#endif
++
+   srcgrafptr = (Dgraph *) grafptr;
+ 
+   velolocdlt = 0.0L;
+diff --git a/src/libscotchmetis/Makefile b/src/libscotchmetis/Makefile
+index d81d02c..09520ec 100644
+--- a/src/libscotchmetis/Makefile
++++ b/src/libscotchmetis/Makefile
+@@ -40,6 +40,8 @@ libdir		= ../../lib
+ 
+ include ../Makefile.inc
+ 
++CPLIB ?= $(LIB)
++
+ %$(OBJ)	:	%.c
+ 				$(CC) $(CFLAGS) $(CLIBFLAGS) -I$(includedir) -I../libscotch -c $(<) -o $(@)
+ 
+@@ -62,14 +64,14 @@ ptscotch			:
+ 
+ install				:	scotch
+ 					-$(CP) metis.h $(includedir)
+-					-$(CP) libscotchmetis$(LIB) $(libdir)
++					-$(CP) libscotchmetis$(CPLIB) $(libdir)
+ 
+ ptinstall			:	ptscotch
+ 					-$(CP) parmetis.h $(includedir)
+-					-$(CP) libptscotchparmetis$(LIB) $(libdir)
++					-$(CP) libptscotchparmetis$(CPLIB) $(libdir)
+ 
+ clean				:
+-					-$(RM) *~ *$(OBJ) lib*$(LIB)
++					-$(RM) *~ *$(OBJ) lib*$(LIB) lib*.a lib*.def
+ 
+ realclean			:	clean
+ 
+@@ -129,12 +131,12 @@ libptscotchparmetis$(LIB)	:	parmetis_dgraph_order$(OBJ)		\
+ 					parmetis_dgraph_order_f$(OBJ)		\
+ 					parmetis_dgraph_part$(OBJ)		\
+ 					parmetis_dgraph_part_f$(OBJ)
+-					$(AR) $(ARFLAGS) $(@) $(^)
++					$(AR) $(ARFLAGS) $(@) $(^) $(ARPMFLAGS)
+ 					-$(RANLIB) $(@)
+ 
+ libscotchmetis$(LIB)		:	metis_graph_order$(OBJ)			\
+ 					metis_graph_order_f$(OBJ)		\
+ 					metis_graph_part$(OBJ)			\
+ 					metis_graph_part_f$(OBJ)
+-					$(AR) $(ARFLAGS) $(@) $(^)
++					$(AR) $(ARFLAGS) $(@) $(^) $(ARSMFLAGS)
+ 					-$(RANLIB) $(@)
+diff --git a/src/scotch/Makefile b/src/scotch/Makefile
+index e186242..68b5623 100644
+--- a/src/scotch/Makefile
++++ b/src/scotch/Makefile
+@@ -40,14 +40,21 @@ libdir		= ../../lib
+ 
+ include ../Makefile.inc
+ 
++ifeq ("$(SCOTCHLIB)","ptscotch")
++LDFLAGS_PT ?= $(LDFLAGS)
++LDFLAGSX = $(LDFLAGS_PT)
++else
++LDFLAGSX = $(LDFLAGS)
++endif
++
+ %$(EXE)	:	%$(OBJ)
+-		 		$(CC) $(CFLAGS) -I$(includedir) -I../libscotch $(<) -o $(@) -L$(libdir) -l$(SCOTCHLIB) -lscotch -l$(SCOTCHLIB)errexit $(LDFLAGS)
++		 		$(CC) $(CFLAGS) -I$(includedir) -I../libscotch $(<) -o $(@) -L$(libdir) -l$(SCOTCHLIB) -lscotch -l$(SCOTCHLIB)errexit $(LDFLAGSX)
+ 
+ %$(OBJ)	:	%.c
+ 				$(CC) $(CFLAGS) -I$(includedir) -I../libscotch -c $(<) -o $(@)
+ 
+ %$(EXE)	:	%.c
+-		 		$(CC) $(CFLAGS) -I$(includedir) -I../libscotch $(<) -o $(@) -L$(libdir) -l$(SCOTCHLIB) -lscotch -l$(SCOTCHLIB)errexit $(LDFLAGS)
++		 		$(CC) $(CFLAGS) -I$(includedir) -I../libscotch $(<) -o $(@) -L$(libdir) -l$(SCOTCHLIB) -lscotch -l$(SCOTCHLIB)errexit $(LDFLAGSX)
+ 
+ ##
+ ##  Project rules.
+@@ -205,7 +211,7 @@ dgpart$(EXE)			:	dgmap.c					\
+ 					$(libdir)/libptscotch$(LIB)		\
+ 					$(libdir)/libptscotcherrexit$(LIB)	\
+ 					dgmap.h
+-			 		$(CC) $(CFLAGS) -I$(includedir) -I../libscotch $(<) -DSCOTCH_COMPILE_PART -o $(@) -L$(libdir) -lptscotch -lscotch -lptscotcherrexit $(LDFLAGS)
++			 		$(CC) $(CFLAGS) -I$(includedir) -I../libscotch $(<) -DSCOTCH_COMPILE_PART -o $(@) -L$(libdir) -lptscotch -lscotch -lptscotcherrexit $(LDFLAGSX)
+ 
+ dgscat$(EXE)			:	dgscat.c				\
+ 					../libscotch/module.h			\

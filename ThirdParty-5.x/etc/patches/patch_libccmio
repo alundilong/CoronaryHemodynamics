@@ -1,0 +1,713 @@
+--- libccmio-2.6.1-orig/libccmio/ccmio.h	2006-06-30 19:00:17.000000000 +0100
++++ libccmio-2.6.1/libccmio/ccmio.h	2009-10-17 11:24:21.000000000 +0100
+@@ -23,33 +23,39 @@
+ 
+ #include "libccmio/ccmiotypes.h"
+ 
++#if defined (_WIN32)
++  #define DllExport __declspec(dllexport)
++#else
++  #define DllExport extern
++#endif
++
+ /* \{ \name Basic functions
+       \ingroup intermediate */
+ 
+ /** Opens an CCMIO file.  Calling CCMIOOpenFile() multiple times on a file does
+     not create multiple references to it;  thus if CCMIOOpenFile() is called
+     five times on the same file, only one CCMIOCloseFile() is required. */
+-extern CCMIOError CCMIOOpenFile( CCMIOError *err, char const *file,
++DllExport CCMIOError CCMIOOpenFile( CCMIOError *err, char const *file,
+ 				 CCMIOIOType mode, CCMIOID *root );
+ 
+ /** Closes all references to the CCMIO file.  Closing an already closed file
+     generates a kCCMIOBadParameterErr. */
+-extern CCMIOError CCMIOCloseFile( CCMIOError *err, CCMIOID root );
++DllExport CCMIOError CCMIOCloseFile( CCMIOError *err, CCMIOID root );
+ 
+ /** Returns the version number of the file. */
+-extern CCMIOError CCMIOGetVersion( CCMIOError *err, CCMIONode root,
++DllExport CCMIOError CCMIOGetVersion( CCMIOError *err, CCMIONode root,
+ 				   int *version );
+ 
+ /** Sets the version number of the file. */
+-extern CCMIOError CCMIOSetVersion( CCMIOError *err, CCMIONode root,
++DllExport CCMIOError CCMIOSetVersion( CCMIOError *err, CCMIONode root,
+ 				   int version );
+ 
+ /** Returns the title of the file.  Note that the returned string is allocated
+     by the library and must be freed by the user.  It is null-terminated. */
+-extern CCMIOError CCMIOGetTitle( CCMIOError *err, CCMIONode root, char **title );
++DllExport CCMIOError CCMIOGetTitle( CCMIOError *err, CCMIONode root, char **title );
+ 
+ /** Sets the title of the file.  The string must be null-terminated. */
+-extern CCMIOError CCMIOSetTitle( CCMIOError *err, CCMIONode root,
++DllExport CCMIOError CCMIOSetTitle( CCMIOError *err, CCMIONode root,
+ 				 char const *title );
+ 
+ /* \} */
+@@ -61,7 +67,7 @@
+     \param parent	The parent entity.
+     \param name		Name of the child node.
+     \param value	Scalar value to be written. */
+-extern CCMIOError CCMIOWriteOpti( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOWriteOpti( CCMIOError *err, CCMIOID parent,
+ 				  char const *name, int value );
+ 
+ /** Creates a child node of parent with given name and scalar value.
+@@ -69,7 +75,7 @@
+     \param parent	The parent entity.
+     \param name		Name of the child node.
+     \param value	Scalar value to be written. */
+-extern CCMIOError CCMIOWriteOptf( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOWriteOptf( CCMIOError *err, CCMIOID parent,
+ 				  char const *name, float value );
+ 
+ /** Creates a child node of parent with given name and scalar value.
+@@ -77,7 +83,7 @@
+     \param parent	The parent entity.
+     \param name		Name of the child node.
+     \param value	Scalar value to be written. */
+-extern CCMIOError CCMIOWriteOptd( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOWriteOptd( CCMIOError *err, CCMIOID parent,
+ 				  char const *name, double value );
+ 
+ /** Creates a child node of parent with given name and string value.
+@@ -85,7 +91,7 @@
+     \param parent	The parent entity.
+     \param name		Name of the child node.
+     \param value	Null-terminated string. */
+-extern CCMIOError CCMIOWriteOptstr( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOWriteOptstr( CCMIOError *err, CCMIOID parent,
+ 				    char const *name, char const *value );
+ 
+ /** Reads the scalar value of a child node;  converts to an integer
+@@ -93,7 +99,7 @@
+     \param parent	The parent entity.
+     \param name		Name of the child node.
+     \param value	Pointer to the scalar data to be read in. */
+-extern CCMIOError CCMIOReadOpti( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOReadOpti( CCMIOError *err, CCMIOID parent,
+ 				 char const *name, int *value );
+ 
+ /** Reads the scalar value of a child node;  converts to an float
+@@ -101,7 +107,7 @@
+     \param parent	The parent entity.
+     \param name		Name of the child node.
+     \param value	Pointer to the scalar data to be read in. */
+-extern CCMIOError CCMIOReadOptf( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOReadOptf( CCMIOError *err, CCMIOID parent,
+ 				 char const *name, float *value );
+ 
+ /** Reads the scalar value of a child node;  converts to an double
+@@ -109,7 +115,7 @@
+     \param parent	The parent entity.
+     \param name		Name of the child node.
+     \param value	Pointer to the scalar data to be read in. */
+-extern CCMIOError CCMIOReadOptd( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOReadOptd( CCMIOError *err, CCMIOID parent,
+ 				 char const *name, double *value );
+ 
+ /** Reads the string value of a child node;  returns \def kCCMIOWrongDataTypeErr
+@@ -117,13 +123,13 @@
+     be allocated to an appropriate size.  (This can be determined by calling
+     the function once and passing NULL for 'value'.  'size' does not include
+     the C string terminator.).  Either 'size' or 'value' can be NULL. */
+-extern CCMIOError CCMIOReadOptstr( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOReadOptstr( CCMIOError *err, CCMIOID parent,
+ 				   char const *name, int *size, char *value );
+ 
+ /** Reads a one-dimensional array from the child node of 'parent'
+     with name 'name' into 'data'.  See CCMIOReadOpt1f() for a complete
+     description. */
+-extern CCMIOError CCMIOReadOpt1i( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOReadOpt1i( CCMIOError *err, CCMIOID parent,
+ 				  char const *name, int *data,
+ 				  CCMIOIndex start, CCMIOIndex end );
+ /** Reads a one-dimensional array from the child node of 'parent'
+@@ -134,19 +140,19 @@
+     \param parent	The parent entity.
+     \param name		Name of the child node.
+     \param data		Data to be read into.  Must be non-NULL. */
+-extern CCMIOError CCMIOReadOpt1f( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOReadOpt1f( CCMIOError *err, CCMIOID parent,
+ 				  char const *name, float *data,
+ 				  CCMIOIndex start, CCMIOIndex end );
+ /** Reads a one-dimensional array from the child node of 'parent'
+     with name 'name' into 'data'.  See CCMIOReadOpt1f() for a complete
+     description. */
+-extern CCMIOError CCMIOReadOpt1d( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOReadOpt1d( CCMIOError *err, CCMIOID parent,
+ 				  char const *name, double *data,
+ 				  CCMIOIndex start, CCMIOIndex end );
+ /** Reads a two-dimensional array from the child node of 'parent'
+     with name 'name' into 'data'.  See CCMIOReadOpt2f() for a complete
+     description. */
+-extern CCMIOError CCMIOReadOpt2i( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOReadOpt2i( CCMIOError *err, CCMIOID parent,
+ 				  char const *name, int *data,
+ 				  CCMIOIndex start, CCMIOIndex end );
+ /** Reads a two-dimensional array from the child node of 'parent'
+@@ -164,19 +170,19 @@
+     \param end		The element one beyond the end.  So to read from [2, 5],
+ 			start = 2, end = 6, which reads from data[2][0]
+ 			to data[5][3]. */
+-extern CCMIOError CCMIOReadOpt2f( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOReadOpt2f( CCMIOError *err, CCMIOID parent,
+ 				  char const *name, float *data,
+ 				  CCMIOIndex start, CCMIOIndex end );
+ /** Reads a two-dimensional array from the child node of 'parent'
+     with name 'name' into 'data'.  See CCMIOReadOpt2f() for a complete
+     description. */
+-extern CCMIOError CCMIOReadOpt2d( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOReadOpt2d( CCMIOError *err, CCMIOID parent,
+ 				  char const *name, double *data,
+ 				  CCMIOIndex start, CCMIOIndex end );
+ /** Reads a three-dimensional array from the child node of 'parent'
+     with name 'name' into 'data'.  See CCMIOReadOpt3f() for a complete
+     description. */
+-extern CCMIOError CCMIOReadOpt3i( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOReadOpt3i( CCMIOError *err, CCMIOID parent,
+ 				  char const *name, int *data,
+ 				  CCMIOIndex start, CCMIOIndex end );
+ /** Reads a three-dimensional array from the child node of 'parent'
+@@ -194,19 +200,19 @@
+     \param end		The element one beyond the end.  So to read from [2, 5],
+ 			start = 2, end = 6, which reads from data[2][0][0]
+ 			to data[5][3][3]. */
+-extern CCMIOError CCMIOReadOpt3f( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOReadOpt3f( CCMIOError *err, CCMIOID parent,
+ 				  char const *name, float *data,
+ 				  CCMIOIndex start, CCMIOIndex end );
+ /** Reads a three-dimensional array from the child node of 'parent'
+     with name 'name' into 'data'.  See CCMIOReadOpt3f() for a complete
+     description. */
+-extern CCMIOError CCMIOReadOpt3d( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOReadOpt3d( CCMIOError *err, CCMIOID parent,
+ 				  char const *name, double *data,
+ 				  CCMIOIndex start, CCMIOIndex end );
+ 
+ /** Writes a one-dimensional array to a child node of 'parent' with name 'name'.
+     See CCMIOWriteOpt1f() for a complete description. */
+-extern CCMIOError CCMIOWriteOpt1i( CCMIOError *err, CCMIOID const parent,
++DllExport CCMIOError CCMIOWriteOpt1i( CCMIOError *err, CCMIOID const parent,
+ 				   char const *name, CCMIOSize const n,
+                                    int const *data,
+ 				   CCMIOIndex start, CCMIOIndex end );
+@@ -224,19 +230,19 @@
+ 			(The write will be from data[start] to data[start-1])
+    <b>Note</b>: When writing partial arrays, the first block of the array you
+    write <i>must</i> have start equal to kCCMIOStart. */
+-extern CCMIOError CCMIOWriteOpt1f( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOWriteOpt1f( CCMIOError *err, CCMIOID parent,
+ 				   char const *name, CCMIOSize n,
+ 				   float const *data,
+ 				   CCMIOIndex start, CCMIOIndex end );
+ /** Writes a one-dimensional array to a child node of 'parent' with name 'name'.
+     See CCMIOWriteOpt1f() for a complete description. */
+-extern CCMIOError CCMIOWriteOpt1d( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOWriteOpt1d( CCMIOError *err, CCMIOID parent,
+ 				   char const *name, CCMIOSize n,
+ 				   double const *data,
+ 				   CCMIOIndex start, CCMIOIndex end );
+ /** Writes a two-dimensional array to a child node of 'parent' with name 'name'.
+     See CCMIOWriteOpt2f() for a complete description. */
+-extern CCMIOError CCMIOWriteOpt2i( CCMIOError *err, CCMIOID const parent,
++DllExport CCMIOError CCMIOWriteOpt2i( CCMIOError *err, CCMIOID const parent,
+ 				   char const *name, CCMIOIndex x, CCMIOIndex y,
+ 				   int const *data,
+ 				   CCMIOIndex start, CCMIOIndex end );
+@@ -262,19 +268,19 @@
+ 			to data[5][3].
+    <b>Note</b>: When writing partial arrays, the first block of the array you
+    write <i>must</i> have start equal to kCCMIOStart. */
+-extern CCMIOError CCMIOWriteOpt2f( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOWriteOpt2f( CCMIOError *err, CCMIOID parent,
+ 				   char const *name, CCMIOIndex x, CCMIOIndex y,
+ 				   float const *data,
+ 				   CCMIOIndex start, CCMIOIndex end );
+ /** Writes a two-dimensional array to a child node of 'parent' with name 'name'.
+     See CCMIOWriteOpt2f() for a complete description. */
+-extern CCMIOError CCMIOWriteOpt2d( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOWriteOpt2d( CCMIOError *err, CCMIOID parent,
+ 				   char const *name, CCMIOIndex x, CCMIOIndex y,
+ 				   double const *data,
+ 				   CCMIOIndex start, CCMIOIndex end );
+ /** Writes a three-dimensional array to a child node of 'parent' with name
+     'name'.  See CCMIOWriteOpt3f() for a complete description. */
+-extern CCMIOError CCMIOWriteOpt3i( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOWriteOpt3i( CCMIOError *err, CCMIOID parent,
+ 				   char const *name,
+ 				   CCMIOIndex x, CCMIOIndex y, CCMIOIndex z,
+ 				   int const *data,
+@@ -304,14 +310,14 @@
+ 			to data[5][3][3].
+    <b>Note</b>: When writing partial arrays, the first block of the array you
+    write <i>must</i> have start equal to kCCMIOStart. */
+-extern CCMIOError CCMIOWriteOpt3f( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOWriteOpt3f( CCMIOError *err, CCMIOID parent,
+ 				   char const *name,
+ 				   CCMIOIndex x, CCMIOIndex y, CCMIOIndex z,
+ 				   float const *data, CCMIOIndex start,
+ 				   CCMIOIndex end );
+ /** Writes a three-dimensional array to a child node of 'parent' with name
+     'name'.  See CCMIOWriteOpt3f() for a complete description. */
+-extern CCMIOError CCMIOWriteOpt3d( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOWriteOpt3d( CCMIOError *err, CCMIOID parent,
+ 				   char const *name,
+ 				   CCMIOIndex x, CCMIOIndex y, CCMIOIndex z,
+ 				   double const *data, CCMIOIndex start,
+@@ -328,7 +334,7 @@
+ 			node is one dimensional).  Can be NULL.
+     \param z		Returns the size of the first dimension (0 if the
+ 			node is less than three dimensions).  Can be NULL. */
+-extern CCMIOError CCMIOGetOptInfo( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOGetOptInfo( CCMIOError *err, CCMIOID parent,
+ 				   char const *name, CCMIODataType *type,
+ 				   CCMIOIndex *x, CCMIOIndex *y,
+ 				   CCMIOIndex *z );
+@@ -339,16 +345,16 @@
+ 
+ /** Marks the entity as invalid.  Further CCMIO calls will fail, until
+     a call (such as CCMIOGetEntity()) writes a valid entity into it. */
+-extern void CCMIOInvalidateEntity( CCMIOID *entity );
++DllExport void CCMIOInvalidateEntity( CCMIOID *entity );
+ 
+ /** Returns TRUE if the entity is valid, FALSE otherwise.  Note that
+     unitialized entities will likely return TRUE, even though they are not
+     actually valid.  Use CCMIOInvalidateEntity() to initialize them.  */
+-extern int CCMIOIsValidEntity( CCMIOID entity );
++DllExport int CCMIOIsValidEntity( CCMIOID entity );
+ 
+ /** Returns TRUE if the two entities are from the same file,
+     FALSE otherwise. */
+-extern int CCMIOIsFromSameFile( CCMIOID entity1, CCMIOID entity2 );
++DllExport int CCMIOIsFromSameFile( CCMIOID entity1, CCMIOID entity2 );
+ 
+ /** Creates a new entity.
+     \param parent	For top-level entities this may be any CCMIOID in the same
+@@ -358,7 +364,7 @@
+     \param description	An optional description of the entity.  Passing NULL
+ 			will omit a description.
+     \param id		The CCMIOID of the created entity. */
+-extern CCMIOError CCMIONewEntity( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIONewEntity( CCMIOError *err, CCMIOID parent,
+ 				  CCMIOEntity type, char const *description,
+ 				  CCMIOID *id );
+ 
+@@ -373,7 +379,7 @@
+ 			internally).  For entities that may not have siblings
+ 			(e.g. cells and internal faces) this value is ignored.
+     \param id		The CCMIOID of the created entity. */
+-extern CCMIOError CCMIOGetEntity( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIOGetEntity( CCMIOError *err, CCMIOID parent,
+ 				  CCMIOEntity type, int idVal, CCMIOID *id );
+ 
+ /** Creates a new entity identified by an index number.
+@@ -389,13 +395,13 @@
+     			kCCMIOBoundaryRegion.
+     \param description	An optional description (NULL for no description)
+     \param id		The CCMIOID to the new entity. */
+-extern CCMIOError CCMIONewIndexedEntity( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIONewIndexedEntity( CCMIOError *err, CCMIOID parent,
+ 				     CCMIOEntity which, int idVal,
+ 				     char const *description, CCMIOID *id );
+ 
+ /** Returns the index (i.e. the id) of the given indexed entity.  (See
+     CCMIONewIndexedEntity() for more details and a list of valid entities.) */
+-extern CCMIOError CCMIOGetEntityIndex( CCMIOError *err, CCMIOID id , int *n );
++DllExport CCMIOError CCMIOGetEntityIndex( CCMIOError *err, CCMIOID id , int *n );
+ 
+ /** Creates a new state.  If a state with that name exists, its contents,
+     including processor entities, will be cleared.
+@@ -408,7 +414,7 @@
+     \param state	The CCMIOID of the new entity.
+     \param description	An optional description string
+     			(NULL for no description) */
+-extern CCMIOError CCMIONewState( CCMIOError *err, CCMIOID root,
++DllExport CCMIOError CCMIONewState( CCMIOError *err, CCMIOID root,
+ 				 char const *name, CCMIOID *problemDescription,
+ 				 char const *description, CCMIOID *state );
+ 
+@@ -423,7 +429,7 @@
+ 			If NULL is passed to this parameter, no
+ 			problemDescription will be looked for.
+     \param state	The CCMIOID of the entity. */
+-extern CCMIOError CCMIOGetState( CCMIOError *err, CCMIOID root,
++DllExport CCMIOError CCMIOGetState( CCMIOError *err, CCMIOID root,
+ 				 char const *name, CCMIOID *problemDescription,
+ 				 CCMIOID *state );
+ 
+@@ -433,7 +439,7 @@
+     \param description	Optional character string describing the state.
+ 			Pass NULL for no description (note that this will
+ 			remove any existing description). */
+-extern CCMIOError CCMIOWriteState( CCMIOError *err, CCMIOID state,
++DllExport CCMIOError CCMIOWriteState( CCMIOError *err, CCMIOID state,
+ 				   CCMIOID problemDescription,
+ 				   char const *description );
+ 
+@@ -449,7 +455,7 @@
+     \param dim		The number of dimensions (\def kCCMIOScalar,
+     			\def kCCMIOVector, \def kCCMIOTensor).
+     \param field	The CCMIOID of the new entity. */
+-extern CCMIOError CCMIONewField( CCMIOError *err, CCMIOID phase,
++DllExport CCMIOError CCMIONewField( CCMIOError *err, CCMIOID phase,
+ 				 char const *name, char const *shortName,
+ 				 CCMIODimensionality dim, CCMIOID *field );
+ 
+@@ -461,7 +467,7 @@
+     \param dim		Returns the number of dimensions
+    			kCCMIOTensor).
+     \param field	The CCMIOID of the field entity. */
+-extern CCMIOError CCMIOGetField( CCMIOError *err, CCMIOID phase,
++DllExport CCMIOError CCMIOGetField( CCMIOError *err, CCMIOID phase,
+ 				 char const *name, CCMIODimensionality *dim,
+ 				 CCMIOID *field );
+ 
+@@ -479,7 +485,7 @@
+ 			same data type (\ref kCCMIOUnknownType will be returned
+ 			for non-scalar data).  May be NULL if the
+ 			information is not desired. */
+-extern CCMIOError CCMIOReadField( CCMIOError *err, CCMIOID field, char *name,
++DllExport CCMIOError CCMIOReadField( CCMIOError *err, CCMIOID field, char *name,
+ 				  char *shortName, CCMIODimensionality *dim,
+ 				  CCMIODataType *datatype );
+ 
+@@ -516,7 +522,7 @@
+     entites that become unused as a result of the delete (e.g. the mesh and
+     post data referred to by that processor) and may lead to wasted disk space.
+     However, calling CCMIODeleteEntity on a state entity is safe. */
+-extern CCMIOError CCMIODeleteEntity( CCMIOError *err, CCMIOID id );
++DllExport CCMIOError CCMIODeleteEntity( CCMIOError *err, CCMIOID id );
+ 
+ /** Returns the next child entity of the parent or \def kCCMIONoNodeError
+     if there are no more.
+@@ -528,20 +534,20 @@
+     			(zero) to retrieve the first child.  It will be
+ 			automatically incremented.
+     \param next		Returns the CCMIOID of the next child entity. */
+-extern CCMIOError CCMIONextEntity( CCMIOError *err, CCMIOID parent,
++DllExport CCMIOError CCMIONextEntity( CCMIOError *err, CCMIOID parent,
+ 				   CCMIOEntity type, int *i, CCMIOID *next );
+ 
+ /** Returns the number of elements and the maximum element ID in the specified
+     entity.  Either 'n' or 'max' may be NULL if the information is not
+     desired. */
+-extern CCMIOError CCMIOEntitySize( CCMIOError *err, CCMIOID id, CCMIOSize *n,
++DllExport CCMIOError CCMIOEntitySize( CCMIOError *err, CCMIOID id, CCMIOSize *n,
+ 				   CCMIOIndex *max );
+ 
+ /** Gets the name of the entity.  Although this is not useful for most entities,
+     it may be convenient for named entities (kCCMIOState, kCCMIOField).
+     \param name		Returns the name of the entity.  Must be at least
+ 			kCCMIOMaxStringLength + 1. */
+-extern CCMIOError CCMIOEntityName( CCMIOError *err, CCMIOID id, char *name );
++DllExport CCMIOError CCMIOEntityName( CCMIOError *err, CCMIOID id, char *name );
+ 
+ /** Gets the label of the entity.
+     \deprecated Use CCMIOEntityDescription() instead.
+@@ -551,7 +557,7 @@
+     \param name		Returns the label.  Must be at least 'size' + 1 bytes.
+ 			If there is no label, this will be the empty string.
+ 			May be NULL if the information is not required. */
+-extern CCMIOError CCMIOEntityLabel( CCMIOError *err, CCMIOID id,
++DllExport CCMIOError CCMIOEntityLabel( CCMIOError *err, CCMIOID id,
+ 				    CCMIOSize *size, char *label );
+ 
+ /** Gets the description (if any) of the specified entity.
+@@ -560,16 +566,16 @@
+     \param desc		Returns the description string.  This must be allocated
+ 			to at least as large as the number of characters + 1
+ 			and may be NULL if the information is not desired. */
+-extern CCMIOError CCMIOEntityDescription( CCMIOError *err, CCMIOID id,
++DllExport CCMIOError CCMIOEntityDescription( CCMIOError *err, CCMIOID id,
+ 					  CCMIOSize *size, char *desc );
+ 
+ /** Returns the CCMIO node corresponding to this entity. */
+-extern CCMIOError CCMIOGetEntityNode( CCMIOError *err, CCMIOID id,
++DllExport CCMIOError CCMIOGetEntityNode( CCMIOError *err, CCMIOID id,
+ 				      CCMIONode *node );
+ 
+ /** Returns the data type of the main data of the entity.  Currently only
+     valid for vertices. */
+-extern CCMIOError CCMIOEntityDataType( CCMIOError *err, CCMIOID id,
++DllExport CCMIOError CCMIOEntityDataType( CCMIOError *err, CCMIOID id,
+ 				       CCMIODataType *type );
+ 
+ /** Writes the map data.
+@@ -586,7 +592,7 @@
+   
+    <b>Note</b>: When writing partial arrays, the first block of the array you
+    write <i>must</i> have start equal to kCCMIOStart. */
+-extern CCMIOError CCMIOWriteMap( CCMIOError *err, CCMIOID id,
++DllExport CCMIOError CCMIOWriteMap( CCMIOError *err, CCMIOID id,
+                                  CCMIOSize n, CCMIOSize max,
+                                  int const *data,
+ 				 CCMIOIndex start, CCMIOIndex end );
+@@ -595,7 +601,7 @@
+     \param id		The CCMIOID of the map.
+     \param data		The map data.  Must be pre-allocated to the correct
+ 			number of elements (given by CCMIOEntitySize()). */
+-extern CCMIOError CCMIOReadMap( CCMIOError *err, CCMIOID id, int *data,
++DllExport CCMIOError CCMIOReadMap( CCMIOError *err, CCMIOID id, int *data,
+ 				CCMIOIndex start, CCMIOIndex end );
+ 
+ /** Reads the vertex data.
+@@ -615,7 +621,7 @@
+     			Data from start to end - 1 will be read. If end is
+ 			kCCMIOEnd, data will be read from 'start' to the
+ 			end of the data.*/
+-extern CCMIOError CCMIOReadVerticesf( CCMIOError *err, CCMIOID id,
++DllExport CCMIOError CCMIOReadVerticesf( CCMIOError *err, CCMIOID id,
+ 				      int *dims, float *scale,
+ 				      CCMIOID *mapID, float  *vertices,
+ 				      CCMIOIndex start, CCMIOIndex end );
+@@ -636,7 +642,7 @@
+     			Data from start to end - 1 will be read. If end is
+ 			kCCMIOEnd, data will be read from 'start' to the
+ 			end of the data.*/
+-extern CCMIOError CCMIOReadVerticesd( CCMIOError *err, CCMIOID id,
++DllExport CCMIOError CCMIOReadVerticesd( CCMIOError *err, CCMIOID id,
+ 				      int *dims, float *scale,
+ 				      CCMIOID *mapID, double *vertices,
+ 				      CCMIOIndex start, CCMIOIndex end );
+@@ -658,7 +664,7 @@
+ 
+    <b>Note</b>: When writing partial arrays, the first block of the array you
+    write <i>must</i> have start equal to zero. */
+-extern CCMIOError CCMIOWriteVerticesf( CCMIOError *err, CCMIOID id,
++DllExport CCMIOError CCMIOWriteVerticesf( CCMIOError *err, CCMIOID id,
+ 				       int dims, float scale,
+ 				       CCMIOID mapID, float const *vertices,
+ 				       CCMIOIndex start, CCMIOIndex end );
+@@ -680,7 +686,7 @@
+   
+    <b>Note</b>: When writing partial arrays, the first block of the array you
+    write <i>must</i> have start equal to zero. */
+-extern CCMIOError CCMIOWriteVerticesd( CCMIOError *err, CCMIOID id,
++DllExport CCMIOError CCMIOWriteVerticesd( CCMIOError *err, CCMIOID id,
+ 				       int dims, float scale,
+ 				       CCMIOID mapID, double const *vertices,
+ 				       CCMIOIndex start, CCMIOIndex end );
+@@ -695,7 +701,7 @@
+     \param end		The ending cell.  Data from 'start' to 'end' -1 will
+     			be read.  If end is zero, data will be read from 'start'
+ 			to the end of the data. */
+-extern CCMIOError CCMIOReadCells( CCMIOError *err, CCMIOID id, CCMIOID *mapID,
++DllExport CCMIOError CCMIOReadCells( CCMIOError *err, CCMIOID id, CCMIOID *mapID,
+ 				  int *cellTypes, CCMIOIndex start,
+ 				  CCMIOIndex end );
+ 
+@@ -709,7 +715,7 @@
+ 			'start' to the end of the data.
+    <b>Note</b>: When writing partial arrays, the first block of the array you
+    write <i>must</i> have start equal to kCCMIOStart. */
+-extern CCMIOError CCMIOWriteCells( CCMIOError *err, CCMIOID id, CCMIOID mapID,
++DllExport CCMIOError CCMIOWriteCells( CCMIOError *err, CCMIOID id, CCMIOID mapID,
+ 				   int *cellTypes, CCMIOIndex start,
+                                    CCMIOIndex end );
+ 
+@@ -734,7 +740,7 @@
+                         'start' to the end of the data.
+   
+    To read the whole array, set start to kCCMIOStart and end to kCCMIOEnd. */
+-extern CCMIOError CCMIOReadFaces( CCMIOError *err, CCMIOID entity,
++DllExport CCMIOError CCMIOReadFaces( CCMIOError *err, CCMIOID entity,
+ 				  CCMIOEntity which, CCMIOID *mapID,
+ 				  CCMIOSize *streamSize, int *vertexStream,
+ 				  CCMIOIndex start, CCMIOIndex end );
+@@ -750,7 +756,7 @@
+ 
+     <b>Note</b>: When writing partial arrays, the first block of the array you
+     write <i>must</i> have start equal to zero. */
+-extern CCMIOError CCMIOWriteFaces( CCMIOError *err, CCMIOID entity,
++DllExport CCMIOError CCMIOWriteFaces( CCMIOError *err, CCMIOID entity,
+                                    CCMIOEntity which, CCMIOID mapID,
+                                    CCMIOSize streamSize,
+                                    int const *vertexStream,
+@@ -775,7 +781,7 @@
+ 
+    <b>Note</b>: When writing partial arrays, the first block of the array you
+    write <i>must</i> have start equal to kCCMIOStart. */
+-CCMIOError CCMIOReadFaceCells( CCMIOError *err, CCMIOID entity,
++DllExport CCMIOError CCMIOReadFaceCells( CCMIOError *err, CCMIOID entity,
+ 			       CCMIOEntity which, int *cells,
+ 			       CCMIOIndex start, CCMIOIndex end );
+ 
+@@ -784,7 +790,7 @@
+   
+    <b>Note</b>: When writing partial arrays, the first block of the array you
+    write <i>must</i> have start equal to zero. */
+-CCMIOError CCMIOWriteFaceCells( CCMIOError *err, CCMIOID entity,
++DllExport CCMIOError CCMIOWriteFaceCells( CCMIOError *err, CCMIOID entity,
+ 				CCMIOEntity which, CCMIOID mapID,
+ 				int const *cells, CCMIOIndex start,
+ 				CCMIOIndex end );
+@@ -809,7 +815,7 @@
+     \param vertices		The CCMIOID of the solution data field set entity.
+ 				If NULL, vertices information will be unchanged.
+ */
+-extern CCMIOError CCMIOWriteProcessor( CCMIOError *err, CCMIOID processor,
++DllExport CCMIOError CCMIOWriteProcessor( CCMIOError *err, CCMIOID processor,
+ 				   char const *verticesFile, CCMIOID *vertices,
+ 				   char const *topologyFile, CCMIOID *topology,
+ 				   char const *initialFieldFile, CCMIOID *initialField,
+@@ -820,7 +826,7 @@
+     the node might be the root of the current file, they should not be closed
+     until the end.  'positions' and 'solution' may be NULL if the information
+     is not desired. */
+-extern CCMIOError CCMIOReadProcessor( CCMIOError *err, CCMIOID processor,
++DllExport CCMIOError CCMIOReadProcessor( CCMIOError *err, CCMIOID processor,
+ 				      CCMIOID *vertices, CCMIOID *topology,
+ 				      CCMIOID *initialField, CCMIOID *solution);
+ 
+@@ -838,7 +844,7 @@
+     				If FALSE, it will be untouched.
+     \param clearLagrangian	If TRUE, any Lagrangian data will be cleared.
+ 				If FALSE, it will be untouched. */
+-extern CCMIOError CCMIOClearProcessor( CCMIOError *err, CCMIOID state,
++DllExport CCMIOError CCMIOClearProcessor( CCMIOError *err, CCMIOID state,
+ 				       CCMIOID processor,
+ 				       int clearVertices, int clearTopology,
+ 				       int clearInitialField, int clearSolution,
+@@ -856,7 +862,7 @@
+ 				NULL for this file.
+     \param solution		The solution node (field set entity).  May be
+ 				NULL if not solution data is to be written. */
+-extern CCMIOError CCMIOWriteLagrangianData( CCMIOError *err, CCMIOID lagrangian,
++DllExport CCMIOError CCMIOWriteLagrangianData( CCMIOError *err, CCMIOID lagrangian,
+ 					    char const *positionsFile,
+ 					    CCMIOID *positions,
+ 					    char const *solutionFile,
+@@ -867,7 +873,7 @@
+     the node might be the root of the current file, they should not be closed
+     until the end.  'positions' and 'solution' may be NULL if the information
+     is not desired. */
+-extern CCMIOError CCMIOReadLagrangianData( CCMIOError *err, CCMIOID lagrangian,
++DllExport CCMIOError CCMIOReadLagrangianData( CCMIOError *err, CCMIOID lagrangian,
+ 					   CCMIOID *positions,
+ 					   CCMIOID *solution );
+ 
+@@ -881,7 +887,7 @@
+ 				to use whatever default value it feels is
+ 				correct.
+     \param componentField	The component field ID. */
+-extern CCMIOError CCMIOWriteMultiDimensionalFieldData( CCMIOError *err,
++DllExport CCMIOError CCMIOWriteMultiDimensionalFieldData( CCMIOError *err,
+ 						       CCMIOID fieldID,
+ 						       CCMIOComponent component,
+ 						       CCMIOID componentField );
+@@ -900,7 +906,7 @@
+     				\ref kCCMIOVectorZ and \ref kCCMIOTensorXX
+ 				to \ref kCCMIOTensorZZ).
+     \param componentField	The component field ID. */
+-extern CCMIOError CCMIOReadMultiDimensionalFieldData( CCMIOError *err,
++DllExport CCMIOError CCMIOReadMultiDimensionalFieldData( CCMIOError *err,
+ 						      CCMIOID fieldID,
+ 						      CCMIOComponent component,
+ 						      CCMIOID *componentField );
+@@ -926,20 +932,20 @@
+ 
+    <b>Note</b>: When writing partial arrays, the first block of the array you
+    write <i>must</i> have start equal to kCCMIOStart. */
+-extern CCMIOError CCMIOWriteFieldDataf( CCMIOError *err, CCMIOID fieldData,
++DllExport CCMIOError CCMIOWriteFieldDataf( CCMIOError *err, CCMIOID fieldData,
+ 					CCMIOID mapID, CCMIODataLocation loc,
+ 					float *data, CCMIOIndex start,
+ 					CCMIOIndex end  );
+ /** Writes the data for a field.  See CCMIOWriteFieldDataf() for a description
+     of the paramaters. */
+-extern CCMIOError CCMIOWriteFieldDatad( CCMIOError *err, CCMIOID fieldData,
++DllExport CCMIOError CCMIOWriteFieldDatad( CCMIOError *err, CCMIOID fieldData,
+ 					CCMIOID mapID, CCMIODataLocation loc,
+ 					double *data, CCMIOIndex start,
+ 					CCMIOIndex end  );
+ 
+ /** Writes the data for a field.  See CCMIOWriteFieldDataf() for a description
+     of the paramaters. */
+-extern CCMIOError CCMIOWriteFieldDatai( CCMIOError *err, CCMIOID fieldData,
++DllExport CCMIOError CCMIOWriteFieldDatai( CCMIOError *err, CCMIOID fieldData,
+ 					CCMIOID mapID, CCMIODataLocation loc,
+ 					int *data, CCMIOIndex start,
+ 					CCMIOIndex end  );
+@@ -951,7 +957,7 @@
+     \param mapID	The CCMIOID of the map corresponding to this field.
+     \param loc		What type of data this node is (cell, vertex, face)
+     \param value	The constant value. */
+-extern CCMIOError CCMIOWriteConstantFieldDataf( CCMIOError *err,
++DllExport CCMIOError CCMIOWriteConstantFieldDataf( CCMIOError *err,
+ 						CCMIOID fieldData,
+ 						CCMIOID mapID,
+ 						CCMIODataLocation loc,
+@@ -959,7 +965,7 @@
+ 
+ /** Writes data for a field that is constant.  See
+     CCMIOWriteConstantFieldDataf() for a description of the parameters. */
+-extern CCMIOError CCMIOWriteConstantFieldDatad( CCMIOError *err,
++DllExport CCMIOError CCMIOWriteConstantFieldDatad( CCMIOError *err,
+ 						CCMIOID fieldData,
+ 						CCMIOID mapID,
+ 						CCMIODataLocation loc,
+@@ -967,7 +973,7 @@
+ 
+ /** Writes data for a field that is constant.  See
+     CCMIOWriteConstantFieldDataf() for a description of the parameters. */
+-extern CCMIOError CCMIOWriteConstantFieldDatai( CCMIOError *err,
++DllExport CCMIOError CCMIOWriteConstantFieldDatai( CCMIOError *err,
+ 						CCMIOID fieldData,
+ 						CCMIOID mapID,
+ 						CCMIODataLocation loc,
+@@ -1000,7 +1006,7 @@
+ 			start = 2, end = 6, which reads from data[2][0][0]
+ 			to data[5][3][3].  (Note that newer files will only
+ 			have scalar data)*/
+-extern CCMIOError CCMIOReadFieldDataf( CCMIOError *err, CCMIOID fieldData,
++DllExport CCMIOError CCMIOReadFieldDataf( CCMIOError *err, CCMIOID fieldData,
+ 				       CCMIOID *mapID, CCMIODataLocation *loc,
+ 				       float *data, CCMIOIndex start,
+ 				       CCMIOIndex end  );
+@@ -1008,7 +1014,7 @@
+ /** Reads the data from a field.  The data is returned in double-precision
+     so if the original data is single-precision it will be converted.
+     See CCMIOReadFieldDataf() for a full description. */
+-extern CCMIOError CCMIOReadFieldDatad( CCMIOError *err, CCMIOID fieldData,
++DllExport CCMIOError CCMIOReadFieldDatad( CCMIOError *err, CCMIOID fieldData,
+ 				       CCMIOID *mapID, CCMIODataLocation *loc,
+ 				       double *data, CCMIOIndex start,
+ 				       CCMIOIndex end  );
+@@ -1016,7 +1022,7 @@
+ /** Reads the data from a field.  The data is returned in double-precision
+     so if the original data is single-precision it will be converted.
+     See CCMIOReadFieldDataf() for a full description. */
+-extern CCMIOError CCMIOReadFieldDatai( CCMIOError *err, CCMIOID fieldData,
++DllExport CCMIOError CCMIOReadFieldDatai( CCMIOError *err, CCMIOID fieldData,
+ 				       CCMIOID *mapID, CCMIODataLocation *loc,
+ 				       int *data, CCMIOIndex start,
+ 				       CCMIOIndex end  );
+@@ -1033,14 +1039,14 @@
+ 			the units default to "s".
+     \param startAngle	The starting angle of the mesh.  Should be 0.0 if
+ 			the mesh is not rotating. */
+-extern CCMIOError CCMIOWriteRestartInfo( CCMIOError *err, CCMIOID restartInfo,
++DllExport CCMIOError CCMIOWriteRestartInfo( CCMIOError *err, CCMIOID restartInfo,
+ 					 char const *solverName, int iteration,
+ 					 float time, char const *timeUnits,
+ 					 float startAngle );
+ 
+ /** Reads the solver restart entity.  Any pointer may be NULL if the
+     information is not desired. */
+-extern CCMIOError CCMIOReadRestartInfo( CCMIOError *err, CCMIOID restartInfo,
++DllExport CCMIOError CCMIOReadRestartInfo( CCMIOError *err, CCMIOID restartInfo,
+ 					char *solverName, int *iteration,
+ 					float *time, char *timeUnits,
+ 					float *startAngle );
+@@ -1058,7 +1064,7 @@
+     
+      <b>Note</b>: When writing partial arrays, the first block of the array you
+      write <i>must</i> have start equal to zero. */
+-extern CCMIOError CCMIOV2WriteFaceCells(
++DllExport CCMIOError CCMIOV2WriteFaceCells(
+                                   CCMIOError *err, CCMIOID entity,
+  				  CCMIOEntity which,
+                                   CCMIOSize nFace, int const *cells,

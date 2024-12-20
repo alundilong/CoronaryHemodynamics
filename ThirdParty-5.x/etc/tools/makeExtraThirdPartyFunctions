@@ -1,0 +1,122 @@
+#---------------------------------*- sh -*-------------------------------------
+# License
+#     Copyright (C) 2011-2014 blueCAPE Lda
+#
+#     This file is part of blueCAPE's unofficial mingw patches for OpenFOAM.
+#     For more information about these patches, visit:
+#         http://bluecfd.com/Core
+#
+#     This file is a derivative work of OpenFOAM.
+#
+#     OpenFOAM is free software: you can redistribute it and/or modify it
+#     under the terms of the GNU General Public License as published by
+#     the Free Software Foundation, either version 3 of the License, or
+#     (at your option) any later version.
+#
+#     OpenFOAM is distributed in the hope that it will be useful, but WITHOUT
+#     ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+#     FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+#     for more details.
+#
+#     You should have received a copy of the GNU General Public License
+#     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
+#
+# File
+#     makeExtraThirdPartyFunctions
+#
+# Description
+#     Functions for managing the extra third-party packages required for the 
+#   mingw builds.
+#
+#------------------------------------------------------------------------------
+
+DownloadRepository="$WM_THIRD_PARTY_DIR/download"
+ALREADYUNPACKED="No"
+
+
+#usage:
+#  isProjectInstalled projectFolder
+#
+#returns ALREADYUNPACKED="Yes"
+isProjectInstalled()
+{
+  ALREADYUNPACKED="No"
+  if [ -d "$1" ]; then
+    fileCount=`find $1/. | wc -l`
+
+    if [ $fileCount -gt 3 ]; then
+      ALREADYUNPACKED="Yes"
+    fi
+  fi
+}
+
+
+#usage:
+#  unpackFile filename [target_folder]
+unpackFile()
+{
+  if [ "x$2" = "x" ]; then
+    cd $WM_THIRD_PARTY_DIR
+  else
+    if [ ! -d "$2" ]; then
+      mkdir -p $2
+    fi
+    cd $2
+  fi
+
+  echo "Extracting $1"
+  if [ ! -f "$DownloadRepository/$1" ]; then
+    echo "Could not unpack $1"
+    exit 1
+  else
+    tar -xf "$DownloadRepository/$1"
+  fi
+}
+
+
+#usage:
+#  moveUnpackedFolder packaged_file target_folder
+moveUnpackedFolder()
+{
+  if [ ! -d $2 ]; then
+    SOURCEFOLDER=`tar -tf "$DownloadRepository/$1" | head -n 1`
+    mv $SOURCEFOLDER $2
+  fi
+}
+
+#Creates the folders "bin", "include" and "lib" inside the desired folder
+#usage:
+#createBinIncludeLib folder_where_to_create_them
+createBinIncludeLib()
+{
+  mkdir -p $1/bin 2> /dev/null
+  mkdir -p $1/include 2> /dev/null
+  mkdir -p $1/lib 2> /dev/null
+}
+
+
+#returns the build machine into the variable BUILD
+definedBUILDmachine()
+{
+  BUILD=""
+
+  # What build should we make
+  machine=`uname -m`
+  operatingsystem=`uname -s`
+  case $operatingsystem in
+  Linux|MINGW*)
+    operatingsystem="linux"
+    ;;
+
+  CYGWIN*)
+    operatingsystem="cygwin"
+    ;;
+
+  *)
+    echo "Error: this script doesn't take into account this operating system: $operatingsystem"
+    exit 1
+    ;;
+  esac
+
+  BUILD=${machine}-${operatingsystem}-gnu
+}

@@ -1,0 +1,83 @@
+#!/bin/sh
+#------------------------------------------------------------------------------
+# License
+#     Copyright (C) 2017 blueCAPE Lda
+#
+#     This file is part of blueCAPE's unofficial mingw patches for OpenFOAM.
+#     For more information about these patches, visit:
+#         http://bluecfd.com/Core
+#
+#     This file is a derivative work of OpenFOAM.
+#
+#     OpenFOAM is free software: you can redistribute it and/or modify it
+#     under the terms of the GNU General Public License as published by
+#     the Free Software Foundation, either version 3 of the License, or
+#     (at your option) any later version.
+#
+#     OpenFOAM is distributed in the hope that it will be useful, but WITHOUT
+#     ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+#     FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+#     for more details.
+#
+#     You should have received a copy of the GNU General Public License
+#     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Script
+#     AllwmakeMinGWStackTrace
+#
+# Description
+#     Build script for building the 'libstack_trace' library.
+#     Also download the cv2pdb utility and related files from:
+#           https://github.com/rainers/cv2pdb/releases
+#
+#------------------------------------------------------------------------------
+# run from third-party directory only
+cd ${0%/*} || exit 1
+wmakeCheckPwd "$WM_THIRD_PARTY_DIR" || {
+    echo "Error: Current directory is not \$WM_THIRD_PARTY_DIR"
+    echo "    The environment variables are inconsistent with the installation."
+    echo "    Check the OpenFOAM entries in your dot-files and source them."
+    exit 1
+}
+
+if ! onWin && ! isMinGW; then
+  echo "Error: this script is meant to be used for MinGW compilers on Windows!"
+  exit 1
+fi
+
+. etc/tools/ThirdPartyFunctions
+
+#------------------------------------------------------------------------------
+
+if [ -n "$CV2PDB_PATH" ]; then
+    # get cv2pdb
+
+    echo ========================================
+    echo "Getting cv2pdb to '$CV2PDB_PATH'"
+
+    [ ! -e "$CV2PDB_PATH" ] && mkdir $CV2PDB_PATH
+
+    if [ ! -e "$CV2PDB_PATH/cv2pdb.exe" ]
+    then
+        downloadFile cv2pdb.exe \
+        "https://ci.appveyor.com/api/projects/rainers/visuald/artifacts/cv2pdb.exe?job=Environment%3A%20os%3DVisual%20Studio%202013%2C%20VS%3D12%2C%20APPVEYOR_BUILD_WORKER_IMAGE%3DVisual%20Studio%202015"
+
+        downloadFile cv2pdb_README https://raw.githubusercontent.com/rainers/cv2pdb/master/README
+        downloadFile cv2pdb_LICENSE https://raw.githubusercontent.com/rainers/cv2pdb/master/LICENSE
+
+        cp -f download/cv2pdb.exe $CV2PDB_PATH/cv2pdb.exe && \
+        cp -f download/cv2pdb_README $CV2PDB_PATH/README && \
+        cp -f download/cv2pdb_LICENSE $CV2PDB_PATH/LICENSE && \
+        chmod +x $CV2PDB_PATH/cv2pdb.exe && \
+        echo "Have gotten cv2pdb with success."
+    else
+        echo "Already have cv2pdb ready to be used."
+    fi
+fi
+
+echo ========================================
+echo "Build stack_trace"
+
+wmake libso stack_trace
+
+echo ========================================

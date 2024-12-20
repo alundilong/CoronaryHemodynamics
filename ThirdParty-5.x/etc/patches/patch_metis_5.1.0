@@ -1,0 +1,89 @@
+diff --git a/GKlib/error.c b/GKlib/error.c
+index e2a18cf..aa84993 100644
+--- a/GKlib/error.c
++++ b/GKlib/error.c
+@@ -174,7 +174,7 @@ void gk_NonLocalExit_Handler(int signum)
+ /**************************************************************************/
+ char *gk_strerror(int errnum)
+ {
+-#if defined(WIN32) || defined(__MINGW32__)
++#if defined(WIN32) || defined(WIN64) || defined(__MINGW32__)
+   return strerror(errnum);
+ #else 
+ #ifndef SUNOS
+diff --git a/GKlib/gk_arch.h b/GKlib/gk_arch.h
+index 2cb80cc..b255fa7 100644
+--- a/GKlib/gk_arch.h
++++ b/GKlib/gk_arch.h
+@@ -36,12 +36,14 @@
+   #include "ms_inttypes.h"
+   #include "ms_stat.h"
+ #else
+-#ifndef SUNOS
++#if !defined(SUNOS) && !defined(WIN32) && !defined(WIN64)
+   #include <stdint.h>
+ #endif
+   #include <inttypes.h>
+   #include <sys/types.h>
++#if !defined(WIN32) && !defined(WIN64)
+   #include <sys/resource.h>
++#endif
+   #include <sys/time.h>
+ #endif
+ 
+@@ -49,7 +51,7 @@
+ /*************************************************************************
+ * Architecture-specific modifications
+ **************************************************************************/
+-#ifdef WIN32
++#if defined(WIN32) || defined(WIN64)
+ typedef ptrdiff_t ssize_t;
+ #endif
+ 
+diff --git a/GKlib/gk_getopt.h b/GKlib/gk_getopt.h
+index 4bb8611..597c080 100644
+--- a/GKlib/gk_getopt.h
++++ b/GKlib/gk_getopt.h
+@@ -52,11 +52,11 @@ struct gk_option {
+ 
+ 
+ /* Function prototypes */
+-extern int gk_getopt(int __argc, char **__argv, char *__shortopts);
+-extern int gk_getopt_long(int __argc, char **__argv, char *__shortopts,
+-              struct gk_option *__longopts, int *__longind);
+-extern int gk_getopt_long_only (int __argc, char **__argv,
+-              char *__shortopts, struct gk_option *__longopts, int *__longind);
++extern int gk_getopt(int argc, char **argv, char *shortopts);
++extern int gk_getopt_long(int argc, char **argv, char *shortopts,
++              struct gk_option *longopts, int *longind);
++extern int gk_getopt_long_only (int argc, char **argv,
++              char *shortopts, struct gk_option *longopts, int *longind);
+ 
+ 
+ 
+diff --git a/GKlib/string.c b/GKlib/string.c
+index 5d28452..39c2772 100644
+--- a/GKlib/string.c
++++ b/GKlib/string.c
+@@ -482,7 +482,7 @@ char *gk_time2str(time_t time)
+ 
+ 
+ 
+-#if !defined(WIN32) && !defined(__MINGW32__)
++#if !defined(WIN32) && !defined(WIN64) && !defined(__MINGW32__)
+ /************************************************************************/
+ /*! \brief Converts a date/time string into its equivalent time_t value
+ 
+diff --git a/GKlib/timers.c b/GKlib/timers.c
+index bb8f296..48b4318 100644
+--- a/GKlib/timers.c
++++ b/GKlib/timers.c
+@@ -39,7 +39,7 @@ double gk_CPUSeconds(void)
+ #ifdef __OPENMPXXXX__
+   return omp_get_wtime();
+ #else
+-  #if defined(WIN32) || defined(__MINGW32__)
++  #if defined(WIN32) || defined(WIN64) || defined(__MINGW32__)
+     return((double) clock()/CLOCKS_PER_SEC);
+   #else
+     struct rusage r;

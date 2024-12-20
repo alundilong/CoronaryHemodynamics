@@ -1,0 +1,4 @@
+EXPORTS
+    SCOTCH_errorPrint @1
+    SCOTCH_errorPrintW @2
+    SCOTCH_errorProg @3

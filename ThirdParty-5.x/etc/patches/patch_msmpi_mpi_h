@@ -1,0 +1,13 @@
+--- mpi.h.orig 2010-10-27 19:04:03.000000000 +0100
++++ mpi.h  2010-10-27 19:04:53.611424319 +0100
+@@ -123,7 +123,9 @@
+ /*---------------------------------------------------------------------------*/
+ 
+ /* Address size integer */
+-#ifdef _WIN64
++#if defined(USE_GCC) || defined(__GNUC__)
++typedef long long MPI_Aint;
++#elif _WIN64
+ typedef __int64 MPI_Aint;
+ #else
+ typedef int MPI_Aint;

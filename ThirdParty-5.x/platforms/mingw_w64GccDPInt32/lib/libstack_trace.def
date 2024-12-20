@@ -1,0 +1,14 @@
+EXPORTS
+    _ZN10StackTrace14OutputToStreamEPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE @1
+    _ZN10StackTrace16StackWalkContextEP8_CONTEXT @2
+    _ZN10StackTraceC1EP19_EXCEPTION_POINTERS @3
+    _ZN10StackTraceC1EP8_CONTEXT @4
+    _ZN10StackTraceC1Ev @5
+    _ZN10StackTraceC2EP19_EXCEPTION_POINTERS @6
+    _ZN10StackTraceC2EP8_CONTEXT @7
+    _ZN10StackTraceC2Ev @8
+    _ZN10StackTraceD1Ev @9
+    _ZN10StackTraceD2Ev @10
+    _ZN13SymbolContext19OutputTraceToStreamEPKyiPNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE @11
+    _ZNK10StackTrace9AddressesEPy @12
+    _ZNKSt5ctypeIcE8do_widenEc @13

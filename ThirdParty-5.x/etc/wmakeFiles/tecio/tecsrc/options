@@ -1,0 +1,11 @@
+/* NOTE: make any changes to this file in etc/wmakeFiles/ */
+
+#include "tecioOptions"
+
+EXE_INC = \
+    $(TECIO_FLAGS) $(TECIO_INC)
+
+LIB_LIBS = \
+    $(TECIO_LIBS)
+
+PROJECT_LIBS=

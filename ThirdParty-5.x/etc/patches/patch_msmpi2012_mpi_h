@@ -1,0 +1,140 @@
+--- mpi.h.orig	2014-03-21 14:52:13 +0000
++++ mpi.h	2014-03-21 16:18:59 +0000
+@@ -27,24 +27,75 @@
+  * sal.h doesn't cause errors.
+  */
+ #ifndef _In_
+-#define MSMPI_DEFINED_SAL
++#define MSMPI_DEFINED_SAL_In_
+ #define _In_
++#endif
++#ifndef _In_z_
++#define MSMPI_DEFINED_SAL_In_z_
+ #define _In_z_
++#endif
++#ifndef _In_opt_
++#define MSMPI_DEFINED_SAL_In_opt_
+ #define _In_opt_
++#endif
++#ifndef _In_count_
++#define MSMPI_DEFINED_SAL_In_count_
+ #define _In_count_( x )
++#endif
++#ifndef _In_bytecount_
++#define MSMPI_DEFINED_SAL_In_bytecount_
+ #define _In_bytecount_( x )
++#endif
++#ifndef _In_opt_count_
++#define MSMPI_DEFINED_SAL_In_opt_count_
+ #define _In_opt_count_( x )
++#endif
++#ifndef _Out_
++#define MSMPI_DEFINED_SAL_Out_
+ #define _Out_
++#endif
++#ifndef _Out_cap_
++#define MSMPI_DEFINED_SAL_Out_cap_
+ #define _Out_cap_( x )
++#endif
++#ifndef _Out_cap_post_count_
++#define MSMPI_DEFINED_SAL_Out_cap_post_count_
+ #define _Out_cap_post_count_( x, y )
++#endif
++#ifndef _Out_bytecap_
++#define MSMPI_DEFINED_SAL_Out_bytecap_
+ #define _Out_bytecap_( x )
++#endif
++#ifndef _Out_z_cap_
++#define MSMPI_DEFINED_SAL_Out_z_cap_
+ #define _Out_z_cap_( x )
++#endif
++#ifndef _Out_z_cap_post_count_
++#define MSMPI_DEFINED_SAL_Out_z_cap_post_count_
+ #define _Out_z_cap_post_count_( x, y )
++#endif
++#ifndef _Out_cap_post_part_
++#define MSMPI_DEFINED_SAL_Out_cap_post_part_
+ #define _Out_cap_post_part_( x, y )
++#endif
++#ifndef _Out_opt_
++#define MSMPI_DEFINED_SAL_Out_opt_
+ #define _Out_opt_
++#endif
++#ifndef _Out_opt_cap_
++#define MSMPI_DEFINED_SAL_Out_opt_cap_
+ #define _Out_opt_cap_( x )
++#endif
++#ifndef _Post_z_
++#define MSMPI_DEFINED_SAL_Post_z_
+ #define _Post_z_
++#endif
++#ifndef _Inout_
++#define MSMPI_DEFINED_SAL_Inout_
+ #define _Inout_
++#endif
++#ifndef _Inout_count_
++#define MSMPI_DEFINED_SAL_Inout_count_
+ #define _Inout_count_( x )
+ #endif
+ 
+@@ -5920,25 +5971,58 @@
+ 
+ //OACR_WARNING_POP
+ 
+-#ifdef MSMPI_DEFINED_SAL
+-#undef MSMPI_DEFINED_SAL
++#ifdef MSMPI_DEFINED_SAL_In_
+ #undef _In_
++#endif
++#ifdef MSMPI_DEFINED_SAL_In_z_
+ #undef _In_z_
++#endif
++#ifdef MSMPI_DEFINED_SAL_In_opt_
+ #undef _In_opt_
++#endif
++#ifdef MSMPI_DEFINED_SAL_In_count_
+ #undef _In_count_
++#endif
++#ifdef MSMPI_DEFINED_SAL_In_bytecount_
+ #undef _In_bytecount_
++#endif
++#ifdef MSMPI_DEFINED_SAL_In_opt_count_
+ #undef _In_opt_count_
++#endif
++#ifdef MSMPI_DEFINED_SAL_Out_
+ #undef _Out_
++#endif
++#ifdef MSMPI_DEFINED_SAL_Out_cap_
+ #undef _Out_cap_
++#endif
++#ifdef MSMPI_DEFINED_SAL_Out_cap_post_count_
+ #undef _Out_cap_post_count_
++#endif
++#ifdef MSMPI_DEFINED_SAL_Out_bytecap_
+ #undef _Out_bytecap_
++#endif
++#ifdef MSMPI_DEFINED_SAL_Out_z_cap_
+ #undef _Out_z_cap_
++#endif
++#ifdef MSMPI_DEFINED_SAL_Out_z_cap_post_count_
+ #undef _Out_z_cap_post_count_
++#endif
++#ifdef MSMPI_DEFINED_SAL_Out_cap_post_part_
+ #undef _Out_cap_post_part_
++#endif
++#ifdef MSMPI_DEFINED_SAL_Out_opt_
+ #undef _Out_opt_
++#endif
++#ifdef MSMPI_DEFINED_SAL_Out_opt_cap_
+ #undef _Out_opt_cap_
++#endif
++#ifdef MSMPI_DEFINED_SAL_Post_z_
+ #undef _Post_z_
++#endif
++#ifdef MSMPI_DEFINED_SAL_Inout_
+ #undef _Inout_
++#endif
++#ifdef MSMPI_DEFINED_SAL_Inout_count_
+ #undef _Inout_count_
+ #endif
+ 
