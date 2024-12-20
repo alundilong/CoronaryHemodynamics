@@ -1,0 +1,34 @@
+EXPORTS
+    _ZN4Foam5token5clearEv @1
+    _ZN4Foam6reduceERNS_8Vector2DIdEERKNS_5sumOpIS1_EEii @2
+    _ZN4Foam6reduceERdRKNS_5minOpIdEEii @3
+    _ZN4Foam6reduceERdRKNS_5sumOpIdEEii @4
+    _ZN4Foam6reduceERdRKNS_5sumOpIdEEiiRi @5
+    _ZN4Foam8IOstream4nameEv @6
+    _ZN4Foam8UPstream11waitRequestEi @7
+    _ZN4Foam8UPstream12waitRequestsEi @8
+    _ZN4Foam8UPstream13resetRequestsEi @9
+    _ZN4Foam8UPstream15finishedRequestEi @10
+    _ZN4Foam8UPstream18addValidParOptionsERNS_9HashTableINS_6stringENS_4wordENS2_4hashEEE @11
+    _ZN4Foam8UPstream23freePstreamCommunicatorEi @12
+    _ZN4Foam8UPstream27allocatePstreamCommunicatorEii @13
+    _ZN4Foam8UPstream4exitEi @14
+    _ZN4Foam8UPstream4initERiRPPc @15
+    _ZN4Foam8UPstream5abortEv @16
+    _ZN4Foam8UPstream6gatherEPKciPcRKNS_5UListIiEES7_i @17
+    _ZN4Foam8UPstream7scatterEPKcRKNS_5UListIiEES6_Pcii @18
+    _ZN4Foam8UPstream8allToAllERKNS_5UListIiEERS2_i @19
+    _ZN4Foam8UPstream9nRequestsEv @20
+    _ZN4Foam9UIPstream4readENS_8UPstream10commsTypesEiPcxii @21
+    _ZN4Foam9UIPstreamC1ENS_8UPstream10commsTypesEiRNS_11DynamicListIcLj0ELj2ELj1EEERiiibNS_8IOstream12streamFormatENS7_13versionNumberE @22
+    _ZN4Foam9UIPstreamC1EiRNS_14PstreamBuffersE @23
+    _ZN4Foam9UIPstreamC2ENS_8UPstream10commsTypesEiRNS_11DynamicListIcLj0ELj2ELj1EEERiiibNS_8IOstream12streamFormatENS7_13versionNumberE @24
+    _ZN4Foam9UIPstreamC2EiRNS_14PstreamBuffersE @25
+    _ZN4Foam9UOPstream5writeENS_8UPstream10commsTypesEiPKcxii @26
+    _ZN4Foam9sumReduceERdRiii @27
+    _ZNK4Foam8IOstream4nameEv @28
+    _ZTIN4Foam7IstreamE @29 DATA
+    _ZTIN4Foam8IOstreamE @30 DATA
+    _ZTSN4Foam7IstreamE @31 DATA
+    _ZTSN4Foam8IOstreamE @32 DATA
+    _ZTVN4Foam7IstreamE @33 DATA

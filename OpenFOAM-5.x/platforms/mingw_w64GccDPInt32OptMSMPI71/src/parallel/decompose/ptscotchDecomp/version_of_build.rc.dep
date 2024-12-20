@@ -1,0 +1,4 @@
+$(OBJECTS_DIR)/version_of_build.rc.dep: $(OBJECTS_DIR)/version_of_build.rc
+
+$(OBJECTS_DIR)/version_of_build.o : $(OBJECTS_DIR)/version_of_build.rc
+	$(rctoo)

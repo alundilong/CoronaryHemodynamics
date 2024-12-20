@@ -1,0 +1,32 @@
+# 1 "Make/options"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "Make/options"
+sinclude $(GENERAL_RULES)/mplib$(WM_MPLIB)
+sinclude $(RULES)/mplib$(WM_MPLIB)
+
+EXE_INC = $(PFLAGS) $(PINC) -I$(SCOTCH_ARCH_PATH)/include/$(FOAM_MPI) -I$(SCOTCH_ARCH_PATH)/include -I/usr/include/scotch -I../decompositionMethods/lnInclude
+
+
+
+
+
+
+# 22 "Make/options"
+
+PROJECT_LIBS = -L$(FOAM_LIBBIN) -l$(WM_PROJECT) -L$(FOAM_LIBBIN)/$(FOAM_MPI) -lPstream
+
+
+
+EXE_INC += $(GFLAGS) -DSCOTCH_PTSCOTCH
+
+
+LIB_LIBS = -L$(SCOTCH_ROOT)/lib -L$(FOAM_EXT_LIBBIN)/$(FOAM_MPI) -lptscotch -lptscotcherrexit -lscotch -ldecompositionMethods $(PLIBS)
+
+
+
+
+
+
+
+

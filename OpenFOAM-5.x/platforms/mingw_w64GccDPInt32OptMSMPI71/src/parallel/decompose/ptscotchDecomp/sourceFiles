@@ -1,0 +1,3 @@
+SOURCE = \
+ptscotchDecomp.C \
+version_of_build.rc

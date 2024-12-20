@@ -1,5 +1,0 @@
-# groupdel(8) completion                                   -*- shell-script -*-
-
-complete -g groupdel
-
-# ex: filetype=sh

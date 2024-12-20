@@ -1,0 +1,42 @@
+EXPORTS
+    _ZN4Foam14ptscotchDecomp5checkEiPKc @1
+    _ZN4Foam14ptscotchDecomp5debugE @2 DATA
+    _ZN4Foam14ptscotchDecomp8typeNameE @3 DATA
+    _ZN4Foam14ptscotchDecomp9decomposeERKNS_4ListINS1_IiEEEERKNS_5FieldINS_6VectorIdEEEERKNS6_IdEE @4
+    _ZN4Foam14ptscotchDecomp9decomposeERKNS_8polyMeshERKNS_4ListIiEERKNS_5FieldINS_6VectorIdEEEERKNS8_IdEE @5
+    _ZN4Foam14ptscotchDecomp9decomposeERKNS_8polyMeshERKNS_5FieldINS_6VectorIdEEEERKNS4_IdEE @6
+    _ZN4Foam14ptscotchDecompC1ERKNS_10dictionaryE @7
+    _ZN4Foam14ptscotchDecompC2ERKNS_10dictionaryE @8
+    _ZN4Foam14ptscotchDecompD0Ev @9
+    _ZN4Foam14ptscotchDecompD1Ev @10
+    _ZN4Foam19decompositionMethod31adddictionaryConstructorToTableINS_14ptscotchDecompEE3NewERKNS_10dictionaryE @11
+    _ZN4Foam19decompositionMethod31adddictionaryConstructorToTableINS_14ptscotchDecompEEC1ERKNS_4wordE @12
+    _ZN4Foam19decompositionMethod9decomposeERKNS_5FieldINS_6VectorIdEEEE @13
+    _ZN4Foam19decompositionMethod9decomposeERKNS_5FieldINS_6VectorIdEEEERKNS1_IdEE @14
+    _ZN4Foam24addptscotchDecompToDebug8readDataERNS_7IstreamE @15
+    _ZN4Foam24addptscotchDecompToDebugD0Ev @16
+    _ZN4Foam24addptscotchDecompToDebugD1Ev @17
+    _ZN4Foam25addptscotchDecompToDebug_E @18 DATA
+    _ZN4Foam4ListIiEC1ERKS1_ @19
+    _ZN4Foam4wordC1EPKcb @20
+    _ZN4Foam65addptscotchDecompdictionaryConstructorTodecompositionMethodTable_E @21 DATA
+    _ZN4Foam7PtrListINS_23decompositionConstraintEED1Ev @22
+    _ZN4Foam9HashTableIPFNS_7autoPtrINS_19decompositionMethodEEERKNS_10dictionaryEENS_4wordENS_6string4hashEE3setERKS9_RKS8_b @23
+    _ZN4Foam9HashTableIPFNS_7autoPtrINS_19decompositionMethodEEERKNS_10dictionaryEENS_4wordENS_6string4hashEE6resizeEi @24
+    _ZNK4Foam14ptscotchDecomp13parallelAwareEv @25
+    _ZNK4Foam14ptscotchDecomp4typeEv @26
+    _ZNK4Foam14ptscotchDecomp9decomposeERKNS_8fileNameERKNS_4ListIiEES7_RKNS_5FieldIdEERS5_ @27
+    _ZNK4Foam14ptscotchDecomp9decomposeERKNS_8fileNameEiPKiiS5_RKNS_5FieldIdEERNS_4ListIiEE @28
+    _ZNK4Foam24addptscotchDecompToDebug9writeDataERNS_7OstreamE @29
+    _ZNKSt5ctypeIcE8do_widenEc @30
+    _ZTIN4Foam14ptscotchDecompE @31 DATA
+    _ZTIN4Foam17simpleRegIOobjectE @32 DATA
+    _ZTIN4Foam19decompositionMethodE @33 DATA
+    _ZTIN4Foam24addptscotchDecompToDebugE @34 DATA
+    _ZTSN4Foam14ptscotchDecompE @35 DATA
+    _ZTSN4Foam17simpleRegIOobjectE @36 DATA
+    _ZTSN4Foam19decompositionMethodE @37 DATA
+    _ZTSN4Foam24addptscotchDecompToDebugE @38 DATA
+    _ZTVN4Foam14ptscotchDecompE @39 DATA
+    _ZTVN4Foam17simpleRegIOobjectE @40 DATA
+    _ZTVN4Foam24addptscotchDecompToDebugE @41 DATA

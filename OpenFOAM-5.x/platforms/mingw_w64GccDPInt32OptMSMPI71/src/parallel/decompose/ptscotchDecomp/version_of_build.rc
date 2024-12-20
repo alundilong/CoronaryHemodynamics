@@ -1,0 +1,27 @@
+#define IDR_VERSION1 1
+
+IDR_VERSION1 VERSIONINFO
+FILEVERSION 5,0,2017,2
+PRODUCTVERSION 5,0,2017,2
+FILEOS 0x00000000
+FILETYPE 0x00000000
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "FFFF0000"
+    BEGIN
+      VALUE "FileVersion", "5.x-a644ba4103de\0" //do not change this
+      VALUE "ProductVersion", "5.x-a644ba4103de\0" //do not change this
+      VALUE "FileDescription", "libptscotchDecomp.dll - Built for blueCFD(R)-Core, by FSD blueCAPE Lda.\0"
+      VALUE "LegalCopyright", "OpenFOAM is Copyright (C) 2011-17 OpenFOAM Foundation.\0"
+      VALUE "LegalTrademarks", "OpenFOAM is a trade mark of OpenCFD (ESI Group). blueCFD is a trade mark of FSD blueCAPE Lda.\0"
+      VALUE "ProductName", "Unofficial port of OpenFOAM. Port website: http://bluecfd.github.io/Core/\0"
+      VALUE "InternalName", "libptscotchDecomp.dll\0"
+      VALUE "OriginalFilename", "libptscotchDecomp.dll\0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0xFFFF, 0x0000
+  END
+END
