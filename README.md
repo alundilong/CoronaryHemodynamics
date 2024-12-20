@@ -19,9 +19,12 @@ and integrating physiological boundary conditions, CoronaryHemodynamics offers a
 studying coronary hemodynamics in both research and clinical applications
 
 ### How to run demo cases?
+#### Setting Environment Variables
+Before running the application, you need to activate the environment variables by opening the command control panel and typing the following command:
+```bash
+setvar.sh
+```
 
-
-### Demo
 #### Windkessel Model Validation
 
 This case demonstrates the implementation validity of the Windkessel 2-element and Windkessel 3-element models. You can run the case using the following steps:
