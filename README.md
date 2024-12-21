@@ -24,7 +24,7 @@ Before running the application, you need to activate the environment variables b
 ```bash
 setvar.sh
 ```
-![alt text](how_to_use-1.gif)
+![alt text](how_to_use.gif)
 
 #### Windkessel Model Validation
 
@@ -71,4 +71,5 @@ decomposePar.exe
 mpirun.exe -np 8 pimpleCoronaryFoam.exe -parallel
 ```
 
+![alt text](coronary_pulse.gif)
 
