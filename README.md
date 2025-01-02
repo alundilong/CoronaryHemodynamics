@@ -18,6 +18,8 @@ stored for detailed post-processing and analysis. By automating critical aspects
 and integrating physiological boundary conditions, CoronaryHemodynamics offers an efficient and robust framework for 
 studying coronary hemodynamics in both research and clinical applications
 
+![alt text](coronary_pulse.gif)
+
 ### How to run demo cases?
 #### Setting Environment Variables
 Before running the application, you need to activate the environment variables by opening the command control panel and typing the following command:
@@ -70,6 +72,3 @@ pimpleCoronaryFoam.exe
 decomposePar.exe
 mpirun.exe -np 8 pimpleCoronaryFoam.exe -parallel
 ```
-
-![alt text](coronary_pulse.gif)
-
