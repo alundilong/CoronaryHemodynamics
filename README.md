@@ -33,8 +33,7 @@ setvar.sh
 This case demonstrates the implementation validity of the Windkessel 2-element and Windkessel 3-element models. You can run the case using the following steps:
 
 ```bash
-cd tutorials/demo/WK2/pimplePipe
-m4.exe blockMeshDict.m4 > system/blockMeshDict
+cd tutorials/demo/pimplePipe/WK2
 blockMesh.exe
 pimpleFoam.exe
 ```
