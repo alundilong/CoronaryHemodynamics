@@ -2,7 +2,21 @@ Please see the following files that are inside the "docs" folder. They are:
  - COPYING.TXT - the GNU Public license (GPL)
  - LICENSE.TXT - the blueCFD-Core License and other information
 
-### On CoronaryHemodynamics:
+### Citation
+
+Find paper [CoronaryHemodynamics: An Automated Simulation Framework for Coronary Artery Hemodynamics Using OpenFOAM](https://arxiv.org/abs/2501.08340)
+
+If you use CoronaryHemodynamics in your research, please use the following BibTeX entry.
+```
+@article{mao2025coronaryhemodynamics,
+  title={CoronaryHemodynamics: An Automated Simulation Framework for Coronary Artery Hemodynamics Using OpenFOAM},
+  author={Mao, Yijin and Zhang, Yuwen},
+  journal={arXiv preprint arXiv:2501.08340},
+  year={2025}
+}
+```
+
+### On CoronaryHemodynamics
 
 CoronaryHemodynamics is a comprehensive simulation package developed on the OpenFOAM platform (blueCFD-core),
 designed specifically for coronary artery hemodynamics analysis. The package integrates a complete suite of 
